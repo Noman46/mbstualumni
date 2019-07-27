@@ -32,21 +32,28 @@
 
 	<div class="container">
 		<form class="form-horizontal" role="form">
-			<h2>Registration</h2>
+			<h2>Application Form</h2>
 			<div class="form-group">
-				<label for="firstName" class="col-sm-3 control-label">First
+				<label for="fullName" class="col-sm-3 control-label">Full
 					Name</label>
 				<div class="col-sm-9">
-					<input type="text" id="firstName" placeholder="First Name"
+					<input type="text" id="fullName" placeholder="Full Name"
 						class="form-control" autofocus>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="lastName" class="col-sm-3 control-label">Last
+				<label for="fatherName" class="col-sm-3 control-label">Father's
 					Name</label>
 				<div class="col-sm-9">
-					<input type="text" id="lastName" placeholder="Last Name"
+					<input type="text" id="fatherName" placeholder="Father's Name"
 						class="form-control" autofocus>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="motherName" class="col-sm-3 control-label">Mother's Name* </label>
+				<div class="col-sm-9">
+					<input type="text" id="motherName" placeholder="Mother's Name"
+						class="form-control" name="moterName">
 				</div>
 			</div>
 			<div class="form-group">
@@ -56,29 +63,7 @@
 						class="form-control" name="email">
 				</div>
 			</div>
-			<div class="form-group">
-				<label for="password" class="col-sm-3 control-label">Password*</label>
-				<div class="col-sm-9">
-					<input type="password" id="password" placeholder="Password"
-						class="form-control">
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="password" class="col-sm-3 control-label">Confirm
-					Password*</label>
-				<div class="col-sm-9">
-					<input type="password" id="password" placeholder="Password"
-						class="form-control">
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="birthDate" class="col-sm-3 control-label">Date
-					of Birth*</label>
-				<div class="col-sm-9">
-					<input type="date" id="birthDate" class="form-control">
-				</div>
-			</div>
-			<div class="form-group">
+				<div class="form-group">
 				<label for="phoneNumber" class="col-sm-3 control-label">Phone
 					number </label>
 				<div class="col-sm-9">
@@ -87,21 +72,50 @@
 						class="help-block">Your phone number won't be disclosed
 						anywhere </span>
 				</div>
-			</div>
+			</div>			
 			<div class="form-group">
-				<label for="Height" class="col-sm-3 control-label">Height* </label>
+				<label for="birthDate" class="col-sm-3 control-label">Date
+					of Birth*</label>
 				<div class="col-sm-9">
-					<input type="number" id="height"
-						placeholder="Please write your height in centimetres"
-						class="form-control">
+					<input type="date" id="birthDate" class="form-control">
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="weight" class="col-sm-3 control-label">Weight* </label>
+                <label for="hscBoard" class="col-sm-3 control-label">HSC Board:</label>
+                        <div class="col-sm-9">
+                         <select class="custom-select custom-select-lg mb-3" id="hscBoard">
+                              <option>Dhaka</option>
+                              <option>Chittagong</option>
+                              <option>Barisal</option>
+                              <option>Comilla</option>
+                              <option>Jessore</option>
+                              <option>Mymensingh</option>
+                              <option>Rajshahi</option>
+                              <option>Sylhet</option>
+                              <option>Dinajpur</option>
+                              <option>Madrasa</option>
+                         </select>
+                        </div>                   
+             </div>
+             <div class="form-group">
+				<label for="hscRoll" class="col-sm-3 control-label">Hsc Roll* </label>
 				<div class="col-sm-9">
-					<input type="number" id="weight"
-						placeholder="Please write your weight in kilograms"
-						class="form-control">
+					<input type="text" id="hscRoll" placeholder="Hsc Roll"
+						class="form-control" name="hscRoll">
+				</div>
+			</div>
+			  <div class="form-group">
+				<label for="session" class="col-sm-3 control-label">Session* </label>
+				<div class="col-sm-9">
+					<input type="text" id="session" placeholder="2011-2012"
+						class="form-control" name="session">
+				</div>
+			</div>
+			 <div class="form-group">
+				<label for="idNumber" class="col-sm-3 control-label">Id Number* </label>
+				<div class="col-sm-9">
+					<input type="text" id="idNumber" placeholder="Id Number"
+						class="form-control" name="idNumber">
 				</div>
 			</div>
 			<div class="form-group">

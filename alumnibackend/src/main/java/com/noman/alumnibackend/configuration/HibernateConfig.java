@@ -14,7 +14,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan(basePackages = { "com.noman.alumnibackend.dto" })
+@ComponentScan(basePackages = {"com.noman.alumnibackend.dto"})
 @EnableTransactionManagement
 public class HibernateConfig {
 
@@ -24,14 +24,15 @@ public class HibernateConfig {
 	private static final String DATABASE_USERNAME = "sa";
 	private static final String DATABASE_PASSWORD = "";
 
-	@Bean
-	private DataSource getDAtaSource() {
+	@Bean("dataSource")
+	public DataSource getDAtaSource() {
 
 		BasicDataSource dataSource = new BasicDataSource();
 		dataSource.setDriverClassName(DATABASE_DRIVER);
 		dataSource.setUrl(DATABASE_URL);
 		dataSource.setUsername(DATABASE_USERNAME);
 		dataSource.setPassword(DATABASE_PASSWORD);
+		System.out.println("DataSource");
 
 		return dataSource;
 
@@ -43,6 +44,7 @@ public class HibernateConfig {
 		LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
 		builder.addProperties(getHiberNateProperties());
 		builder.scanPackages("com.noman.alumnibackend.dto");
+		System.out.println("factory");
 
 		return builder.buildSessionFactory();
 
@@ -53,12 +55,16 @@ public class HibernateConfig {
 		properties.put("hibernate.dialect", DATABASE_DIALECT);
 		properties.put("hibernate.show_sql", "true");
 		properties.put("hibernate.format_sql", "true");
-		return null;
+		System.out.println("Properties");
+		return properties;
 	}
-
+   
+	@Bean
 	public HibernateTransactionManager getTransactionManager(SessionFactory sesssionFactory) {
 
-		HibernateTransactionManager transactionManager = new HibernateTransactionManager();
+		HibernateTransactionManager transactionManager = new HibernateTransactionManager(sesssionFactory);
+		System.out.println("Transaction");
+		
 		return transactionManager;
 	}
 }

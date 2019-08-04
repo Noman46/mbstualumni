@@ -19,10 +19,7 @@ public class ApplicationForm {
 	private String studentName;
 	private String fatherName;
 	private String motherName;
-	
-	
 	private Timestamp studentDOB;
-	
 	private String studentemail;
 	private String phone;
 	private String hscBoard;
@@ -34,12 +31,7 @@ public class ApplicationForm {
 	private Timestamp updated_at;
 	
 	
-	public boolean isActive() {
-		return isActive;
-	}
-	public void setActive(boolean isActive) {
-		this.isActive = isActive;
-	}
+	
 	public Timestamp getCreated_at() {
 		return created_at;
 	}
@@ -120,6 +112,12 @@ public class ApplicationForm {
 	}
 	public void setVersityId(String versityId) {
 		this.versityId = versityId;
+	}
+	public boolean getIsActive() {
+		return isActive;
+	}
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
 	}
 	
 

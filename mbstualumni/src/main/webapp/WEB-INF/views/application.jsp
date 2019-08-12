@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <spring:url var="css" value="/resources/css" />
 <spring:url var="js" value="/resources/js" />
@@ -31,44 +32,45 @@
 <body>
 
 	<div class="container">
-		<form class="form-horizontal" role="form">
+	
+		<form:form method="post" modelAttribute="applicationForm" action="/sendApplication" class="form-horizontal" role="form">
 			<h2>Application Form</h2>
 			<div class="form-group">
 				<label for="fullName" class="col-sm-3 control-label">Full
 					Name</label>
 				<div class="col-sm-9">
-					<input type="text" id="fullName" placeholder="Full Name"
-						class="form-control" autofocus>
+					<form:input path="studentName" id="fullName" placeholder="Full Name"
+						class="form-control"/>
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="fatherName" class="col-sm-3 control-label">Father's
 					Name</label>
 				<div class="col-sm-9">
-					<input type="text" id="fatherName" placeholder="Father's Name"
-						class="form-control" autofocus>
+					<form:input path="fatherName" id="fatherName" placeholder="Father's Name"
+						class="form-control"/>
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="motherName" class="col-sm-3 control-label">Mother's Name* </label>
 				<div class="col-sm-9">
-					<input type="text" id="motherName" placeholder="Mother's Name"
-						class="form-control" name="moterName">
+					<form:input path="motherName" id="motherName" placeholder="Mother's Name"
+						class="form-control" name="moterName"/>
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="email" class="col-sm-3 control-label">Email* </label>
 				<div class="col-sm-9">
-					<input type="email" id="email" placeholder="Email"
-						class="form-control" name="email">
+					<form:input path="studentemail" id="email" placeholder="Email"
+						class="form-control" name="email"/>
 				</div>
 			</div>
 				<div class="form-group">
 				<label for="phoneNumber" class="col-sm-3 control-label">Phone
 					number </label>
 				<div class="col-sm-9">
-					<input type="phoneNumber" id="phoneNumber"
-						placeholder="Phone number" class="form-control"> <span
+					<form:input path="phone" id="phoneNumber"
+						placeholder="Phone number" class="form-control"/> <span
 						class="help-block">Your phone number won't be disclosed
 						anywhere </span>
 				</div>
@@ -77,45 +79,45 @@
 				<label for="birthDate" class="col-sm-3 control-label">Date
 					of Birth*</label>
 				<div class="col-sm-9">
-					<input type="date" id="birthDate" class="form-control">
+					<form:input path="studentDOB" id="birthDate" class="form-control"/>
 				</div>
 			</div>
 			<div class="form-group">
                 <label for="hscBoard" class="col-sm-3 control-label">HSC Board:</label>
                         <div class="col-sm-9">
-                         <select class="custom-select custom-select-lg mb-3" id="hscBoard">
-                              <option>Dhaka</option>
-                              <option>Chittagong</option>
-                              <option>Barisal</option>
-                              <option>Comilla</option>
-                              <option>Jessore</option>
-                              <option>Mymensingh</option>
-                              <option>Rajshahi</option>
-                              <option>Sylhet</option>
-                              <option>Dinajpur</option>
-                              <option>Madrasa</option>
-                         </select>
+                         <form:select path="hscBoard" class="custom-select custom-select-lg mb-3" id="hscBoard">
+                              <form:option value="Dhaka">Dhaka</form:option>
+                              <form:option value="Chittagong">Chittagong</form:option>
+                              <form:option value="Barisal">Barisal</form:option>
+                              <form:option value="Comilla">Comilla</form:option>
+                              <form:option value="Jessore">Jessore</form:option>
+                              <form:option value="Mymensingh">Mymensingh</form:option>
+                              <form:option value="Rajshahi">Rajshahi</form:option>
+                              <form:option value="Sylhet">Sylhet</form:option>
+                              <form:option value="Dinajpur">Dinajpur</form:option>
+                              <form:option value="Madrasa">Madrasa</form:option>
+                         </form:select>
                         </div>                   
              </div>
              <div class="form-group">
 				<label for="hscRoll" class="col-sm-3 control-label">Hsc Roll* </label>
 				<div class="col-sm-9">
-					<input type="text" id="hscRoll" placeholder="Hsc Roll"
-						class="form-control" name="hscRoll">
+					<form:input path="hscRoll" id="hscRoll" placeholder="Hsc Roll"
+						class="form-control" name="hscRoll"/>
 				</div>
 			</div>
 			  <div class="form-group">
 				<label for="session" class="col-sm-3 control-label">Session* </label>
 				<div class="col-sm-9">
-					<input type="text" id="session" placeholder="2011-2012"
-						class="form-control" name="session">
+					<form:input path="versitySession" id="session" placeholder="2011-2012"
+						class="form-control" name="session"/>
 				</div>
 			</div>
 			 <div class="form-group">
 				<label for="idNumber" class="col-sm-3 control-label">Id Number* </label>
 				<div class="col-sm-9">
-					<input type="text" id="idNumber" placeholder="Id Number"
-						class="form-control" name="idNumber">
+					<form:input path="versityId" id="idNumber" placeholder="Id Number"
+						class="form-control" name="idNumber"/>
 				</div>
 			</div>
 			<div class="form-group">
@@ -123,13 +125,13 @@
 				<div class="col-sm-6">
 					<div class="row">
 						<div class="col-sm-4">
-							<label class="radio-inline"> <input type="radio"
-								id="femaleRadio" value="Female">Female
+							<label class="radio-inline"> 
+							<form:radiobutton path="gender" id="femaleRadio" value="Female"/>Female
 							</label>
 						</div>
 						<div class="col-sm-4">
-							<label class="radio-inline"> <input type="radio"
-								id="maleRadio" value="Male">Male
+							<label class="radio-inline">
+							<form:radiobutton path="gender" id="maleRadio" value="Male"/>Male
 							</label>
 						</div>
 					</div>
@@ -141,8 +143,8 @@
 					<span class="help-block">*Required fields</span>
 				</div>
 			</div>
-			<button type="submit" class="btn btn-primary btn-block">Register</button>
-		</form>
+			<button type="submit" class="btn btn-primary btn-block">Apply</button>
+		</form:form>
 		<!-- /form -->
 	</div>
 	<!-- ./container -->

@@ -13,6 +13,11 @@ import javax.persistence.Id;
 @Entity
 public class ApplicationForm {
     
+	
+	public ApplicationForm(){
+		
+	}
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int applicationId;
@@ -27,6 +32,7 @@ public class ApplicationForm {
 	private String versitySession;
 	private String versityId;
 	private boolean isActive;
+	private String gender;	
 	private Timestamp created_at;
 	private Timestamp updated_at;
 	
@@ -118,6 +124,12 @@ public class ApplicationForm {
 	}
 	public void setActive(boolean isActive) {
 		this.isActive = isActive;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 	
 

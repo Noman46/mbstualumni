@@ -24,10 +24,6 @@ public class ApplicationFormDaoImpl implements ApplicationFormDao {
 		try {
 			
 			System.out.println(applicationForm.getVersityId());
-			System.out.println(applicationForm.getApplicationId());
-			System.out.println(applicationForm.getIsActive());
-			System.out.println(applicationForm.getIsActive());
-			System.out.println(applicationForm.getCreated_at());
 			
 			
 			sessionFactory.getCurrentSession().persist(applicationForm);

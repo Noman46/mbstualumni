@@ -32,8 +32,7 @@
 <body>
 
 	<div class="container">
-	
-		<form:form method="post" modelAttribute="applicationForm" action="/sendApplication" class="form-horizontal" role="form">
+		<form:form method="post" modelAttribute="applicationForm" action="/mbstualumni/sendApplication" class="form-horizontal" role="form">
 			<h2>Application Form</h2>
 			<div class="form-group">
 				<label for="fullName" class="col-sm-3 control-label">Full
@@ -61,7 +60,7 @@
 			<div class="form-group">
 				<label for="email" class="col-sm-3 control-label">Email* </label>
 				<div class="col-sm-9">
-					<form:input path="studentemail" id="email" placeholder="Email"
+					<form:input type = "email" path="studentemail" id="email" placeholder="Email"
 						class="form-control" name="email"/>
 				</div>
 			</div>
@@ -75,13 +74,13 @@
 						anywhere </span>
 				</div>
 			</div>			
-			<div class="form-group">
+		<%-- 	<div class="form-group">
 				<label for="birthDate" class="col-sm-3 control-label">Date
 					of Birth*</label>
 				<div class="col-sm-9">
-					<form:input path="studentDOB" id="birthDate" class="form-control"/>
+					<form:input type = "date" path="studentDOB" id="birthDate" class="form-control"/>
 				</div>
-			</div>
+			</div> --%>
 			<div class="form-group">
                 <label for="hscBoard" class="col-sm-3 control-label">HSC Board:</label>
                         <div class="col-sm-9">

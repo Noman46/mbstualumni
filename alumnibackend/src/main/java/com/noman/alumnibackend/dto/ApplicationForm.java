@@ -24,32 +24,21 @@ public class ApplicationForm {
 	private String studentName;
 	private String fatherName;
 	private String motherName;
-	private Timestamp studentDOB;
+	//private Timestamp studentDOB;
 	private String studentemail;
 	private String phone;
 	private String hscBoard;
 	private String hscRoll;
 	private String versitySession;
 	private String versityId;
-	private boolean isActive;
+	//private boolean isActive;
 	private String gender;	
-	private Timestamp created_at;
-	private Timestamp updated_at;
+	//private Timestamp created_at;
+	//private Timestamp updated_at;
 	
 	
 	
-	public Timestamp getCreated_at() {
-		return created_at;
-	}
-	public void setCreated_at(Timestamp created_at) {
-		this.created_at = created_at;
-	}
-	public Timestamp getUpdated_at() {
-		return updated_at;
-	}
-	public void setUpdated_at(Timestamp updated_at) {
-		this.updated_at = updated_at;
-	}
+
 	
 	
 	
@@ -77,12 +66,7 @@ public class ApplicationForm {
 	public void setMotherName(String motherName) {
 		this.motherName = motherName;
 	}
-	public Timestamp getStudentDOB() {
-		return studentDOB;
-	}
-	public void setStudentDOB(Timestamp studentDOB) {
-		this.studentDOB = studentDOB;
-	}
+	
 	public String getStudentemail() {
 		return studentemail;
 	}
@@ -119,12 +103,7 @@ public class ApplicationForm {
 	public void setVersityId(String versityId) {
 		this.versityId = versityId;
 	}
-	public boolean getIsActive() {
-		return isActive;
-	}
-	public void setActive(boolean isActive) {
-		this.isActive = isActive;
-	}
+	
 	public String getGender() {
 		return gender;
 	}

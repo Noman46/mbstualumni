@@ -33,6 +33,9 @@ public class PageController {
 		System.out.println(applicationForm.getStudentName());
 		model.addAttribute("studentName", applicationForm.getStudentName());
         model.addAttribute("fatherName", applicationForm.getFatherName());
+        model.addAttribute("dob", applicationForm.getStudentDOB());
+        model.addAttribute("gen", applicationForm.getGender());
+         
         
 		
 		

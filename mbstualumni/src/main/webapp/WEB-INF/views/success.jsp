@@ -17,6 +17,15 @@
             <td>Father Name :</td>
             <td>${fatherName}</td>
         </tr>
+         <tr>
+            <td>dob:</td>
+            <td>${dob}</td>
+        </tr>
+         <tr>
+            <td>gender:</td>
+            <td>${gen}</td>
+        </tr>
+       
        
     </table>
 </body>

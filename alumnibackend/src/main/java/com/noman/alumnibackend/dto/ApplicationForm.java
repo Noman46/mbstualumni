@@ -1,14 +1,17 @@
 package com.noman.alumnibackend.dto;
 
 
-import java.sql.Timestamp;
-import java.util.Date;
 
-import javax.persistence.Column;
+import java.time.LocalDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
 
 @Entity
 public class ApplicationForm {
@@ -24,7 +27,18 @@ public class ApplicationForm {
 	private String studentName;
 	private String fatherName;
 	private String motherName;
-	//private Timestamp studentDOB;
+	
+	@DateTimeFormat(iso = ISO.DATE)
+	private LocalDate studentDOB;
+	
+	
+	public LocalDate getStudentDOB() {
+		return studentDOB;
+	}
+	public void setStudentDOB(LocalDate studentDOB) {
+		this.studentDOB = studentDOB;
+	}
+
 	private String studentemail;
 	private String phone;
 	private String hscBoard;

@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
@@ -45,10 +47,19 @@ public class ApplicationForm {
 	private String hscRoll;
 	private String versitySession;
 	private String versityId;
-	//private boolean isActive;
-	private String gender;	
-	//private Timestamp created_at;
-	//private Timestamp updated_at;
+	private boolean isActive;
+	public boolean isActive() {
+		return isActive;
+	}
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
+
+	private String gender;
+	@CreationTimestamp
+	private LocalDate created_at;
+	@UpdateTimestamp
+	private LocalDate updated_at;
 	
 	
 	
@@ -56,6 +67,18 @@ public class ApplicationForm {
 	
 	
 	
+	public LocalDate getCreated_at() {
+		return created_at;
+	}
+	public void setCreated_at(LocalDate created_at) {
+		this.created_at = created_at;
+	}
+	public LocalDate getUpdated_at() {
+		return updated_at;
+	}
+	public void setUpdated_at(LocalDate updated_at) {
+		this.updated_at = updated_at;
+	}
 	public int getApplicationId() {
 		return applicationId;
 	}

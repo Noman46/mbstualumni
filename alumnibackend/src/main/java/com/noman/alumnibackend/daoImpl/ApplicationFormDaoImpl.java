@@ -12,32 +12,24 @@ import com.noman.alumnibackend.dto.ApplicationForm;
 @Transactional
 public class ApplicationFormDaoImpl implements ApplicationFormDao {
 
-	
 	@Autowired
 	private SessionFactory sessionFactory;
 
 	@Override
-	@Transactional   
-	public boolean saveApplicationForm (ApplicationForm applicationForm) {
-		
-		
+	@Transactional
+	public boolean saveApplicationForm(ApplicationForm applicationForm) {
+
 		try {
-			
-			System.out.println(applicationForm.getVersityId());
-			
-			
+
 			sessionFactory.getCurrentSession().persist(applicationForm);
-			
+
 			return true;
-		}catch(Exception ex) {
+		} catch (Exception ex) {
 			ex.printStackTrace();
-			
+
 			return false;
 		}
-		
-	
+
 	}
-		
-		
 
 }

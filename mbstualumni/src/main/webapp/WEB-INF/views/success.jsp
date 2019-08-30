@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Submitted Employee Information</h2>
+<h2>Submitted Student Information</h2>
     <div>
     <p>Hi ${studentName} MBSTUALUMNA got your application. Our Staff will verify the information you just provided. You will get an email </p>
     

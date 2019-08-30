@@ -31,6 +31,7 @@ public class PageController {
 		// ModelAndView mv = new ModelAndView("success");
 		applicationForm.setActive(true);
 		applicationFormDao.saveApplicationForm(applicationForm);
+		model.addAttribute("studentName", applicationForm.getStudentName());
 		return "success";
 	}
 }

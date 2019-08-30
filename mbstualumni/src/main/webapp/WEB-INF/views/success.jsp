@@ -8,25 +8,9 @@
 </head>
 <body>
 <h2>Submitted Employee Information</h2>
-    <table>
-        <tr>
-            <td>Student Name :</td>
-            <td>${studentName}</td>
-        </tr>
-        <tr>
-            <td>Father Name :</td>
-            <td>${fatherName}</td>
-        </tr>
-         <tr>
-            <td>dob:</td>
-            <td>${dob}</td>
-        </tr>
-         <tr>
-            <td>gender:</td>
-            <td>${gen}</td>
-        </tr>
-       
-       
-    </table>
+    <div>
+    <p>Hi ${studentName} MBSTUALUMNA got your application. Our Staff will verify the information you just provided. You will get an email </p>
+    
+    </div>
 </body>
 </html>

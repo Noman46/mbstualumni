@@ -20,6 +20,39 @@
 <link rel="stylesheet" type="text/css" href="${css}/adminpage.css">
 
 <script src="${js}/adminpage.js"></script>
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+<style>
+.ad {
+	position: absolute;
+	width: 300px;
+	height: 250px;
+	border: 1px solid #ddd;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 250px;
+	z-index: 10;
+}
+
+.ad .close {
+	position: absolute;
+	font-family: 'ionicons';
+	width: 20px;
+	height: 20px;
+	color: #fff;
+	background-color: #999;
+	font-size: 20px;
+	left: -20px;
+	top: -1px;
+	display: table-cell;
+	vertical-align: middle;
+	cursor: pointer;
+	text-align: center;
+}
+</style>
+
+
 </head>
 <body>
 	<div class="header">
@@ -48,6 +81,34 @@
 		</ul>
 		</nav>
 	</div>
-	<div class="main-content"></div>
+	<div class="main-content">
+		<div class="title">Analytics</div>
+		<div class='ad'>
+			<div class="close">
+				<i class="ion-ios-close-empty"></i>
+			</div>
+			<script async
+				src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- kodhus demos -->
+			<ins class="adsbygoogle"
+				style="display: inline-block; width: 300px; height: 250px"
+				data-ad-client="ca-pub-8408356133845039" data-ad-slot="8154430505"></ins>
+			
+		</div>
+		<div class="main">
+			<div class="widget">
+				<div class="title">Number of views</div>
+				<div class="chart"></div>
+			</div>
+			<div class="widget">
+				<div class="title">Number of likes</div>
+				<div class="chart"></div>
+			</div>
+			<div class="widget">
+				<div class="title">Number of comments</div>
+				<div class="chart"></div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

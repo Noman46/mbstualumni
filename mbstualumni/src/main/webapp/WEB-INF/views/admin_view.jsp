@@ -70,7 +70,14 @@
 
 			</ul>
 			</nav>
-			<div id="colorChange"></div>
+			<div id="colorChange">
+			
+			<div id="green"></div>
+			<div id="black"></div>
+			<div id="blue"></div>
+			</div>
+			
+			</div>
 		</div>
 
 	</div>
@@ -108,13 +115,14 @@
 
 </body>
 <script>
-	document.getElementById("colorChangeOption").addEventListener("click", function() {
-		var colorChangeOption =  document.getElementById("colorChange");
-		 if (colorChangeOption.style.display === "none") {
-			 colorChangeOption.style.display = "block";
-			  } else {
-				  colorChangeOption.style.display = "none";
-			  }
-	})
+	document.getElementById("colorChangeOption").addEventListener("click",
+			function() {
+				var colorChangeOption = document.getElementById("colorChange");
+				if (colorChangeOption.style.display === "none") {
+					colorChangeOption.style.display = "block";
+				} else {
+					colorChangeOption.style.display = "none";
+				}
+			})
 </script>
 </html>

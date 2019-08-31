@@ -249,6 +249,7 @@ body {
 	font-weight: 600;
 }
 
+/*Color Change Div */
 #colorChange{
 	width: 200px;
 	height:200px; 
@@ -256,3 +257,30 @@ body {
 	background-color:red;
 	display: none;
 }
+
+#green{
+	
+	width: 20px;
+	height:20px; 
+	margin-right:5px;
+	background-color:green;
+	float: left;
+}
+
+#black{
+	width: 20px;
+	height:20px; 
+	margin-right:5px;
+	background-color:black;
+	float: left;
+}
+
+#blue{
+	width: 20px;
+	height:20px; 
+	margin-right:5px;
+	float: left;
+	background-color:white;
+}
+
+

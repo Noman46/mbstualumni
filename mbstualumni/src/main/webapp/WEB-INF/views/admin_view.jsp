@@ -26,29 +26,10 @@
 <style>
 .ad {
 	position: absolute;
-	width: 300px;
-	height: 250px;
-	border: 1px solid #ddd;
-	left: 50%;
-	transform: translateX(-50%);
-	top: 250px;
-	z-index: 10;
 }
 
 .ad .close {
 	position: absolute;
-	font-family: 'ionicons';
-	width: 20px;
-	height: 20px;
-	color: #fff;
-	background-color: #999;
-	font-size: 20px;
-	left: -20px;
-	top: -1px;
-	display: table-cell;
-	vertical-align: middle;
-	cursor: pointer;
-	text-align: center;
 }
 </style>
 
@@ -61,41 +42,54 @@
 		</div>
 		<a href="#" class="nav-trigger"><span></span></a>
 	</div>
-	<div class="side-nav">
-		<div class="logo">
-			<i class="fa fa-tachometer"></i> <span>Brand</span>
+
+
+	<div id="side-navbar">
+
+		<div class="side-nav">
+			<div class="logo">
+				<i class="fa fa-tachometer"></i> <span>Brand</span>
+			</div>
+
+			<nav>
+			<ul>
+				<li><a href="#"> <span><i class="fa fa-user"></i></span> <span>Users</span>
+				</a></li>
+				<li><a href="#"> <span><i class="fa fa-envelope"></i></span>
+						<span>Messages</span>
+				</a></li>
+				<li class="active"><a href="#"> <span><i
+							class="fa fa-bar-chart"></i></span> <span>Analytics</span>
+				</a></li>
+				<li><a href="#"> <span><i
+							class="fa fa-credit-card-alt"></i></span> <span>Payments</span>
+				</a></li>
+
+				<li style="color: white;" id="colorChangeOption"><span><i
+						class="fa fa-cog fa-spin fa-3x fa-fw"></i></span><span>Settings</span></li>
+
+			</ul>
+			</nav>
+			<div id="colorChange"></div>
 		</div>
-		<nav>
-		<ul>
-			<li><a href="#"> <span><i class="fa fa-user"></i></span> <span>Users</span>
-			</a></li>
-			<li><a href="#"> <span><i class="fa fa-envelope"></i></span>
-					<span>Messages</span>
-			</a></li>
-			<li class="active"><a href="#"> <span><i
-						class="fa fa-bar-chart"></i></span> <span>Analytics</span>
-			</a></li>
-			<li><a href="#"> <span><i
-						class="fa fa-credit-card-alt"></i></span> <span>Payments</span>
-			</a></li>
-		</ul>
-		</nav>
+
 	</div>
 	<div class="main-content">
-		<div class="title">Analytics</div>
+		<div class="title"></div>
 		<div class='ad'>
 			<div class="close">
 				<i class="ion-ios-close-empty"></i>
 			</div>
-			<script async
-				src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<!-- kodhus demos -->
-			<ins class="adsbygoogle"
-				style="display: inline-block; width: 300px; height: 250px"
-				data-ad-client="ca-pub-8408356133845039" data-ad-slot="8154430505"></ins>
-			
+
+
+
 		</div>
 		<div class="main">
+			<div class="widget"
+				style="text-align: center; flex-basis: 98%; height: 100px; padding: 0 10px 10px 10px; font-size: 1.1em">
+
+
+				Resize the browser to see the menu in tablet and mobile views</div>
 			<div class="widget">
 				<div class="title">Number of views</div>
 				<div class="chart"></div>
@@ -108,7 +102,19 @@
 				<div class="title">Number of comments</div>
 				<div class="chart"></div>
 			</div>
+
 		</div>
 	</div>
+
 </body>
+<script>
+	document.getElementById("colorChangeOption").addEventListener("click", function() {
+		var colorChangeOption =  document.getElementById("colorChange");
+		 if (colorChangeOption.style.display === "none") {
+			 colorChangeOption.style.display = "block";
+			  } else {
+				  colorChangeOption.style.display = "none";
+			  }
+	})
+</script>
 </html>

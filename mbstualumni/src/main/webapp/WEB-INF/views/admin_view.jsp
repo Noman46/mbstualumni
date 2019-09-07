@@ -73,9 +73,9 @@
 			</nav>
 			<div id="colorChange">
 
-				<div id="green"></div>
-				<div id="black"></div>
-				<div id="blue"></div>
+				<div id="green" onclick="callGreen()"></div>
+				<div id="black" onclick="callBlack()"></div>
+				<div id="blue" onclick="callBlue()"></div>
 			</div>
 
 		</div>
@@ -116,4 +116,15 @@
 
 </body>
 <script type="text/javascript" src="${js}/colorchange.js"></script>
+<script>
+
+function callGreen()
+{
+	
+	var GREEN = document.getElementsByClassName("side-nav");
+	GREEN[0].style.backgroundColor = "green";
+	}
+
+</script>
+
 </html>

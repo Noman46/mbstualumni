@@ -32,4 +32,10 @@ public class ApplicationFormDaoImpl implements ApplicationFormDao {
 
 	}
 
+	@Override
+	public ApplicationForm getApplicationForms() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

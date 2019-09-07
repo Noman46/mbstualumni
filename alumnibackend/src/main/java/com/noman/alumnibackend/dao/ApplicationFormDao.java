@@ -5,4 +5,5 @@ import com.noman.alumnibackend.dto.ApplicationForm;
 public interface ApplicationFormDao {
 
 	public boolean saveApplicationForm(ApplicationForm applicationForm);
+	public ApplicationForm getApplicationForms();
 }

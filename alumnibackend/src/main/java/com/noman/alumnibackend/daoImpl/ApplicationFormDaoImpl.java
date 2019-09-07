@@ -1,5 +1,7 @@
 package com.noman.alumnibackend.daoImpl;
 
+import java.util.List;
+
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -7,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.noman.alumnibackend.dao.ApplicationFormDao;
 import com.noman.alumnibackend.dto.ApplicationForm;
+import org.hibernate.query.Query;
 
 @Repository("applicationFormDao")
 @Transactional
@@ -32,10 +35,20 @@ public class ApplicationFormDaoImpl implements ApplicationFormDao {
 
 	}
 
+	
+
 	@Override
-	public ApplicationForm getApplicationForms() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<ApplicationForm> getApplicationForms() {
+
+		String selectActiveCategory = "FROM ApplicationForm WHERE isActive = :isActive";
+		
+		
+		Query<ApplicationForm> query = sessionFactory.getCurrentSession().createQuery(selectActiveCategory);		
+		query.setParameter("isActive", true);
+						
+		return query.getResultList();
 	}
+
+	
 
 }

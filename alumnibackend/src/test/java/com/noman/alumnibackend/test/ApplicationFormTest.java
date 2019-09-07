@@ -4,6 +4,8 @@ package com.noman.alumnibackend.test;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.List;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -29,7 +31,7 @@ public class ApplicationFormTest {
 		
 	}
 	
-	@Test
+/*	@Test
 	public void testSaveApplicationForm() {
 		
 		form = new ApplicationForm();
@@ -39,4 +41,13 @@ public class ApplicationFormTest {
 		form.setVersityId("IT-12046");
 		assertEquals("Successfull", true, applicationFormDao.saveApplicationForm(form));
 	}
+	*/
+	@Test
+	public void testGetApplicationForm() {
+		
+		//List<ApplicationForm> list = applicationFormDao.getApplicationForms();
+		assertEquals("Successfull", 4,applicationFormDao.getApplicationForms().size());
+		//System.out.println(list.size());
+	}
+	
 }

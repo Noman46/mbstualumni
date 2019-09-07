@@ -18,6 +18,7 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="${css}/adminpage.css">
+<link rel="stylesheet" type="text/css" href="${css}/notification.css">
 
 <script src="${js}/adminpage.js"></script>
 
@@ -41,12 +42,17 @@
 		<div class="logo">
 			<i class="fa fa-tachometer"></i> <span>Brand</span>
 		</div>
-		<div id = "notification"">
-			<a href="#" class="notification"> <span>Inbox</span> <span
+		<div id = "notifications"">
+			
+			<a href="#" class="notification"> <i class="fa fa-bell" aria-hidden="true"></i></span> <span
+				class="badge">3</span>
+			</a>
+			<a href="#" class="notification"> <span><i class="fa fa-envelope" aria-hidden="true"></i></i></span> <span
 				class="badge">3</span>
 			</a>
 
 		</div>
+		
 		<a href="#" class="nav-trigger"><span></span></a>
 	</div>
 

@@ -20,6 +20,7 @@
 <link rel="stylesheet" type="text/css" href="${css}/adminpage.css">
 
 <script src="${js}/adminpage.js"></script>
+
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 
 
@@ -71,14 +72,14 @@
 			</ul>
 			</nav>
 			<div id="colorChange">
-			
-			<div id="green"></div>
-			<div id="black"></div>
-			<div id="blue"></div>
+
+				<div id="green"></div>
+				<div id="black"></div>
+				<div id="blue"></div>
 			</div>
-			
-			</div>
+
 		</div>
+	</div>
 
 	</div>
 	<div class="main-content">
@@ -114,15 +115,5 @@
 	</div>
 
 </body>
-<script>
-	document.getElementById("colorChangeOption").addEventListener("click",
-			function() {
-				var colorChangeOption = document.getElementById("colorChange");
-				if (colorChangeOption.style.display === "none") {
-					colorChangeOption.style.display = "block";
-				} else {
-					colorChangeOption.style.display = "none";
-				}
-			})
-</script>
+<script type="text/javascript" src="${js}/colorchange.js"></script>
 </html>

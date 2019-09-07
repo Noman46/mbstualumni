@@ -7,3 +7,9 @@ document.getElementById("colorChangeOption").addEventListener("click",
 				colorChangeOption.style.display = "none";
 			}
 		})
+
+function callGreen() {
+
+	var GREEN = document.getElementsByClassName("side-nav");
+	GREEN[0].style.backgroundColor = "green";
+}

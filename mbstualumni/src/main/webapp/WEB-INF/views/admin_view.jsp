@@ -41,6 +41,12 @@
 		<div class="logo">
 			<i class="fa fa-tachometer"></i> <span>Brand</span>
 		</div>
+		<div id = "notification"">
+			<a href="#" class="notification"> <span>Inbox</span> <span
+				class="badge">3</span>
+			</a>
+
+		</div>
 		<a href="#" class="nav-trigger"><span></span></a>
 	</div>
 
@@ -116,15 +122,6 @@
 
 </body>
 <script type="text/javascript" src="${js}/colorchange.js"></script>
-<script>
 
-function callGreen()
-{
-	
-	var GREEN = document.getElementsByClassName("side-nav");
-	GREEN[0].style.backgroundColor = "green";
-	}
-
-</script>
 
 </html>

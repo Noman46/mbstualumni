@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 
 <spring:url var="css" value="/resources/css" />
@@ -42,17 +43,20 @@
 		<div class="logo">
 			<i class="fa fa-tachometer"></i> <span>Brand</span>
 		</div>
-		<div id = "notifications"">
-			
-			<a href="#" class="notification"> <i class="fa fa-bell" aria-hidden="true"></i></span> <span
-				class="badge">3</span>
-			</a>
-			<a href="#" class="notification"> <span><i class="fa fa-envelope" aria-hidden="true"></i></i></span> <span
-				class="badge">3</span>
+		<div id="notifications"">
+
+			<a href="#" class="notification"> <span><i class="fa fa-bell"
+				aria-hidden="true"></i></span> 
+				<c:if test="${size > 0}">
+					<span class="badge">${size}</span>
+				</c:if>
+
+			</a> <a href="#" class="notification"> <span><i
+					class="fa fa-envelope" aria-hidden="true"></i></i></span> <span class="badge">0</span>
 			</a>
 
 		</div>
-		
+
 		<a href="#" class="nav-trigger"><span></span></a>
 	</div>
 

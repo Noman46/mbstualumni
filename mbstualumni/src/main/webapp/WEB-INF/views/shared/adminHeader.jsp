@@ -4,7 +4,7 @@
 		</div>
 		<div id="notifications"">
 
-			<a href="#" class="notification"> <span><i class="fa fa-bell"
+			<a href="/mbstualumni/getApplication" class="notification"> <span><i class="fa fa-bell"
 				aria-hidden="true"></i></span> 
 				<c:if test="${size > 0}">
 					<span class="badge">${size}</span>

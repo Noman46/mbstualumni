@@ -13,7 +13,15 @@
 	 $("#time_button").click(function(){
 		 //alert("I am clicked");
 		 
-		 
+		 $.ajax({
+			 
+			 url : '/mbstualumni/test/date',
+			 success : function(data){
+				 
+				 $("#show").html(data)
+			 }
+			 
+		 });
 	 })
 	 
  })
@@ -24,5 +32,7 @@
 <h1>Ajax Test page</h1>
 
 <button id ="time_button">Get Time</button>
+
+<p id = "show"></p>
 </body>
 </html>

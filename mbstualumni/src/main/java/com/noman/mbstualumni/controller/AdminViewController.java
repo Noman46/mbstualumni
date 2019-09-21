@@ -53,4 +53,12 @@ public class AdminViewController {
 		} else
 			return "";
 	}
+	
+	@RequestMapping (value = {"/listOfApplicationForm"})
+	public ModelAndView giveListOfApplicationForm() {
+		
+		ModelAndView mv = new ModelAndView("listOfApplication");
+		return mv;
+		
+	}
 }

@@ -4,7 +4,7 @@
 		</div>
 		<div id="notifications"">
 
-			<a href="/mbstualumni/getApplication" class="notification"> <span><i class="fa fa-bell"
+			<a href="/mbstualumni/listOfApplicationForm" class="notification"> <span><i class="fa fa-bell"
 				aria-hidden="true"></i></span> 
 				
 					<span class="badge" id = "show">${size}</span>

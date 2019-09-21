@@ -35,20 +35,15 @@ public class ApplicationFormDaoImpl implements ApplicationFormDao {
 
 	}
 
-	
-
 	@Override
 	public List<ApplicationForm> getApplicationForms() {
 
 		String selectActiveCategory = "FROM ApplicationForm WHERE isActive = :isActive";
-		
-		
-		Query<ApplicationForm> query = sessionFactory.getCurrentSession().createQuery(selectActiveCategory);		
+
+		Query<ApplicationForm> query = sessionFactory.getCurrentSession().createQuery(selectActiveCategory);
 		query.setParameter("isActive", true);
-						
+
 		return query.getResultList();
 	}
-
-	
 
 }

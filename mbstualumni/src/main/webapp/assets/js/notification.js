@@ -9,7 +9,7 @@ function doRefresh(){
 	   });
 	   setTimeout(function() {
 	      doRefresh();
-	   }, 2000);
+	   }, 10000);
 	}
 
 	$(document).ready(function () {

@@ -19,27 +19,38 @@ public class AdminViewController {
 
 	@RequestMapping(value = { "/adminView" }, method = RequestMethod.GET)
 	public ModelAndView getAdminView() {
-		
+
 		int i = applicationFormDao.getApplicationForms().size();
 		ModelAndView mv = new ModelAndView("admin_view");
-		mv.addObject("size", i );
-		
+		mv.addObject("size", i);
 
 		return mv;
 	}
-	
+
 	@RequestMapping("/test")
 	public String testAjax() {
-		
+
 		return "test";
 	}
-	
-	@RequestMapping("/test/date")
+	/*
+	 * @RequestMapping("/test/date")
+	 * 
+	 * @ResponseBody public String getTime(){
+	 * 
+	 * Date d = new Date(); return d.toString();
+	 * 
+	 * }
+	 */
+
+	@RequestMapping(value = { "/adminView1" }, method = RequestMethod.GET)
 	@ResponseBody
-	public String getTime(){
-		
-		Date d = new Date();
-		return d.toString();
-		
+	public String getAdminView1() {
+
+		Integer numberOfApplications = applicationFormDao.getApplicationForms().size();
+		if (numberOfApplications > 0) {
+			return numberOfApplications.toString();
+
+		} else
+			return "";
 	}
 }

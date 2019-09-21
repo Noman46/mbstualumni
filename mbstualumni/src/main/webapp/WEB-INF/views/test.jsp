@@ -8,14 +8,14 @@
 
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script>
- $(document).ready(function(){
+/*  $(document).ready(function(){
 	 
 	 $("#time_button").click(function(){
 		 //alert("I am clicked");
 		 
 		 $.ajax({
 			 
-			 url : '/mbstualumni/test/date',
+			 url : '/mbstualumni/adminView1',
 			 success : function(data){
 				 
 				 $("#show").html(data)
@@ -24,7 +24,26 @@
 		 });
 	 })
 	 
- })
+ }) */
+ 
+ 
+ function doRefresh(){
+   $.ajax({
+      url : "/mbstualumni/adminView1",
+      
+      success : function(data){
+			 
+			 $("#show").html(data)
+		 }
+   });
+   setTimeout(function() {
+      doRefresh();
+   }, 2000);
+}
+
+$(document).ready(function () {
+  doRefresh(); 
+});
  
 </script>
 </head>

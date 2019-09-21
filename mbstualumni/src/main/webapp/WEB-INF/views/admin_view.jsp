@@ -25,6 +25,8 @@
 
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 
+<script src="${js}/notification.js"></script>
+
 
 
 <style>
@@ -40,7 +42,7 @@
 
 </head>
 <body>
-<%@include file="./shared/adminHeader.jsp"%>
+	<%@include file="./shared/adminHeader.jsp"%>
 	<div id="side-navbar">
 
 		<div class="side-nav">
@@ -64,7 +66,7 @@
 
 				<li style="color: white;" id="colorChangeOption"><span><i
 						class="fa fa-cog fa-spin fa-3x fa-fw"></i></span><span>Settings</span></li>
-						
+
 
 			</ul>
 			</nav>

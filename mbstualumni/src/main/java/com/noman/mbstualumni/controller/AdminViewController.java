@@ -54,7 +54,7 @@ public class AdminViewController {
 			return numberOfApplications.toString();
 
 		} else
-			return "";
+			return "No";
 	}
 	
 	@RequestMapping (value = {"/listOfApplicationForm"})

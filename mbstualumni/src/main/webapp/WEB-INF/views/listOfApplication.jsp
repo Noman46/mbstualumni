@@ -68,6 +68,8 @@ function changeActiveStatus(applicationId){
 		success: function(data){
 			
 			alert(data);
+			window.location.reload();
+			
 		}
 		
 	});

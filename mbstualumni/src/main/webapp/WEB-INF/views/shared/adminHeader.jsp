@@ -2,12 +2,12 @@
 		<div class="logo">
 			<i class="fa fa-tachometer"></i> <span>Brand</span>
 		</div>
-		<div id="notifications"">
+		<div id="notifications">
 
 			<a href="/mbstualumni/listOfApplicationForm" class="notification"> <span><i class="fa fa-bell"
 				aria-hidden="true"></i></span> 
 				
-					<span class="badge" id = "show">${size}</span>
+					<span class="badge" id = "show"></span>
 				
 
 			</a> <a href="#" class="notification"> <span><i

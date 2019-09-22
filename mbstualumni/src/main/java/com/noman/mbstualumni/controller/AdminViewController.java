@@ -1,6 +1,7 @@
 package com.noman.mbstualumni.controller;
 
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.noman.alumnibackend.dao.ApplicationFormDao;
+import com.noman.alumnibackend.dto.ApplicationForm;
 
 @Controller
 public class AdminViewController {
@@ -56,8 +58,10 @@ public class AdminViewController {
 	
 	@RequestMapping (value = {"/listOfApplicationForm"})
 	public ModelAndView giveListOfApplicationForm() {
-		
+		List<ApplicationForm> forms = applicationFormDao.getApplicationForms();
+		//System.out.println(forms.size());
 		ModelAndView mv = new ModelAndView("listOfApplication");
+		mv.addObject("listofForms", forms); 
 		return mv;
 		
 	}

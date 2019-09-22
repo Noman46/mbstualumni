@@ -46,4 +46,6 @@ public class ApplicationFormDaoImpl implements ApplicationFormDao {
 		return query.getResultList();
 	}
 
+	
+
 }

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -44,9 +45,9 @@ public class AdminViewController {
 	 * }
 	 */
 
-	@RequestMapping(value = { "/adminView1" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/getApplicationFormNumber" }, method = RequestMethod.GET)
 	@ResponseBody
-	public String getAdminView1() {
+	public String getApplicationFormNumber() {
 
 		Integer numberOfApplications = applicationFormDao.getApplicationForms().size();
 		if (numberOfApplications > 0) {
@@ -65,4 +66,13 @@ public class AdminViewController {
 		return mv;
 		
 	}
+	
+	@RequestMapping(value = { "/updateApplicationFormStatus" }, method = RequestMethod.GET)
+	@ResponseBody
+	public String updateApplicationFormStatusr(@RequestParam Integer applicationId) {
+
+		applicationFormDao.updateisActive(applicationId);
+		return "The form is verified";
+	}
+	
 }

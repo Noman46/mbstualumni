@@ -61,7 +61,16 @@
 
 function changeActiveStatus(applicationId){
 	
-	alert(applicationId);
+	$.ajax({
+		
+		url: "/mbstualumni/updateApplicationFormStatus",
+		data: {applicationId: applicationId},
+		success: function(data){
+			
+			alert(data);
+		}
+		
+	});
 	
 }
 

@@ -1,6 +1,6 @@
 function doRefresh(){
 	   $.ajax({
-	      url : "/mbstualumni/adminView1",
+	      url : "/mbstualumni/getApplicationFormNumber",
 	      success : function(data){
 				 
 				 $("#show").html(data)

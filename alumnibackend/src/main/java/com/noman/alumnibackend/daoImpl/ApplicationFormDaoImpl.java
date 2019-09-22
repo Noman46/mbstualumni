@@ -47,11 +47,12 @@ public class ApplicationFormDaoImpl implements ApplicationFormDao {
 	}
 
 	@Override
-	public void updateisActive() {
+	public void updateisActive(Integer applicationId) {
 		
 		
-		ApplicationForm applicationForm =sessionFactory.getCurrentSession().load(ApplicationForm.class, 111);
+		ApplicationForm applicationForm =sessionFactory.getCurrentSession().load(ApplicationForm.class, applicationId);
 		applicationForm.setActive(false);
+		sessionFactory.getCurrentSession().update(applicationForm);
 	}
 
 	

@@ -19,6 +19,8 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="${css}/adminpage.css">
+<link rel="stylesheet" type="text/css" href="${css}/appliCationFormList.css">
+
 <link rel="stylesheet" type="text/css" href="${css}/notification.css">
 
 <script src="${js}/adminpage.js"></script>
@@ -29,20 +31,18 @@
 
 
 
-<style>
-.ad {
-	position: absolute;
-}
-
-.ad .close {
-	position: absolute;
-}
-</style>
 
 
 </head>
 <body>
 	<%@include file="./shared/adminHeader.jsp"%>
 	<%@include file="./shared/sideNavBar.jsp"%>
+
+	<div class="tableContainer">
+		<div class = "innerDidTable">
+		
+		</div>
+
+	</div>
 </body>
 </html>

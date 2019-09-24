@@ -13,11 +13,17 @@
 	margin: 0px; 
 	padding: 0px; 
 	box-sizing: border-box;
+	
 }
 
 body, html {
 	height: 100%;
 	font-family: Poppins-Regular, sans-serif;
+	
+}
+.limiter{
+	
+	background-color: #92a8d1;
 }
 
 /*----------------ANCHOR TAG----------------------------*/
@@ -160,7 +166,8 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #f2f2f2;
+  background-color: #375269;
+  
 }
 
 .wrap-login100 {

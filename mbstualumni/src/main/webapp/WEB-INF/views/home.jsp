@@ -61,7 +61,9 @@ bottom: 0;
 left: 0;
 right: 0;   
 margin: auto;
+
 display:none;
+box-shadow: 2px 2px 2px 8px white;
 }
 
 </style>

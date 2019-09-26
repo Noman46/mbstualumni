@@ -26,8 +26,8 @@
 
   <!-- ======================================================================================== -->
 
-  <link rel="stylesheet" type="text/css" href="css/util.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="${css}/loginpageUtil.css">
+	<link rel="stylesheet" type="text/css" href="${css}/loginpageMain.css">
   <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -61,7 +61,20 @@ bottom: 0;
 left: 0;
 right: 0;   
 margin: auto;
-
+display:none;
+box-shadow: 2px 2px 2px 8px white;
+}
+#contact{
+width: 700px;
+height: 300px;
+background-color:black;
+opacity:0.5;
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;   
+margin: auto;
 display:none;
 box-shadow: 2px 2px 2px 8px white;
 }
@@ -71,12 +84,30 @@ box-shadow: 2px 2px 2px 8px white;
 <script>
 function showAbout(){
  var about = document.getElementById('about');
- console.log("++++++ ",about.style.display );
+ var contact = document.getElementById('contact');
+
  if(about.style.display == 'none' || about.style.display == ''){
 about.style.display = 'block';
+contact.style.display = 'none';
 
 }else
 about.style.display = 'none'
+
+
+}
+</script>
+<script>
+function showContact(){
+ var contact = document.getElementById('contact');
+ var about = document.getElementById('about');
+
+ if(contact.style.display == 'none' || contact.style.display == ''){
+contact.style.display = 'block';
+about.style.display = 'none';
+
+
+}else
+contact.style.display = 'none'
 
 
 }
@@ -95,7 +126,7 @@ about.style.display = 'none'
     <ul class="nav navbar-nav">
       <li><a href="#">HOME</a></li>
       <li><a href="#" onclick="showAbout()">ABOUT</a></li>
-      <li><a href="#">CONTACT</a></li>
+      <li><a href="#" onclick="showContact()">CONTACT</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -107,10 +138,9 @@ about.style.display = 'none'
 
 
 <!-- ================== -->
-<div id = "about">
-  
-  </div>
-  
+	<div id="about" style = "color:white; text-align:center;">ABOUT</div>
+	<div id="contact" style = "color:white; text-align:center;"> Contact</div>
+
 
 </body>
 </html>

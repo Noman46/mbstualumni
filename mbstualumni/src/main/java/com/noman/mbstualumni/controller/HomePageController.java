@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomePageController {
 
-	@RequestMapping(value = {"/"})
+	@RequestMapping(value = {"/home"})
 	public ModelAndView giveHomePage() {
 		
 		
@@ -15,7 +15,7 @@ public class HomePageController {
 		return home;
 	}
 	
-	@RequestMapping(value = {"/welcome"})
+	@RequestMapping(value = {"/"})
 	public ModelAndView giveWelComePage() {
 		
 		

@@ -121,7 +121,7 @@ contact.style.display = 'none'
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">MBSTU-ALUMNI</a>
+      <a class="navbar-brand animated bounce" href="#">MBSTU-ALUMNI</a>
     </div>
     <ul class="nav navbar-nav">
       <li><a href="#">HOME</a></li>

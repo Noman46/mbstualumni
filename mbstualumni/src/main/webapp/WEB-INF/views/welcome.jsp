@@ -14,6 +14,14 @@
 <link rel="stylesheet" type="text/css" href="${css}/welcome.css">
 </head>
 <body>
+	<section> 
+	<video src="${image}/smoke.mp4" autoplay muted> </video>
+	<h1>
+		<span>M</span> <span>B</span> <span>S</span> <span>T</span> <span>U</span>
+		<span>-</span> <span>A</span> <span>L</span> <span>U</span> <span>M</span>
+		<span>N</span> <span>I</span>
 
+	</h1>
+	</section>
 </body>
 </html>

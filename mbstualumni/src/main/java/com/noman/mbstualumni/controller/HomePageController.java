@@ -14,4 +14,12 @@ public class HomePageController {
 		ModelAndView home = new ModelAndView("home");
 		return home;
 	}
+	
+	@RequestMapping(value = {"/welcome"})
+	public ModelAndView giveWelComePage() {
+		
+		
+		ModelAndView welcome = new ModelAndView("welcome");
+		return welcome;
+	}
 }

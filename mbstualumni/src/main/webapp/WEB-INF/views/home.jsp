@@ -129,8 +129,8 @@ contact.style.display = 'none'
       <li><a href="#" onclick="showContact()">CONTACT</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="./getApplication"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="./loginmbstu"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>
   

@@ -42,12 +42,24 @@ public class ApplicationFormTest {
 		assertEquals("Successfull", true, applicationFormDao.saveApplicationForm(form));
 	}
 	*/
-	@Test
+/*	@Test
 	public void testGetApplicationForm() {
 		
 		//List<ApplicationForm> list = applicationFormDao.getApplicationForms();
 		assertEquals("Successfull", 4,applicationFormDao.getApplicationForms().size());
 		//System.out.println(list.size());
+	}*/
+	
+	@Test
+	public void testGiveApplicationForm() {
+		
+		//List<ApplicationForm> list = applicationFormDao.getApplicationForms();
+		/*assertEquals("Successfull", ,applicationFormDao.getApplicationForms().size());*/
+		//System.out.println(list.size());
+		form = applicationFormDao.giveApplicationForm(36);
+		System.out.println(form.getFatherName());
 	}
+	
+	
 	
 }

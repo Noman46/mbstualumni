@@ -10,6 +10,7 @@ public interface ApplicationFormDao {
 	public boolean saveApplicationForm(ApplicationForm applicationForm);
 	public List<ApplicationForm> getApplicationForms();
 	public void updateisActive(Integer applicationId);
+	public ApplicationForm giveApplicationForm(Integer applicationId);
 	
 	
 } 

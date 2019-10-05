@@ -42,6 +42,7 @@ public class ApplicationFormDaoImpl implements ApplicationFormDao {
 
 		Query<ApplicationForm> query = sessionFactory.getCurrentSession().createQuery(selectActiveCategory);
 		query.setParameter("isActive", true);
+		
 
 		return query.getResultList();
 	}
@@ -53,6 +54,16 @@ public class ApplicationFormDaoImpl implements ApplicationFormDao {
 		ApplicationForm applicationForm =sessionFactory.getCurrentSession().load(ApplicationForm.class, applicationId);
 		applicationForm.setActive(false);
 		sessionFactory.getCurrentSession().update(applicationForm);
+	}
+
+
+	@Override
+	public ApplicationForm giveApplicationForm(Integer applicationId) {
+		// TODO Auto-generated method stub
+		String selectApplicationForm = "FROM ApplicationForm A WHERE A.applicationId = :applicationId";
+		Query<ApplicationForm>query = sessionFactory.getCurrentSession().createQuery(selectApplicationForm);
+		query.setParameter("applicationId", applicationId);
+		   return query.getSingleResult();
 	}
 
 	

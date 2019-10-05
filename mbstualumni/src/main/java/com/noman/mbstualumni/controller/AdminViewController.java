@@ -1,6 +1,5 @@
 package com.noman.mbstualumni.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,12 +12,15 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.noman.alumnibackend.dao.ApplicationFormDao;
 import com.noman.alumnibackend.dto.ApplicationForm;
+import com.noman.alumnibackend.utility.EmailSender;
 
 @Controller
 public class AdminViewController {
 
 	@Autowired
 	public ApplicationFormDao applicationFormDao;
+	@Autowired
+	public EmailSender sendTheEmail;
 
 	@RequestMapping(value = { "/adminView" }, method = RequestMethod.GET)
 	public ModelAndView getAdminView() {
@@ -70,9 +72,11 @@ public class AdminViewController {
 	@RequestMapping(value = { "/updateApplicationFormStatus" }, method = RequestMethod.GET)
 	@ResponseBody
 	public String updateApplicationFormStatusr(@RequestParam Integer applicationId) {
-
+        
 		applicationFormDao.updateisActive(applicationId);
-		return "The form is verified";
+		ApplicationForm  form = applicationFormDao.giveApplicationFormById(applicationId);
+		sendTheEmail.doSendEmailToApplicant(form);
+		return "The form is verified and an Email has been sent to";
 	}
 	
 }

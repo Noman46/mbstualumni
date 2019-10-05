@@ -42,30 +42,25 @@ public class ApplicationFormDaoImpl implements ApplicationFormDao {
 
 		Query<ApplicationForm> query = sessionFactory.getCurrentSession().createQuery(selectActiveCategory);
 		query.setParameter("isActive", true);
-		
 
 		return query.getResultList();
 	}
 
 	@Override
 	public void updateisActive(Integer applicationId) {
-		
-		
-		ApplicationForm applicationForm =sessionFactory.getCurrentSession().load(ApplicationForm.class, applicationId);
+
+		ApplicationForm applicationForm = sessionFactory.getCurrentSession().load(ApplicationForm.class, applicationId);
 		applicationForm.setActive(false);
 		sessionFactory.getCurrentSession().update(applicationForm);
 	}
 
-
 	@Override
-	public ApplicationForm giveApplicationForm(Integer applicationId) {
+	public ApplicationForm giveApplicationFormById(Integer applicationId) {
 		// TODO Auto-generated method stub
 		String selectApplicationForm = "FROM ApplicationForm A WHERE A.applicationId = :applicationId";
-		Query<ApplicationForm>query = sessionFactory.getCurrentSession().createQuery(selectApplicationForm);
+		Query<ApplicationForm> query = sessionFactory.getCurrentSession().createQuery(selectApplicationForm);
 		query.setParameter("applicationId", applicationId);
-		   return query.getSingleResult();
+		return query.getSingleResult();
 	}
-
-	
 
 }

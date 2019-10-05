@@ -35,7 +35,7 @@ public class EmailController {
 	        mailSender.send(email);
 	         
 	        // forwards to the view named "Result"
-	        return "Result";
+	        return "";
 	    }
   
 }

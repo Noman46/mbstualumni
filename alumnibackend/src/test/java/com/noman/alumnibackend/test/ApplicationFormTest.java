@@ -56,7 +56,7 @@ public class ApplicationFormTest {
 		//List<ApplicationForm> list = applicationFormDao.getApplicationForms();
 		/*assertEquals("Successfull", ,applicationFormDao.getApplicationForms().size());*/
 		//System.out.println(list.size());
-		form = applicationFormDao.giveApplicationForm(36);
+		form = applicationFormDao.giveApplicationFormById(36);
 		System.out.println(form.getFatherName());
 	}
 	

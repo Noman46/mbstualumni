@@ -32,12 +32,11 @@ public class AdminViewController {
 		return mv;
 	}
 
-	@RequestMapping("/test")
-	public String testAjax() {
-
-		return "test";
-	}
 	/*
+	 * @RequestMapping("/test") public String testAjax() {
+	 * 
+	 * return "test"; }
+	 * 
 	 * @RequestMapping("/test/date")
 	 * 
 	 * @ResponseBody public String getTime(){
@@ -58,25 +57,25 @@ public class AdminViewController {
 		} else
 			return "No";
 	}
-	
-	@RequestMapping (value = {"/listOfApplicationForm"})
+
+	@RequestMapping(value = { "/listOfApplicationForm" })
 	public ModelAndView giveListOfApplicationForm() {
 		List<ApplicationForm> forms = applicationFormDao.getApplicationForms();
-		//System.out.println(forms.size());
+		// System.out.println(forms.size());
 		ModelAndView mv = new ModelAndView("listOfApplication");
-		mv.addObject("listofForms", forms); 
+		mv.addObject("listofForms", forms);
 		return mv;
-		
+
 	}
-	
+
 	@RequestMapping(value = { "/updateApplicationFormStatus" }, method = RequestMethod.GET)
 	@ResponseBody
 	public String updateApplicationFormStatusr(@RequestParam Integer applicationId) {
-        
+
 		applicationFormDao.updateisActive(applicationId);
-		ApplicationForm  form = applicationFormDao.giveApplicationFormById(applicationId);
+		ApplicationForm form = applicationFormDao.giveApplicationFormById(applicationId);
 		sendTheEmail.doSendEmailToApplicant(form);
-		return "The form is verified and an Email has been sent to";
+		return "The form is verified and an Email has been sent to"+" "+form.getStudentName();
 	}
-	
+
 }

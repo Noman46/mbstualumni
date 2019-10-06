@@ -13,6 +13,9 @@ public class EmailSender {
 	@Autowired
     public JavaMailSender mailSender;
 	
+	@Autowired
+	RandomCredentials randomCredentials;
+	
 	public void doSendEmailToApplicant(ApplicationForm form) {
 	       
         
@@ -21,7 +24,9 @@ public class EmailSender {
         SimpleMailMessage email = new SimpleMailMessage();
         email.setTo(form.getStudentemail());
         email.setSubject("MBSTU_ALUMNI application result");
-        email.setText("Hi"+" "+form.getStudentName()+". "+"Your Application for enrollment in MBSTU-ALUMNI has been granted");
+        email.setText("Hi"+" "+form.getStudentName()+". "+"Your Application for enrollment in MBSTU-ALUMNI has been granted. Please login using user Name:"
+        		+ " "+randomCredentials.giveRandomUserName(form.getStudentName(), form.getVersityId())
+        		+ " and Password:"+" "+randomCredentials.giveRandomPassword());
          
         // sends the e-mail
         mailSender.send(email);

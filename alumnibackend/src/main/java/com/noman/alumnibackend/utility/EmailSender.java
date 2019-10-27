@@ -19,8 +19,9 @@ public class EmailSender {
 	public void doSendEmailToApplicant(ApplicationForm form) {
 	       
         
-	       
+	      
         // creates a simple e-mail object
+		
         SimpleMailMessage email = new SimpleMailMessage();
         email.setTo(form.getStudentemail());
         email.setSubject("MBSTU_ALUMNI application result");

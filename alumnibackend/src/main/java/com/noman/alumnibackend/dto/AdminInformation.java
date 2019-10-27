@@ -31,6 +31,11 @@ public class AdminInformation {
 	private String admin_mobile;
 	private String admin_email;
 	private String admin_password;
+	private String admin_username;
+	@CreationTimestamp
+	private LocalDate created_at;
+	@UpdateTimestamp
+	private LocalDate updated_at;
 	public int getAdminId() {
 		return adminId;
 	}
@@ -104,11 +109,7 @@ public class AdminInformation {
 		this.updated_at = updated_at;
 	}
 
-	private String admin_username;
-	@CreationTimestamp
-	private LocalDate created_at;
-	@UpdateTimestamp
-	private LocalDate updated_at;
+	
 
 	
 }

@@ -6,23 +6,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.noman.alumnibackend.dao.AdminInformtionDao;
+import com.noman.alumnibackend.dao.AdminInformationDao;
 import com.noman.alumnibackend.dto.AdminInformation;
-import com.noman.alumnibackend.dto.ApplicationForm;
 
-@Repository("adminInformtionDao")
+
+@Repository("adminInformationDao")
 @Transactional
-public class AdminInformationDaoImpl implements AdminInformtionDao{
-	
+public class AdminInformationDaoImpl implements AdminInformationDao {
+
 	@Autowired
 	private SessionFactory sessionFactory;
-
+	
 	@Override
-	public AdminInformation getAdminInformation(String username, String password) {
-		String selectAdminInformation = "FROM AdminInformation WHERE admin_username = :adminUsername AND admin_password = :adminPassword ";
-		Query<AdminInformation> query = sessionFactory.getCurrentSession().createQuery(selectAdminInformation);
-		query.setParameter("adminUsername", username);
-		query.setParameter("adminPassword", password);
+	public AdminInformation getAdmin(String username, String password) {
+		String selectAdminInfo = "FROM AdminInformation A WHERE A.adminUsername = :username AND A.adminPassword = :password";
+		Query<AdminInformation> query = sessionFactory.getCurrentSession().createQuery(selectAdminInfo);
+		query.setParameter("username", username);
+		query.setParameter("password", password);
+		System.out.println("inside the do -----------------------");
 		return query.getSingleResult();
 		
 	}

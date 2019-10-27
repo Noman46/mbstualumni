@@ -33,6 +33,8 @@ public class ApplicationForm {
 	private String versityId;
 	private boolean isActive;
 	private String gender;
+	@DateTimeFormat(iso = ISO.DATE)
+	private LocalDate studentDOB;
 	
 	
 	
@@ -50,8 +52,7 @@ public class ApplicationForm {
 		this.isActive = isActive;
 	}
 
-	@DateTimeFormat(iso = ISO.DATE)
-	private LocalDate studentDOB;
+	
 
 	public LocalDate getStudentDOB() {
 		return studentDOB;

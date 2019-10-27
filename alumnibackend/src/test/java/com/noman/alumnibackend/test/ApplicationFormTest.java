@@ -2,17 +2,17 @@ package com.noman.alumnibackend.test;
 
 
 
-import static org.junit.Assert.assertEquals;
 
-import java.util.List;
+
+
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.noman.alumnibackend.dao.AdminInformtionDao;
+
 import com.noman.alumnibackend.dao.ApplicationFormDao;
-import com.noman.alumnibackend.dto.AdminInformation;
+
 import com.noman.alumnibackend.dto.ApplicationForm;
 
 public class ApplicationFormTest {
@@ -21,14 +21,13 @@ public class ApplicationFormTest {
 	private static ApplicationFormDao applicationFormDao;
 	private ApplicationForm form;
 	
-	private static AdminInformtionDao adminInformationDao;
-    private AdminInformation admininfo;
+	
 	
 	@BeforeClass
 	public static void init() {
 		
 		context = new AnnotationConfigApplicationContext();
-		context.scan("com.noman.alumnibackend");
+		context.scan("com.noman.alumnibackend,com.noman.mbstualumni");
 		context.refresh();
 		
 		

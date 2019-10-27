@@ -18,21 +18,21 @@ public class AdminInformation {
 	public AdminInformation() {
 		
 	}
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int adminId;
-	private String admin_name;
-	private int gender;
-	private String admin_profession_id;
-	private String admin_father_name;
-	@DateTimeFormat(iso = ISO.DATE)
-	private LocalDate admin_DOB;
-	private String admin_mobile;
-	private String admin_email;
-	private String admin_password;
-	private String admin_username;
-	@CreationTimestamp
+	private String adminName;
+    private String gender;
+    private String adminProfessionId;
+    private String adminFatherName;
+    @DateTimeFormat(iso = ISO.DATE)
+    private LocalDate adminDob;
+    private String adminMobile;
+    private String adminEmail;
+    private String adminPassword;
+    private String adminUsername;
+    @CreationTimestamp
 	private LocalDate created_at;
 	@UpdateTimestamp
 	private LocalDate updated_at;
@@ -42,59 +42,59 @@ public class AdminInformation {
 	public void setAdminId(int adminId) {
 		this.adminId = adminId;
 	}
-	public String getAdmin_name() {
-		return admin_name;
+	public String getAdminName() {
+		return adminName;
 	}
-	public void setAdmin_name(String admin_name) {
-		this.admin_name = admin_name;
+	public void setAdminName(String adminName) {
+		this.adminName = adminName;
 	}
-	public int getGender() {
+	public String getGender() {
 		return gender;
 	}
-	public void setGender(int gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public String getAdmin_profession_id() {
-		return admin_profession_id;
+	public String getAdminProfessionId() {
+		return adminProfessionId;
 	}
-	public void setAdmin_profession_id(String admin_profession_id) {
-		this.admin_profession_id = admin_profession_id;
+	public void setAdminProfessionId(String adminProfessionId) {
+		this.adminProfessionId = adminProfessionId;
 	}
-	public String getAdmin_father_name() {
-		return admin_father_name;
+	public String getAdminFatherName() {
+		return adminFatherName;
 	}
-	public void setAdmin_father_name(String admin_father_name) {
-		this.admin_father_name = admin_father_name;
+	public void setAdminFatherName(String adminFatherName) {
+		this.adminFatherName = adminFatherName;
 	}
-	public LocalDate getAdmin_DOB() {
-		return admin_DOB;
+	public LocalDate getAdminDob() {
+		return adminDob;
 	}
-	public void setAdmin_DOB(LocalDate admin_DOB) {
-		this.admin_DOB = admin_DOB;
+	public void setAdminDob(LocalDate adminDob) {
+		this.adminDob = adminDob;
 	}
-	public String getAdmin_mobile() {
-		return admin_mobile;
+	public String getAdminMobile() {
+		return adminMobile;
 	}
-	public void setAdmin_mobile(String admin_mobile) {
-		this.admin_mobile = admin_mobile;
+	public void setAdminMobile(String adminMobile) {
+		this.adminMobile = adminMobile;
 	}
-	public String getAdmin_email() {
-		return admin_email;
+	public String getAdminEmail() {
+		return adminEmail;
 	}
-	public void setAdmin_email(String admin_email) {
-		this.admin_email = admin_email;
+	public void setAdminEmail(String adminEmail) {
+		this.adminEmail = adminEmail;
 	}
-	public String getAdmin_password() {
-		return admin_password;
+	public String getAdminPassword() {
+		return adminPassword;
 	}
-	public void setAdmin_password(String admin_password) {
-		this.admin_password = admin_password;
+	public void setAdminPassword(String adminPassword) {
+		this.adminPassword = adminPassword;
 	}
-	public String getAdmin_username() {
-		return admin_username;
+	public String getAdminUsername() {
+		return adminUsername;
 	}
-	public void setAdmin_username(String admin_username) {
-		this.admin_username = admin_username;
+	public void setAdminUsername(String adminUsername) {
+		this.adminUsername = adminUsername;
 	}
 	public LocalDate getCreated_at() {
 		return created_at;
@@ -108,8 +108,8 @@ public class AdminInformation {
 	public void setUpdated_at(LocalDate updated_at) {
 		this.updated_at = updated_at;
 	}
-
 	
-
 	
+   
+
 }

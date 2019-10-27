@@ -10,7 +10,7 @@ import com.noman.alumnibackend.dao.AdminInformtionDao;
 import com.noman.alumnibackend.dto.AdminInformation;
 import com.noman.alumnibackend.dto.ApplicationForm;
 
-@Repository("AdminInformtionDao")
+@Repository("adminInformtionDao")
 @Transactional
 public class AdminInformationDaoImpl implements AdminInformtionDao{
 	

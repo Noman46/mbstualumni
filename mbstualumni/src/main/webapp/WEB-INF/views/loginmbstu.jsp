@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -40,13 +41,17 @@
 						<span class="focus-input100"></span>
 					</div>
 					
+					
+					
 <!-- ============================================= SIGN BUTTON======================================================================== -->							
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							Sign in
 						</button>
 					</div>
-					
+<!--  ============================================ CHECK BOX =========================================================== -->	
+
+				
 					
 <!-- ===================================================================================================================== -->		
 					<div class="w-full text-center p-t-27 p-b-239">

@@ -32,6 +32,19 @@ body{
 	background-color: #041c33;
 	border-radius: 10px;
 }
+#description p{
+	margin: 0px;
+}
+#description input[type = text]{
+	outline: none;
+	width: 800px;
+	height: 30px;
+	border-radius: 5px;
+	margin-left: 13px;
+	margin-top: 5px;
+	padding: 10px;
+	
+}
 /*========================== THE JOB DIV ================================= */
 #job{
 	width: 850px;

@@ -75,8 +75,9 @@
 			</div>
 
 			<div id="description">
-				<p class="textcontrol">
-			</div>
+			<p class="textcontrol">Please add your Favourite Qoute</p>
+				<input type="text" name="">
+		</div>
 
 			<div id="job">
 

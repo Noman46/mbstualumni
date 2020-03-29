@@ -67,16 +67,16 @@
 </head>
 
 <body>
-	<form modelAttribute="" action="" method="" enctype="">
-		<div class="proSettings">
 
+	<div class="proSettings">
+		<form:form modelAttribute="studentJobInformation" action="" method="post" enctype="">
 			<div id="uploadfile">
 				<p class="textcontrol"></p>
 			</div>
 
 			<div id="description">
-				<p class="textcontrol">Please add your Favourite Qoute</p>
-				<input type="text" name="">
+				<p class="textcontrol">Please add your Favorite Quote</p>
+				<form:input path ="favouriteQoute" type="text" name=""/>
 			</div>
 
 			<div id="job">
@@ -86,17 +86,17 @@
 					<div id="companyName">
 						<lebel>Company Name</lebel>
 						<div id="companyInput">
-							<input type="text" path="companyName_1">
+							<form:input type="text" path="companyName1"/>
 						</div>
 						<br> <br>
 						<lebel>Your Job Position</lebel>
 						<div id="jobPosition">
-							<input type="text" path="jobPosition_1">
+							<form:input type="text" path="jobPosition1"/>
 						</div>
 						<br> <br>
 						<lebel>Job Duration</lebel>
 						<div id="jobDuration">
-							<input type="text" path="jobDuration_1">
+							<form:input type="text" path="jobDuration1"/>
 						</div>
 					</div>
 				</div>
@@ -106,20 +106,18 @@
 					<div id="companyName">
 						<lebel>Company Name</lebel>
 						<div id="companyInput">
-							<input type="text" path="companyName_2">
+							<form:input type="text" path="companyName2"/>
 						</div>
 						<br> <br>
 						<lebel>Your Job Position</lebel>
 						<div id="jobPosition">
-							<input type="text" path="jobPosition_2">
+							<form:input type="text" path="jobPosition2"/>
 						</div>
-						<br> <br>
+						<br><br>
 						<lebel>Job Duration</lebel>
 						<div id="jobDuration">
-							<input type="text" path="jobDuration_2">
+							<form:input type="text" path="jobDuration2"/>
 						</div>
-
-
 					</div>
 				</div>
 				<div id="thirdJob">
@@ -127,20 +125,18 @@
 					<div id="companyName">
 						<lebel>Company Name</lebel>
 						<div id="companyInput">
-							<input type="text" path="companyName_3">
+							<form:input type="text" path="companyName3"/>
 						</div>
-						<br> <br>
+						<br><br>
 						<lebel>Your Job Position</lebel>
 						<div id="jobPosition">
-							<input type="text" path="jobPosition_3">
+							<form:input type="text" path="jobPosition3"/>
 						</div>
-						<br> <br>
+						<br><br>
 						<lebel>Job Duration</lebel>
 						<div id="jobDuration">
-							<input type="text" path="jobDuration_3">
+							<form:input type="text" path="jobDuration3"/>
 						</div>
-
-
 					</div>
 				</div>
 
@@ -149,17 +145,17 @@
 					<div id="companyName">
 						<lebel>Company Name</lebel>
 						<div id="companyInput">
-							<input type="text" path="companyName_4">
+							<form:input  type="text" path="companyName4"/>
 						</div>
 						<br> <br>
 						<lebel>Your Job Position</lebel>
 						<div id="jobPosition">
-							<input type="text" path="jobPosition_4">
+							<form:input type="text" path="jobPosition4"/>
 						</div>
 						<br> <br>
 						<lebel>Job Duration</lebel>
 						<div id="jobDuration">
-							<input type="text" path="jobDuration_4">
+							<form:input type="text" path="jobDuration4"/>
 						</div>
 
 
@@ -174,7 +170,7 @@
 
 
 			<div id="description2">
-				<input type="button" name="" value="Submit">
+				<input type="button" name="" value="Submit"/>
 			</div>
 			<div id="divider2"></div>
 
@@ -325,9 +321,9 @@
 
 
 			</div>
-
-		</div>
-		<form>
+			</form:form>
+	</div>
+	
 </body>
 </html>
 

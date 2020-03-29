@@ -3,14 +3,18 @@ package com.noman.alumnibackend.dto;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
-public class StudentJobInfornation {
+public class StudentJobInformation {
 	
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int jobInfoId;
 	private String versityId;
 	private String companyName1;

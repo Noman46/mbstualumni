@@ -1,0 +1,599 @@
+body{
+	min-height: 100%
+    width: 100%
+}
+
+.proSettings{
+	width: 880px;
+	top: 65px;
+	left: 242px;
+	min-height: 1080px;
+	position: relative;
+	background:#15314b;
+	box-shadow: 0 3px 8px #08131e;
+	border-radius: 10px;
+}
+
+#uploadfile{
+	width: 470px;
+	height: 40px;
+	position: absolute;
+	top: 20px;
+	left: 15px;
+	background-color: #041c33;
+	border-radius: 10px;
+}
+#description{
+	width: 850px;
+	height: 85px;
+	position: absolute;
+	top: 70px;
+	left: 15px;
+	background-color: #041c33;
+	border-radius: 10px;
+}
+/*========================== THE JOB DIV ================================= */
+#job{
+	width: 850px;
+	height: 300px;
+	position: relative;
+	top: 165px;
+	left: 15px;
+	background-color: #041c33;
+	border-radius: 10px;
+}
+.labels{
+
+position: relative;
+text-align: right;
+font-family: "Comic Sans MS";
+font-size: 13px;
+color:#C06C84;
+width: 220px;
+height: 35px;
+left: 10px;
+border-radius: 5px;
+transition-property: background;
+transition-duration: 1.3s;
+
+}
+.labels h3{
+padding: 5px;
+}
+.labels:hover{
+	background:#15314b;
+}
+
+/*========================== THE 1st JOB DIV ================================= */
+
+#firstJob
+{
+position: relative;
+background:#15314b;
+width: 415px;
+height: 140px;
+display: inline-block;
+margin-left: 4px;
+margin-top: 5px;
+border-radius: 5px;
+}
+
+.jobNumber{
+	position: absolute;
+	background:red;
+	width: 85px;
+    height: 15px;
+    border-radius: 2px;
+    margin-left: 2px;
+    margin-top: 2px;
+    font-size: 11px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight:bold; 
+}
+
+#companyName{
+	position: absolute;
+	left: 2px;
+	top: 20px;
+}
+#companyName lebel{
+	color: red;
+	margin-left: 2px;
+	font-weight:bold; 
+	font-family: "Times New Roman", Times, serif;
+}
+#companyInput{
+	position: relative;
+	display: inline-block;
+	left: 19px;
+}
+#companyInput input[type = text] {
+	width: 265px;
+	background-color :#15314b;
+	outline: none;
+	border-left-style: hidden;
+	border-right-style: hidden;
+	border-top-style: hidden;
+	border-radius: 5px;
+	padding-left: 6px;
+	padding-bottom: 1px;
+	color: white;  
+	text-align: center;   
+}
+
+#jobPosition{
+	position: relative;
+	display: inline-block;
+	left: 10px;
+}
+#jobPosition input[type = text] {
+	width: 260px;
+	background-color :#15314b;
+	outline: none;
+	border-left-style: hidden;
+	border-right-style: hidden;
+	border-top-style: hidden;
+	border-radius: 5px;
+	padding-left: 6px;
+	padding-bottom: 3px;
+	color: white;
+	text-align: center;
+}
+
+#jobDuration{
+	position: relative;
+	display: inline-block;
+	left: 39px;
+}
+
+#jobDuration input[type = text] {
+	width: 260px;
+	background-color :#15314b;
+	outline: none;
+	border-left-style: hidden;
+	border-right-style: hidden;
+	border-top-style: hidden;
+	border-radius: 5px;
+	padding-left: 6px;
+	padding-bottom: 3px;
+	color: white;
+	text-align: center;
+}
+
+
+/* --------------------------------------------------------------------------*/
+
+/*========================== THE second JOB DIV ================================= */
+#secondJob
+{
+position: relative;
+background:#15314b;
+width: 415px;
+height: 140px;
+display: inline-block;
+margin-left: 7px;
+margin-top: 5px;
+border-radius: 5px;
+
+}
+/*========================== THE third JOB DIV ================================= */
+#thirdJob
+{
+position: relative;
+background:#15314b;
+width: 415px;
+height: 140px;
+display: inline-block;
+margin-left: 4px;
+margin-top: 4px;
+border-radius: 5px;
+
+
+}
+/*========================== THE fourth JOB DIV ================================= */
+#fourthJob
+{
+position: relative;
+background:#15314b;
+width: 405px;
+height: 135px;
+display: inline-block;
+margin-left: 7px;
+margin-top: 4px;
+border-radius: 5px;
+width: 415px;
+height: 140px;
+
+
+}
+/* --------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------*/
+
+/* --------------------------------------------------------------------------*/
+#divider{
+	width: 850px;
+	height: 5px;
+	position: absolute;
+	top: 475px;
+	left: 15px;
+	background-color: #041c33;
+	border-radius: 10px;
+}
+#description2{
+	width: 850px;
+	height: 85px;
+	position: absolute;
+	top: 485px;
+	left: 15px;
+	background-color: #041c33;
+	border-radius: 10px;
+}
+#divider2{
+	width: 850px;
+	height: 5px;
+	position: absolute;
+	top: 575px;
+	left: 15px;
+	background-color: #041c33;
+	border-radius: 10px;
+}
+
+#personalInfo{
+	width: 850px;
+	height: 450px;
+	position: absolute;
+	top: 590px;
+	left: 15px;
+	border-radius: 10px;
+	background-color: #041c33
+
+}
+
+/*======================= TEXT CONTROL ============================ */
+
+.textcontrol{
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	color: #FFFFF0;
+	letter-spacing: 3px;
+	font-weight: bold;
+	word-spacing: 1px;
+	font-size: 1em;
+
+}
+/* ----------------------------------------------------------------*/
+
+
+/*======================= Personal Description ============================ */
+.personalSection{
+	position: relative;
+	background:red;
+	width: 115px;
+    height: 15px;
+    border-radius: 2px;
+    margin-left: 2px;
+    margin-top: 2px;
+    font-size: 11px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight:bold; 
+}
+
+
+#hobby{
+	color: red;
+	position: relative;
+	margin-left: 2px;
+	top: 20px;
+	left: 10px;
+	font-weight:bold; 
+	display: inline-block;
+	font-family: "Times New Roman", Times, serif;
+}
+
+#hobbyInputRadio{
+	position: relative;
+	top: 22px;
+	left: 48px;
+	display: inline-block;
+	color: white;
+}
+
+#hobbyInput{
+	position: relative;
+	display: none;
+	top: 18px;
+	left:80px;
+	
+}
+
+#hobbyInput input[type = text]{
+
+	width: 260px;
+	background-color :#041c33;
+	outline: none;
+	border-left-style: hidden;
+	border-right-style: hidden;
+	border-top-style: hidden;
+	border-radius: 5px;
+	padding-left: 6px;
+	padding-bottom: 3px;
+	color: white;
+	text-align: center;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------*/
+
+
+/*======================= Wrapper 2 Blogs ============================ */
+#wrapper2{
+	position: relative;
+	top: 40px;
+}
+
+#blog{
+	color: red;
+	position: relative;
+	margin-left: 2px;
+	
+	left: 10px;
+	font-weight:bold; 
+	display: inline-block;
+	font-family: "Times New Roman", Times, serif;
+}
+
+#blogInputRadio{
+	position: relative;
+	left: 23px;
+	display: inline-block;
+	color: white;
+}
+
+#blogInput{
+	position: relative;
+	display: none;
+	left:57px;
+}
+
+#blogInput input[type = text]{
+
+	width: 260px;
+	background-color :#041c33;
+	outline: none;
+	border-left-style: hidden;
+	border-right-style: hidden;
+	border-top-style: hidden;
+	border-radius: 5px;
+	padding-left: 6px;
+	padding-bottom: 3px;
+	color: white;
+	text-align: center;
+}
+
+/* ----------------------------------------------------------------*/
+
+
+/*======================= Wrapper 3 Vlog ============================ */
+
+#wrapper3{
+	position: relative;
+	top: 60px;
+}
+
+#vlog{
+	color: red;
+	position: relative;
+	margin-left: 2px;
+	
+	left: 10px;
+	font-weight:bold; 
+	display: inline-block;
+	font-family: "Times New Roman", Times, serif;
+}
+
+#vlogInputRadio{
+	position: relative;
+	left: 23px;
+	display: inline-block;
+	color: white;
+}
+
+#vlogInput{
+	position: relative;
+	display: none;
+	left:57px;
+}
+
+#vlogInput input[type = text]{
+
+	width: 260px;
+	background-color :#041c33;
+	outline: none;
+	border-left-style: hidden;
+	border-right-style: hidden;
+	border-top-style: hidden;
+	border-radius: 5px;
+	padding-left: 6px;
+	padding-bottom: 3px;
+	color: white;
+	text-align: center;
+}
+
+/* ----------------------------------------------------------------*/
+
+
+/*======================= Wrapper 4 Blood ============================ */
+
+#wrapper4{
+	position: relative;
+	top: 90px;
+}
+
+#blood{
+	color: red;
+	position: relative;
+	margin-left: 2px;
+	
+	left: 10px;
+	font-weight:bold; 
+	display: inline-block;
+	font-family: "Times New Roman", Times, serif;
+}
+
+#bloodInputRadio{
+	position: relative;
+	left: 23px;
+	display: inline-block;
+	color: white;
+}
+
+/* ----------------------------------------------------------------*/
+
+
+/*======================= Wrapper 4 Blood ============================ */
+
+
+#wrapper5{
+	position: relative;
+	top: 110px;
+}
+
+
+
+
+/* ----------------------------------------------------------------*/
+
+
+/*======================= Social ============================ */
+#social{
+	color: red;
+	position: relative;
+	margin-left: 2px;
+	
+	left: 10px;
+	font-weight:bold; 
+	display: inline-block;
+	font-family: "Times New Roman", Times, serif;
+}
+
+#socialinputText{
+	position: absolute;
+	left: 10px;
+	top: 238px;
+	border-radius: 5px;
+	padding: 5px;
+	width: 300px;
+	height: 195px;
+	background-color: #15314b;
+}
+#coverDiv1{
+	position: relative;
+	width: 300px;
+	height: 30px;
+
+}
+
+/* ----------------------------------------------------------------*/
+
+
+/*======================= Book ============================ */
+#book{
+	color: red;
+	position: relative;
+	margin-left: 27px;
+	left: 10px;
+	font-weight:bold; 
+	display: inline-block;
+	font-family: "Times New Roman", Times, serif;
+}
+
+
+
+
+#bookInputText{
+	position: absolute;
+	left: 330px;
+	top: 238px;
+	border-radius: 5px;
+	padding: 5px;
+	width: 500px;
+	height: 195px;
+	background-color: #15314b;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------*/
+
+
+/*=======================  Social Icons============================ */
+
+
+.icons{
+	width: 30px;
+	height: 30px;
+	background: #b284be;
+	border-radius:4px;
+	text-align: center;
+	padding:px;
+	transition-duration: .3s;
+
+}
+.fa{
+ margin-top: 5px;
+ 
+}
+
+
+.icons:hover{
+	background: #15314b;
+	color: #FF00CC;
+}
+
+.iconInputField input[type= text]{
+	width: 260px;
+	outline: none;
+	border-radius: 5px;
+	padding-left: 6px;
+	padding-bottom: 3px;
+	
+}
+
+
+/* ----------------------------------------------------------------*/
+
+
+/*=======================  Books Section ============================ */
+
+#paraForBook{
+	color: white;
+	margin:0px;
+}
+
+#testAreaBook{
+	padding-left: 10px;
+	color: white;
+
+}
+#testAreaBook textarea{
+	border-radius: 5px;
+	padding: 5px;
+	outline: none;
+	resize: none;
+	width: 450px;
+    height: 120px;
+}
+
+
+
+
+
+
+
+

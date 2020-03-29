@@ -75,9 +75,9 @@
 			</div>
 
 			<div id="description">
-			<p class="textcontrol">Please add your Favourite Qoute</p>
+				<p class="textcontrol">Please add your Favourite Qoute</p>
 				<input type="text" name="">
-		</div>
+			</div>
 
 			<div id="job">
 
@@ -173,7 +173,9 @@
 
 
 
-			<div id="description2"></div>
+			<div id="description2">
+				<input type="button" name="" value="Submit">
+			</div>
 			<div id="divider2"></div>
 
 
@@ -306,18 +308,19 @@
 									favourite books and their description within 300 Charecters</p></td>
 						</tr>
 						<tr>
-							<td id="testAreaBook"><textarea  name=""
-									maxlength="300" id="maxCharecter"
+							<td id="testAreaBook"><textarea name="" maxlength="300"
+									id="maxCharecter"
 									onkeyup="countCharcter('maxCharecter','charectersEntered');"
 									onkeydown="countCharcter('maxCharecter','charectersEntered');
 		    				        onmouseout="countCharcter('maxCharecter','charectersEntered');"></textarea>
 								<br> You have entered&nbsp<span style="color: red;"
-								id="charectersEntered">0</span>/300&nbspcharecters
-								
-							</td>
+								id="charectersEntered">0</span>/300&nbspcharecters</td>
 						</tr>
 					</table>
 
+				</div>
+				<div id="butt3">
+					<input type="button" name="" value="Submit">
 				</div>
 
 

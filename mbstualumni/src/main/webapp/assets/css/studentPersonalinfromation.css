@@ -7,7 +7,7 @@ body{
 	width: 880px;
 	top: 65px;
 	left: 242px;
-	min-height: 1080px;
+	min-height: 1100px;
 	position: relative;
 	background:#15314b;
 	box-shadow: 0 3px 8px #08131e;
@@ -242,6 +242,26 @@ height: 140px;
 	background-color: #041c33;
 	border-radius: 10px;
 }
+#description2 input[type = button]{
+	margin-left: 355px;
+	margin-top: 20px;
+	width: 150px;
+	height: 40px;
+	border-radius:5px;
+	font-weight: bold;
+	background-color: #9BC4E2;
+	color: #0D4F8B;
+	font-size: 16px;
+	border: none;
+	transition: .3s;
+}
+
+#description2 input[type = button]:hover{
+	background-color:#0D4F8B;
+	color:  #9BC4E2;
+	border: none;
+	font-size: 16px;
+}
 #divider2{
 	width: 850px;
 	height: 5px;
@@ -254,7 +274,7 @@ height: 140px;
 
 #personalInfo{
 	width: 850px;
-	height: 450px;
+	height: 500px;
 	position: absolute;
 	top: 590px;
 	left: 15px;
@@ -601,6 +621,32 @@ height: 140px;
 	resize: none;
 	width: 450px;
     height: 120px;
+}
+
+#butt3{
+	position: relative;
+	top: 340px;
+	left: 353px;
+	
+}
+
+#butt3 input[type = button]{
+	width: 150px;
+	height: 40px;
+	border-radius:5px;
+	font-weight: bold;
+	background-color: #9BC4E2;
+	color: #0D4F8B;
+	font-size: 16px;
+	border: none;
+	transition: .3s;
+}
+
+#butt3 input[type = button]:hover{
+	background-color:#0D4F8B;
+	color:  #9BC4E2;
+	border: none;
+	font-size: 16px;
 }
 
 

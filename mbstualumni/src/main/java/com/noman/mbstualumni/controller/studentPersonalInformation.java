@@ -19,6 +19,9 @@ public class studentPersonalInformation {
 		return studentPersonalInformation;
 	}
 	
+	@RequestMapping(value = {""})
+	public
+	
 	
 
 }

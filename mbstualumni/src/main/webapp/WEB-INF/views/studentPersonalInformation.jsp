@@ -69,7 +69,7 @@
 <body>
 
 	<div class="proSettings">
-		<form:form modelAttribute="studentJobInformation" action="" method="post" enctype="">
+		<form:form modelAttribute="studentJobInformation" action="/mbstualumni/sendStudentJobInformation" method="post" enctype="">
 			<div id="uploadfile">
 				<p class="textcontrol"></p>
 			</div>

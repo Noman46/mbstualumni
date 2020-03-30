@@ -33,7 +33,7 @@ public class studentPersonalInformation {
 		//studentJobInformation.setVersityId("IT12046");
 		studentJobInformationDao.saveStudentJobInformation(studentJobInformation);
 		
-		return "home";
+		return "studentPersonalInformation";
 	}
 	
 

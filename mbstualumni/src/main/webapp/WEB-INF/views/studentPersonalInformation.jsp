@@ -69,14 +69,17 @@
 <body>
 
 	<div class="proSettings">
-		<form:form modelAttribute="studentJobInformation" action="/mbstualumni/sendStudentJobInformation" method="post" enctype="">
+		<form:form modelAttribute="studentJobInformation"
+			action="/mbstualumni/sendStudentJobInformation" method="post"
+			enctype="">
 			<div id="uploadfile">
 				<p class="textcontrol"></p>
 			</div>
 
 			<div id="description">
 				<p class="textcontrol">Please add your Favorite Quote</p>
-				<form:input path ="favouriteQoute" type="text" name=""/>
+				<form:input path="favouriteQoute" type="text" name=""
+					autocomplete="off" />
 			</div>
 
 			<div id="job">
@@ -86,17 +89,17 @@
 					<div id="companyName">
 						<lebel>Company Name</lebel>
 						<div id="companyInput">
-							<form:input type="text" path="companyName1"/>
+							<form:input type="text" path="companyName1" autocomplete="off" />
 						</div>
 						<br> <br>
 						<lebel>Your Job Position</lebel>
 						<div id="jobPosition">
-							<form:input type="text" path="jobPosition1"/>
+							<form:input type="text" path="jobPosition1" autocomplete="off" />
 						</div>
 						<br> <br>
 						<lebel>Job Duration</lebel>
 						<div id="jobDuration">
-							<form:input type="text" path="jobDuration1"/>
+							<form:input type="text" path="jobDuration1" autocomplete="off" />
 						</div>
 					</div>
 				</div>
@@ -106,17 +109,18 @@
 					<div id="companyName">
 						<lebel>Company Name</lebel>
 						<div id="companyInput">
-							<form:input type="text" path="companyName2"/>
+							<form:input type="text" path="companyName2" autocomplete="off" />
 						</div>
 						<br> <br>
 						<lebel>Your Job Position</lebel>
 						<div id="jobPosition">
-							<form:input type="text" path="jobPosition2"/>
+							<form:input type="text" path="jobPosition2" autocomplete="off" />
 						</div>
-						<br><br>
+						<br>
+						<br>
 						<lebel>Job Duration</lebel>
 						<div id="jobDuration">
-							<form:input type="text" path="jobDuration2"/>
+							<form:input type="text" path="jobDuration2" autocomplete="off" />
 						</div>
 					</div>
 				</div>
@@ -125,17 +129,19 @@
 					<div id="companyName">
 						<lebel>Company Name</lebel>
 						<div id="companyInput">
-							<form:input type="text" path="companyName3"/>
+							<form:input type="text" path="companyName3" autocomplete="off" />
 						</div>
-						<br><br>
+						<br>
+						<br>
 						<lebel>Your Job Position</lebel>
 						<div id="jobPosition">
-							<form:input type="text" path="jobPosition3"/>
+							<form:input type="text" path="jobPosition3" autocomplete="off" />
 						</div>
-						<br><br>
+						<br>
+						<br>
 						<lebel>Job Duration</lebel>
 						<div id="jobDuration">
-							<form:input type="text" path="jobDuration3"/>
+							<form:input type="text" path="jobDuration3" autocomplete="off" />
 						</div>
 					</div>
 				</div>
@@ -145,17 +151,17 @@
 					<div id="companyName">
 						<lebel>Company Name</lebel>
 						<div id="companyInput">
-							<form:input  type="text" path="companyName4"/>
+							<form:input type="text" path="companyName4" autocomplete="off" />
 						</div>
 						<br> <br>
 						<lebel>Your Job Position</lebel>
 						<div id="jobPosition">
-							<form:input type="text" path="jobPosition4"/>
+							<form:input type="text" path="jobPosition4" autocomplete="off" />
 						</div>
 						<br> <br>
 						<lebel>Job Duration</lebel>
 						<div id="jobDuration">
-							<form:input type="text" path="jobDuration4"/>
+							<form:input type="text" path="jobDuration4" autocomplete="off" />
 						</div>
 
 
@@ -170,7 +176,7 @@
 
 
 			<div id="description2">
-				<input type="submit" name="" value="Submit"/>
+				<input type="submit" name="" value="Submit" />
 			</div>
 			<div id="divider2"></div>
 
@@ -192,7 +198,8 @@
 							name="studentsHobby" path="studentsHobby" value="yes">&nbspYes
 					</div>
 					<div id="hobbyInput">
-						<input type="text" path="" placeholder="Hobbies">
+						<input type="text" path="" placeholder="Hobbies"
+							autocomplete="off">
 					</div>
 				</div>
 
@@ -210,7 +217,7 @@
 							name="studentsBlog" path="studentsBlog" value="yes">&nbspYes
 					</div>
 					<div id="blogInput">
-						<input type="text" path="" placeholder="URL">
+						<input type="text" path="" placeholder="URL" autocomplete="off">
 					</div>
 				</div>
 
@@ -226,7 +233,7 @@
 							name="studentsVlog" path="studentsVlog" value="yes">&nbspYes
 					</div>
 					<div id="vlogInput">
-						<input type="text" path="" placeholder="URL">
+						<input type="text" path="" placeholder="URL" autocomplete="off">
 					</div>
 				</div>
 
@@ -274,23 +281,23 @@
 
 						<tr>
 							<td><i class="fa fa-github icons"></i></td>
-							<td><input type="text" name=""></td>
+							<td><input type="text" name="" autocomplete="off"></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-facebook icons"></i></td>
-							<td><input type="text" name=""></td>
+							<td><input type="text" name="" autocomplete="off"></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-linkedin icons"></i></td>
-							<td><input type="text" name=""></td>
+							<td><input type="text" name="" autocomplete="off"></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-instagram icons"></i></td>
-							<td><input type="text" name=""></td>
+							<td><input type="text" name="" autocomplete="off"></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-twitter icons"></i></td>
-							<td><input type="text" name=""></td>
+							<td><input type="text" name="" autocomplete="off"></td>
 						</tr>
 					</table>
 
@@ -321,9 +328,9 @@
 
 
 			</div>
-			</form:form>
+		</form:form>
 	</div>
-	
+
 </body>
 </html>
 

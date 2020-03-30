@@ -67,7 +67,7 @@
 </head>
 
 <body>
-
+     
 	<div class="proSettings">
 		<form:form modelAttribute="studentJobInformation"
 			action="/mbstualumni/sendStudentJobInformation" method="post"

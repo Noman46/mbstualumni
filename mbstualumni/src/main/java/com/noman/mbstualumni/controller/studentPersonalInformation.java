@@ -13,28 +13,33 @@ import com.noman.alumnibackend.dto.StudentJobInformation;
 
 @Controller
 public class studentPersonalInformation {
-	
+
 	@Autowired
 	public StudentJobInformationDao studentJobInformationDao;
-	
-	
-	@RequestMapping(value = {"/student/personalInformation"})
+
+	@RequestMapping(value = { "/student/personalInformation" })
 	public ModelAndView giveStudentPersonalInformationPage() {
-		
-		
+
 		ModelAndView studentPersonalInformation = new ModelAndView("studentPersonalInformation");
 		studentPersonalInformation.addObject("studentJobInformation", new StudentJobInformation());
 		return studentPersonalInformation;
 	}
-	
+
 	@RequestMapping(value = { "/sendStudentJobInformation" }, method = RequestMethod.POST)
-	public String sendApplication(@ModelAttribute("studentJobInformation") StudentJobInformation studentJobInformation, ModelMap model) {
+	public String sendStudentJobInformation(
+			@ModelAttribute("studentJobInformation") StudentJobInformation studentJobInformation, ModelMap model) {
 		// ModelAndView mv = new ModelAndView("success");
-		//studentJobInformation.setVersityId("IT12046");
+		// studentJobInformation.setVersityId("IT12046");
 		studentJobInformationDao.saveStudentJobInformation(studentJobInformation);
-		
+
+		return "redirect:/jobSavedSuccessfully";
+	}
+
+	@RequestMapping(value = { "/jobSavedSuccessfully" }, method = RequestMethod.GET)
+	public String jobInformationRedirected(
+			@ModelAttribute("studentJobInformation") StudentJobInformation studentJobInformation, ModelMap model) {
+
 		return "studentPersonalInformation";
 	}
-	
 
 }

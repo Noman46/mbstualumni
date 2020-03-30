@@ -16,7 +16,7 @@ public class StudentJobInformation {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int jobInfoId;
-	private String versityId;
+	//private String versityId;
 	private String companyName1;
 	private String jobPosition1;
 	private String jobDuration1;
@@ -40,12 +40,12 @@ public class StudentJobInformation {
 	public void setJobInfoId(int jobInfoId) {
 		this.jobInfoId = jobInfoId;
 	}
-	public String getVersityId() {
+/*	public String getVersityId() {
 		return versityId;
 	}
 	public void setVersityId(String versityId) {
 		this.versityId = versityId;
-	}
+	}*/
 	public String getCompanyName1() {
 		return companyName1;
 	}
@@ -136,21 +136,20 @@ public class StudentJobInformation {
 	public void setUpdated_at(LocalDate updated_at) {
 		this.updated_at = updated_at;
 	}
-	
-	
-	
-	
 	@Override
 	public String toString() {
-		return "StudentJobInfornation [jobInfoId=" + jobInfoId + ", versityId=" + versityId + ", companyName1="
-				+ companyName1 + ", jobPosition1=" + jobPosition1 + ", jobDuration1=" + jobDuration1 + ", companyName2="
-				+ companyName2 + ", jobPosition2=" + jobPosition2 + ", jobDuration2=" + jobDuration2 + ", companyName3="
-				+ companyName3 + ", jobPosition3=" + jobPosition3 + ", jobDuration3=" + jobDuration3 + ", companyName4="
-				+ companyName4 + ", jobPosition4=" + jobPosition4 + ", jobDuration4=" + jobDuration4
-				+ ", favouriteQoute=" + favouriteQoute + ", created_at=" + created_at + ", updated_at=" + updated_at
-				+ "]";
+		return "StudentJobInformation [jobInfoId=" + jobInfoId + ", companyName1=" + companyName1 + ", jobPosition1="
+				+ jobPosition1 + ", jobDuration1=" + jobDuration1 + ", companyName2=" + companyName2 + ", jobPosition2="
+				+ jobPosition2 + ", jobDuration2=" + jobDuration2 + ", companyName3=" + companyName3 + ", jobPosition3="
+				+ jobPosition3 + ", jobDuration3=" + jobDuration3 + ", companyName4=" + companyName4 + ", jobPosition4="
+				+ jobPosition4 + ", jobDuration4=" + jobDuration4 + ", favouriteQoute=" + favouriteQoute
+				+ ", created_at=" + created_at + ", updated_at=" + updated_at + "]";
 	}
 	
+	
+	
+	
+
 	
 	
 	

@@ -242,7 +242,7 @@ height: 140px;
 	background-color: #041c33;
 	border-radius: 10px;
 }
-#description2 input[type = button]{
+#description2 input[type = submit]{
 	margin-left: 355px;
 	margin-top: 20px;
 	width: 150px;
@@ -256,7 +256,7 @@ height: 140px;
 	transition: .3s;
 }
 
-#description2 input[type = button]:hover{
+#description2 input[type = submit]:hover{
 	background-color:#0D4F8B;
 	color:  #9BC4E2;
 	border: none;

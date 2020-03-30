@@ -170,7 +170,7 @@
 
 
 			<div id="description2">
-				<input type="button" name="" value="Submit"/>
+				<input type="submit" name="" value="Submit"/>
 			</div>
 			<div id="divider2"></div>
 

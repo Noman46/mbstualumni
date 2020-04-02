@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -24,18 +25,18 @@ public class studentPersonalInformation {
 		studentPersonalInformation.addObject("studentJobInformation", new StudentJobInformation());
 		return studentPersonalInformation;
 	}
-
-	@RequestMapping(value = { "/sendStudentJobInformation" }, method = RequestMethod.POST)
+	
+	@RequestMapping(value = { "student/sendStudentJobInformation" }, method = RequestMethod.POST)
 	public String sendStudentJobInformation(
 			@ModelAttribute("studentJobInformation") StudentJobInformation studentJobInformation, ModelMap model) {
 		// ModelAndView mv = new ModelAndView("success");
 		// studentJobInformation.setVersityId("IT12046");
 		studentJobInformationDao.saveStudentJobInformation(studentJobInformation);
 
-		return "redirect:/jobSavedSuccessfully";
+		return "redirect:/student/jobSavedSuccessfully";
 	}
 
-	@RequestMapping(value = { "/jobSavedSuccessfully" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "student/jobSavedSuccessfully" }, method = RequestMethod.GET)
 	public String jobInformationRedirected(
 			@ModelAttribute("studentJobInformation") StudentJobInformation studentJobInformation, ModelMap model) {
 

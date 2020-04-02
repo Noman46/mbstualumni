@@ -71,8 +71,8 @@
 
 	<div class="proSettings">
 		<form:form modelAttribute="studentJobInformation"
-			action="/mbstualumni/sendStudentJobInformation" method="post"
-			enctype="">
+			action="/mbstualumni/student/sendStudentJobInformation" method="post"
+			enctype="" id="jobForm">
 			<div id="uploadfile">
 				<p class="textcontrol"></p>
 			</div>
@@ -90,7 +90,7 @@
 					<div id="companyName">
 						<lebel>Company Name</lebel>
 						<div id="companyInput">
-							<form:input type="text" path="companyName1" autocomplete="off" />
+							<form:input type="text" path="companyName1" autocomplete="off" id = "companyName1"/>
 						</div>
 						<br> <br>
 						<lebel>Your Job Position</lebel>
@@ -174,8 +174,9 @@
 
 
 			<div id="description2">
-				<input type="submit" name="" value="Submit" />
+				<input type="submit" value="Submit" />
 			</div>
+			</form:form>
 			<div id="divider2"></div>
 
 
@@ -184,6 +185,9 @@
 
 
 			<div id="personalInfo">
+				<form modelAttribute=""
+			action="" method=""
+			enctype="">
 				<div class="personalSection">Personal Information</div>
 				<div id="wrapper1">
 					<div id="hobby">
@@ -323,10 +327,11 @@
 				<div id="butt3">
 					<input type="button" name="" value="Submit">
 				</div>
+				</form>
 
 
 			</div>
-		</form:form>
+		
 	</div>
 
 </body>

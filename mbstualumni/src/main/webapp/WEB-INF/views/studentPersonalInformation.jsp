@@ -9,12 +9,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<head>
+
 <title>Personal Information</title>
 <link href="${css}/studentPersonalinfromation.css " rel="stylesheet" />
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="${js}/submitStudentJobInFormationForm.js"></script>
 <script type="text/javascript">
 	
 	//This is for the Personal Information Section Section
@@ -67,7 +68,7 @@
 </head>
 
 <body>
-     
+
 	<div class="proSettings">
 		<form:form modelAttribute="studentJobInformation"
 			action="/mbstualumni/sendStudentJobInformation" method="post"
@@ -116,8 +117,7 @@
 						<div id="jobPosition">
 							<form:input type="text" path="jobPosition2" autocomplete="off" />
 						</div>
-						<br>
-						<br>
+						<br> <br>
 						<lebel>Job Duration</lebel>
 						<div id="jobDuration">
 							<form:input type="text" path="jobDuration2" autocomplete="off" />
@@ -131,14 +131,12 @@
 						<div id="companyInput">
 							<form:input type="text" path="companyName3" autocomplete="off" />
 						</div>
-						<br>
-						<br>
+						<br> <br>
 						<lebel>Your Job Position</lebel>
 						<div id="jobPosition">
 							<form:input type="text" path="jobPosition3" autocomplete="off" />
 						</div>
-						<br>
-						<br>
+						<br> <br>
 						<lebel>Job Duration</lebel>
 						<div id="jobDuration">
 							<form:input type="text" path="jobDuration3" autocomplete="off" />

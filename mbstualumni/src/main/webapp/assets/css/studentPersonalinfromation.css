@@ -629,7 +629,7 @@ height: 140px;
 	left: 353px;	
 }
 
-#butt3 input[type = button]{
+#butt3 input[type = submit]{
 	width: 150px;
 	height: 40px;
 	border-radius:5px;
@@ -641,7 +641,7 @@ height: 140px;
 	transition: .3s;
 }
 
-#butt3 input[type = button]:hover{
+#butt3 input[type = submit]:hover{
 	background-color:#0D4F8B;
 	color:  #9BC4E2;
 	border: none;

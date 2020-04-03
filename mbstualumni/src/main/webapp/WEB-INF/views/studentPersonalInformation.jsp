@@ -185,8 +185,8 @@
 
 
 			<div id="personalInfo">
-				<form modelAttribute=""
-			action="" method=""
+				<form:form modelAttribute="studentPersonalInformation"
+			action="" method="post"
 			enctype="">
 				<div class="personalSection">Personal Information</div>
 				<div id="wrapper1">
@@ -195,13 +195,13 @@
 					</div>
 					<div id="hobbyInputRadio">
 						<input type="radio" id="" onclick="showInputFieldForHobby(0)"
-							name="studentsHobby" path="studentsHobby" value="no">&nbspNo&nbsp&nbsp
+							name="studentsHobby"  value="no">&nbspNo&nbsp&nbsp
 						<input type="radio" id="" onclick="showInputFieldForHobby(1)"
-							name="studentsHobby" path="studentsHobby" value="yes">&nbspYes
+							name="studentsHobby" value="yes">&nbspYes
 					</div>
 					<div id="hobbyInput">
-						<input type="text" path="" placeholder="Hobbies"
-							autocomplete="off">
+						<form:input type="text" path="studentHobby" placeholder="Hobbies"
+							autocomplete="off"/>
 					</div>
 				</div>
 
@@ -214,12 +214,12 @@
 					</div>
 					<div id="blogInputRadio">
 						<input type="radio" id="" onclick="showInputFieldForBlog(0)"
-							name="studentsBlog" path="studentsBlog" value="no">&nbspNo&nbsp&nbsp
+							name="studentsBlog"  value="no">&nbspNo&nbsp&nbsp
 						<input type="radio" id="" onclick="showInputFieldForBlog(1)"
-							name="studentsBlog" path="studentsBlog" value="yes">&nbspYes
+							name="studentsBlog"  value="yes">&nbspYes
 					</div>
 					<div id="blogInput">
-						<input type="text" path="" placeholder="URL" autocomplete="off">
+						<form:input type="text" path="studentBlog" placeholder="URL" autocomplete="off"/>
 					</div>
 				</div>
 
@@ -230,12 +230,12 @@
 					</div>
 					<div id="vlogInputRadio">
 						<input type="radio" id="" onclick="showInputFieldForVlog(0)"
-							name="studentsVlog" path="studentsVlog" value="no">&nbspNo&nbsp&nbsp
+							name="studentsVlog" value="no">&nbspNo&nbsp&nbsp
 						<input type="radio" id="" onclick="showInputFieldForVlog(1)"
-							name="studentsVlog" path="studentsVlog" value="yes">&nbspYes
+							name="studentsVlog" value="yes">&nbspYes
 					</div>
 					<div id="vlogInput">
-						<input type="text" path="" placeholder="URL" autocomplete="off">
+						<input type="text" path="studentVlog" placeholder="URL" autocomplete="off">
 					</div>
 				</div>
 
@@ -247,23 +247,14 @@
 						<label>Blood Group</label>
 					</div>
 					<div id="bloodInputRadio">
-						<input type="radio" id="" name="studentsBloodGroup"
-							path="studentsBloodGroup" value="A+">A+ <input
-							type="radio" id="" name="studentsBloodGroup"
-							path="studentsBloodGroup" value="A-">A- <input
-							type="radio" id="" name="studentsBloodGroup"
-							path="studentsBloodGroup" value="B+">B+ <input
-							type="radio" id="" name="studentsBloodGroup"
-							path="studentsBloodGroup" value="B-">B- <input
-							type="radio" id="" name="studentsBloodGroup"
-							path="studentsBloodGroup" value="O+">O+ <input
-							type="radio" id="" name="studentsBloodGroup"
-							path="studentsBloodGroup" value="O-">O- <input
-							type="radio" id="" name="studentsBloodGroup"
-							path="studentsBloodGroup" value="AB+">AB+ <input
-							type="radio" id="" name="studentsBloodGroup"
-							path="studentsBloodGroup" value="AB-">AB-
-
+						<form:radiobutton path="studentBloodGroup" value="A+"/>A+
+						<form:radiobutton path="studentBloodGroup" value="A-"/>A-
+						<form:radiobutton path="studentBloodGroup" value="B+"/>B+
+						<form:radiobutton path="studentBloodGroup" value="B-"/>B+
+						<form:radiobutton path="studentBloodGroup" value="AB+"/>AB+
+						<form:radiobutton path="studentBloodGroup" value="AB-"/>AB-
+						<form:radiobutton path="studentBloodGroup" value="O+"/>O+
+						<form:radiobutton path="studentBloodGroup" value="O-"/>O-				
 					</div>
 
 				</div>
@@ -283,23 +274,23 @@
 
 						<tr>
 							<td><i class="fa fa-github icons"></i></td>
-							<td><input type="text" name="" autocomplete="off"></td>
+							<td><form:input type="text" path = "studentGit" autocomplete="off"/></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-facebook icons"></i></td>
-							<td><input type="text" name="" autocomplete="off"></td>
+							<td><form:input type="text" path = "studentFb" autocomplete="off"/></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-linkedin icons"></i></td>
-							<td><input type="text" name="" autocomplete="off"></td>
+							<td><form:input type="text" path = "studentLinkedin" autocomplete="off"/></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-instagram icons"></i></td>
-							<td><input type="text" name="" autocomplete="off"></td>
+							<td><form:input type="text" path = "studentIn" autocomplete="off"/></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-twitter icons"></i></td>
-							<td><input type="text" name="" autocomplete="off"></td>
+							<td><form:input type="text" path = "studentTwt" autocomplete="off"/></td>
 						</tr>
 					</table>
 
@@ -313,11 +304,11 @@
 									favourite books and their description within 300 Charecters</p></td>
 						</tr>
 						<tr>
-							<td id="testAreaBook"><textarea name="" maxlength="300"
-									id="maxCharecter"
+							<td id="testAreaBook"><form:textarea maxlength="300"
+									id="maxCharecter" path = "studentBooks" 
 									onkeyup="countCharcter('maxCharecter','charectersEntered');"
-									onkeydown="countCharcter('maxCharecter','charectersEntered');
-		    				        onmouseout="countCharcter('maxCharecter','charectersEntered');"></textarea>
+									onkeydown="countCharcter('maxCharecter','charectersEntered');"
+		    				        onmouseout="countCharcter('maxCharecter','charectersEntered');"/>
 								<br> You have entered&nbsp<span style="color: red;"
 								id="charectersEntered">0</span>/300&nbspcharecters</td>
 						</tr>
@@ -325,9 +316,10 @@
 
 				</div>
 				<div id="butt3">
-					<input type="button" name="" value="Submit">
+					<input type="submit" value="Submit" />
 				</div>
-				</form>
+				</form:form>
+				
 
 
 			</div>

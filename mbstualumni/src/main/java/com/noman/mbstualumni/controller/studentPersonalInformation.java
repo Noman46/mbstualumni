@@ -4,13 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.noman.alumnibackend.dao.StudentJobInformationDao;
 import com.noman.alumnibackend.dto.StudentJobInformation;
+import com.noman.alumnibackend.dto.StudentPersonalInformation;
 
 @Controller
 public class studentPersonalInformation {
@@ -22,10 +22,13 @@ public class studentPersonalInformation {
 	public ModelAndView giveStudentPersonalInformationPage() {
 
 		ModelAndView studentPersonalInformation = new ModelAndView("studentPersonalInformation");
+
 		studentPersonalInformation.addObject("studentJobInformation", new StudentJobInformation());
+		studentPersonalInformation.addObject("studentPersonalInformation", new StudentPersonalInformation());
+		
 		return studentPersonalInformation;
 	}
-	
+
 	@RequestMapping(value = { "student/sendStudentJobInformation" }, method = RequestMethod.POST)
 	public String sendStudentJobInformation(
 			@ModelAttribute("studentJobInformation") StudentJobInformation studentJobInformation, ModelMap model) {

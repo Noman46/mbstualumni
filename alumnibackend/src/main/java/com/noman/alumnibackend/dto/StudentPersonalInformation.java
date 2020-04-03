@@ -27,9 +27,6 @@ public class StudentPersonalInformation {
 	private String studentIn;
 	private String studentTwt;
 	private String studentBooks;
-	private String jobPosition4;
-	private String jobDuration4;
-	private String favouriteQoute;
 	@CreationTimestamp
 	private LocalDate created_at;
 	@UpdateTimestamp
@@ -104,24 +101,7 @@ public class StudentPersonalInformation {
 	public void setStudentBooks(String studentBooks) {
 		this.studentBooks = studentBooks;
 	}
-	public String getJobPosition4() {
-		return jobPosition4;
-	}
-	public void setJobPosition4(String jobPosition4) {
-		this.jobPosition4 = jobPosition4;
-	}
-	public String getJobDuration4() {
-		return jobDuration4;
-	}
-	public void setJobDuration4(String jobDuration4) {
-		this.jobDuration4 = jobDuration4;
-	}
-	public String getFavouriteQoute() {
-		return favouriteQoute;
-	}
-	public void setFavouriteQoute(String favouriteQoute) {
-		this.favouriteQoute = favouriteQoute;
-	}
+	
 	public LocalDate getCreated_at() {
 		return created_at;
 	}
@@ -140,10 +120,10 @@ public class StudentPersonalInformation {
 				+ ", studentBlog=" + studentBlog + ", studentVlog=" + studentVlog + ", studentBloodGroup="
 				+ studentBloodGroup + ", studentGit=" + studentGit + ", studentFb=" + studentFb + ", studentLinkedin="
 				+ studentLinkedin + ", studentIn=" + studentIn + ", studentTwt=" + studentTwt + ", studentBooks="
-				+ studentBooks + ", jobPosition4=" + jobPosition4 + ", jobDuration4=" + jobDuration4
-				+ ", favouriteQoute=" + favouriteQoute + ", created_at=" + created_at + ", updated_at=" + updated_at
-				+ "]";
+				+ studentBooks + ", created_at=" + created_at + ", updated_at=" + updated_at + "]";
 	}
+
+	
 	
 	
 	

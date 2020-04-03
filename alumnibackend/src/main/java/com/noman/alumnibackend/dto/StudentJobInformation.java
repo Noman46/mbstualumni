@@ -34,6 +34,8 @@ public class StudentJobInformation {
 	private LocalDate created_at;
 	@UpdateTimestamp
 	private LocalDate updated_at;
+	
+	
 	public int getJobInfoId() {
 		return jobInfoId;
 	}

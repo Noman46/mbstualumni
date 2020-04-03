@@ -19,10 +19,8 @@ public class StudentJobInformationImpl implements StudentJobInformationDao{
 	@Transactional
 	public boolean saveStudentJobInformation(StudentJobInformation studentJobInformation) {
 		try {
-            System.out.println("In save methed");
+            
 			sessionFactory.getCurrentSession().persist(studentJobInformation);
-			System.out.println("Out save methed");
-
 			return true;
 		} catch (Exception ex) {
 			ex.printStackTrace();

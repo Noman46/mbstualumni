@@ -186,7 +186,7 @@
 
 			<div id="personalInfo">
 				<form:form modelAttribute="studentPersonalInformation"
-			action="" method="post"
+			action="/mbstualumni/student/sendStudentPersonalInformation" method="post"
 			enctype="">
 				<div class="personalSection">Personal Information</div>
 				<div id="wrapper1">

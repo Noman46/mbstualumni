@@ -1,21 +1,20 @@
-body{
-	min-height: 100%
-    width: 100%
+body {
+	min-height: 100% width: 100%
 }
 
-.proSettings{
+.proSettings {
 	width: 880px;
 	top: 65px;
 	left: 242px;
 	min-height: 1100px;
 	position: relative;
-	background:#15314b;
+	background: #15314b;
 	box-shadow: 0 3px 8px #08131e;
 	border-radius: 10px;
 }
-
-#uploadfile{
-	width: 470px;
+/*========================== THE UPLOAD FILE DIV ================================= */
+#uploadfile {
+	width: 850px;
 	height: 40px;
 	position: absolute;
 	top: 20px;
@@ -23,231 +22,37 @@ body{
 	background-color: #041c33;
 	border-radius: 10px;
 }
-#description{
-	width: 850px;
-	height: 85px;
-	position: absolute;
-	top: 70px;
-	left: 15px;
-	background-color: #041c33;
-	border-radius: 10px;
-}
-#description p{
-	margin: 0px;
-}
-#description input[type = text]{
-	outline: none;
-	width: 800px;
-	height: 30px;
-	border-radius: 5px;
-	margin-left: 13px;
-	margin-top: 5px;
-	padding: 10px;
-	
-}
-/*========================== THE JOB DIV ================================= */
-#job{
-	width: 850px;
-	height: 300px;
+
+#fileLabel {
 	position: relative;
-	top: 165px;
-	left: 15px;
-	background-color: #041c33;
-	border-radius: 10px;
-}
-.labels{
-
-position: relative;
-text-align: right;
-font-family: "Comic Sans MS";
-font-size: 13px;
-color:#C06C84;
-width: 220px;
-height: 35px;
-left: 10px;
-border-radius: 5px;
-transition-property: background;
-transition-duration: 1.3s;
-
-}
-.labels h3{
-padding: 5px;
-}
-.labels:hover{
-	background:#15314b;
-}
-
-/*========================== THE 1st JOB DIV ================================= */
-
-#firstJob
-{
-position: relative;
-background:#15314b;
-width: 415px;
-height: 140px;
-display: inline-block;
-margin-left: 4px;
-margin-top: 5px;
-border-radius: 5px;
-}
-
-.jobNumber{
-	position: absolute;
-	background:red;
-	width: 85px;
-    height: 15px;
-    border-radius: 2px;
-    margin-left: 2px;
-    margin-top: 2px;
-    font-size: 11px;
-    font-family: "Times New Roman", Times, serif;
-    font-weight:bold; 
-}
-
-#companyName{
-	position: absolute;
-	left: 2px;
-	top: 20px;
-}
-#companyName lebel{
-	color: red;
-	margin-left: 2px;
-	font-weight:bold; 
-	font-family: "Times New Roman", Times, serif;
-}
-#companyInput{
-	position: relative;
+	top:2px;
+	left: 5px; 
+	color : white;
 	display: inline-block;
-	left: 19px;
-}
-#companyInput input[type = text] {
-	width: 265px;
-	background-color :#15314b;
-	outline: none;
-	border-left-style: hidden;
-	border-right-style: hidden;
-	border-top-style: hidden;
-	border-radius: 5px;
-	padding-left: 6px;
-	padding-bottom: 1px;
-	color: white;  
-	text-align: center;   
-}
-
-#jobPosition{
-	position: relative;
-	display: inline-block;
-	left: 10px;
-}
-#jobPosition input[type = text] {
-	width: 260px;
-	background-color :#15314b;
-	outline: none;
-	border-left-style: hidden;
-	border-right-style: hidden;
-	border-top-style: hidden;
-	border-radius: 5px;
-	padding-left: 6px;
-	padding-bottom: 3px;
 	color: white;
-	text-align: center;
 }
 
-#jobDuration{
+#fileInput {
 	position: relative;
-	display: inline-block;
-	left: 39px;
-}
-
-#jobDuration input[type = text] {
-	width: 260px;
-	background-color :#15314b;
-	outline: none;
-	border-left-style: hidden;
-	border-right-style: hidden;
-	border-top-style: hidden;
-	border-radius: 5px;
-	padding-left: 6px;
-	padding-bottom: 3px;
+	top:2px;
 	color: white;
-	text-align: center;
+	outline: none; 
+	margin-left : 25px;
+	display: inline-block;
+	left: 5px;
 }
 
-
-/* --------------------------------------------------------------------------*/
-
-/*========================== THE second JOB DIV ================================= */
-#secondJob
-{
-position: relative;
-background:#15314b;
-width: 415px;
-height: 140px;
-display: inline-block;
-margin-left: 7px;
-margin-top: 5px;
-border-radius: 5px;
-
+#fileButt {
+	position: relative;
+	top:3px;
+	left:150px;
+	display: inline-block;
 }
-/*========================== THE third JOB DIV ================================= */
-#thirdJob
-{
-position: relative;
-background:#15314b;
-width: 415px;
-height: 140px;
-display: inline-block;
-margin-left: 4px;
-margin-top: 4px;
-border-radius: 5px;
 
-
-}
-/*========================== THE fourth JOB DIV ================================= */
-#fourthJob
-{
-position: relative;
-background:#15314b;
-width: 405px;
-height: 135px;
-display: inline-block;
-margin-left: 7px;
-margin-top: 4px;
-border-radius: 5px;
-width: 415px;
-height: 140px;
-
-
-}
-/* --------------------------------------------------------------------------*/
-/* --------------------------------------------------------------------------*/
-/* --------------------------------------------------------------------------*/
-
-/* --------------------------------------------------------------------------*/
-#divider{
-	width: 850px;
-	height: 5px;
-	position: absolute;
-	top: 475px;
-	left: 15px;
-	background-color: #041c33;
-	border-radius: 10px;
-}
-#description2{
-	width: 850px;
-	height: 85px;
-	position: absolute;
-	top: 485px;
-	left: 15px;
-	background-color: #041c33;
-	border-radius: 10px;
-}
-#description2 input[type = submit]{
-	margin-left: 355px;
-	margin-top: 20px;
+#fileButt input[type=submit] {
 	width: 150px;
-	height: 40px;
-	border-radius:5px;
+	height: 35px;
+	border-radius: 5px;
 	font-weight: bold;
 	background-color: #9BC4E2;
 	color: #0D4F8B;
@@ -256,13 +61,252 @@ height: 140px;
 	transition: .3s;
 }
 
-#description2 input[type = submit]:hover{
-	background-color:#0D4F8B;
-	color:  #9BC4E2;
+#fileButt input[type=submit]:hover {
+	background-color: #0D4F8B;
+	color: #9BC4E2;
 	border: none;
 	font-size: 16px;
 }
-#divider2{
+
+/* ------------------------- =============================================== ----------------------------*/
+#description {
+	width: 850px;
+	height: 85px;
+	position: absolute;
+	top: 70px;
+	left: 15px;
+	background-color: #041c33;
+	border-radius: 10px;
+}
+
+#description p {
+	margin: 0px;
+}
+
+#description input[type=text] {
+	outline: none;
+	width: 800px;
+	height: 30px;
+	border-radius: 5px;
+	margin-left: 13px;
+	margin-top: 5px;
+	padding: 10px;
+}
+/*========================== THE JOB DIV ================================= */
+#job {
+	width: 850px;
+	height: 300px;
+	position: relative;
+	top: 165px;
+	left: 15px;
+	background-color: #041c33;
+	border-radius: 10px;
+}
+
+.labels {
+	position: relative;
+	text-align: right;
+	font-family: "Comic Sans MS";
+	font-size: 13px;
+	color: #C06C84;
+	width: 220px;
+	height: 35px;
+	left: 10px;
+	border-radius: 5px;
+	transition-property: background;
+	transition-duration: 1.3s;
+}
+
+.labels h3 {
+	padding: 5px;
+}
+
+.labels:hover {
+	background: #15314b;
+}
+
+/*========================== THE 1st JOB DIV ================================= */
+#firstJob {
+	position: relative;
+	background: #15314b;
+	width: 415px;
+	height: 140px;
+	display: inline-block;
+	margin-left: 4px;
+	margin-top: 5px;
+	border-radius: 5px;
+}
+
+.jobNumber {
+	position: absolute;
+	background: red;
+	width: 85px;
+	height: 15px;
+	border-radius: 2px;
+	margin-left: 2px;
+	margin-top: 2px;
+	font-size: 11px;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+}
+
+#companyName {
+	position: absolute;
+	left: 2px;
+	top: 20px;
+}
+
+#companyName lebel {
+	color: red;
+	margin-left: 2px;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif;
+}
+
+#companyInput {
+	position: relative;
+	display: inline-block;
+	left: 19px;
+}
+
+#companyInput input[type=text] {
+	width: 265px;
+	background-color: #15314b;
+	outline: none;
+	border-left-style: hidden;
+	border-right-style: hidden;
+	border-top-style: hidden;
+	border-radius: 5px;
+	padding-left: 6px;
+	padding-bottom: 1px;
+	color: white;
+	text-align: center;
+}
+
+#jobPosition {
+	position: relative;
+	display: inline-block;
+	left: 10px;
+}
+
+#jobPosition input[type=text] {
+	width: 260px;
+	background-color: #15314b;
+	outline: none;
+	border-left-style: hidden;
+	border-right-style: hidden;
+	border-top-style: hidden;
+	border-radius: 5px;
+	padding-left: 6px;
+	padding-bottom: 3px;
+	color: white;
+	text-align: center;
+}
+
+#jobDuration {
+	position: relative;
+	display: inline-block;
+	left: 39px;
+}
+
+#jobDuration input[type=text] {
+	width: 260px;
+	background-color: #15314b;
+	outline: none;
+	border-left-style: hidden;
+	border-right-style: hidden;
+	border-top-style: hidden;
+	border-radius: 5px;
+	padding-left: 6px;
+	padding-bottom: 3px;
+	color: white;
+	text-align: center;
+}
+
+/* --------------------------------------------------------------------------*/
+
+/*========================== THE second JOB DIV ================================= */
+#secondJob {
+	position: relative;
+	background: #15314b;
+	width: 415px;
+	height: 140px;
+	display: inline-block;
+	margin-left: 7px;
+	margin-top: 5px;
+	border-radius: 5px;
+}
+/*========================== THE third JOB DIV ================================= */
+#thirdJob {
+	position: relative;
+	background: #15314b;
+	width: 415px;
+	height: 140px;
+	display: inline-block;
+	margin-left: 4px;
+	margin-top: 4px;
+	border-radius: 5px;
+}
+/*========================== THE fourth JOB DIV ================================= */
+#fourthJob {
+	position: relative;
+	background: #15314b;
+	width: 405px;
+	height: 135px;
+	display: inline-block;
+	margin-left: 7px;
+	margin-top: 4px;
+	border-radius: 5px;
+	width: 415px;
+	height: 140px;
+}
+/* --------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------*/
+
+/* --------------------------------------------------------------------------*/
+#divider {
+	width: 850px;
+	height: 5px;
+	position: absolute;
+	top: 475px;
+	left: 15px;
+	background-color: #041c33;
+	border-radius: 10px;
+}
+
+#description2 {
+	width: 850px;
+	height: 85px;
+	position: absolute;
+	top: 485px;
+	left: 15px;
+	background-color: #041c33;
+	border-radius: 10px;
+}
+
+#description2 input[type=submit] {
+	margin-left: 355px;
+	margin-top: 20px;
+	width: 150px;
+	height: 40px;
+	border-radius: 5px;
+	font-weight: bold;
+	background-color: #9BC4E2;
+	color: #0D4F8B;
+	font-size: 16px;
+	border: none;
+	transition: .3s;
+}
+
+#description2 input[type=submit]:hover {
+	background-color: #0D4F8B;
+	color: #9BC4E2;
+	border: none;
+	font-size: 16px;
+}
+
+#divider2 {
 	width: 850px;
 	height: 5px;
 	position: absolute;
@@ -272,7 +316,7 @@ height: 140px;
 	border-radius: 10px;
 }
 
-#personalInfo{
+#personalInfo {
 	width: 850px;
 	height: 500px;
 	position: absolute;
@@ -280,12 +324,10 @@ height: 140px;
 	left: 15px;
 	border-radius: 10px;
 	background-color: #041c33
-
 }
 
 /*======================= TEXT CONTROL ============================ */
-
-.textcontrol{
+.textcontrol {
 	font-family: "Times New Roman", Times, serif;
 	text-align: center;
 	color: #FFFFF0;
@@ -293,38 +335,35 @@ height: 140px;
 	font-weight: bold;
 	word-spacing: 1px;
 	font-size: 1em;
-
 }
 /* ----------------------------------------------------------------*/
 
-
 /*======================= Personal Description ============================ */
-.personalSection{
+.personalSection {
 	position: relative;
-	background:red;
+	background: red;
 	width: 115px;
-    height: 15px;
-    border-radius: 2px;
-    margin-left: 2px;
-    margin-top: 2px;
-    font-size: 11px;
-    font-family: "Times New Roman", Times, serif;
-    font-weight:bold; 
+	height: 15px;
+	border-radius: 2px;
+	margin-left: 2px;
+	margin-top: 2px;
+	font-size: 11px;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
 }
 
-
-#hobby{
+#hobby {
 	color: red;
 	position: relative;
 	margin-left: 2px;
 	top: 20px;
 	left: 10px;
-	font-weight:bold; 
+	font-weight: bold;
 	display: inline-block;
 	font-family: "Times New Roman", Times, serif;
 }
 
-#hobbyInputRadio{
+#hobbyInputRadio {
 	position: relative;
 	top: 22px;
 	left: 48px;
@@ -332,18 +371,16 @@ height: 140px;
 	color: white;
 }
 
-#hobbyInput{
+#hobbyInput {
 	position: relative;
 	display: none;
 	top: 18px;
-	left:80px;
-	
+	left: 80px;
 }
 
-#hobbyInput input[type = text]{
-
+#hobbyInput input[type=text] {
 	width: 260px;
-	background-color :#041c33;
+	background-color: #041c33;
 	outline: none;
 	border-left-style: hidden;
 	border-right-style: hidden;
@@ -355,47 +392,40 @@ height: 140px;
 	text-align: center;
 }
 
-
-
-
-
 /* ----------------------------------------------------------------*/
 
-
 /*======================= Wrapper 2 Blogs ============================ */
-#wrapper2{
+#wrapper2 {
 	position: relative;
 	top: 40px;
 }
 
-#blog{
+#blog {
 	color: red;
 	position: relative;
 	margin-left: 2px;
-	
 	left: 10px;
-	font-weight:bold; 
+	font-weight: bold;
 	display: inline-block;
 	font-family: "Times New Roman", Times, serif;
 }
 
-#blogInputRadio{
+#blogInputRadio {
 	position: relative;
 	left: 23px;
 	display: inline-block;
 	color: white;
 }
 
-#blogInput{
+#blogInput {
 	position: relative;
 	display: none;
-	left:57px;
+	left: 57px;
 }
 
-#blogInput input[type = text]{
-
+#blogInput input[type=text] {
 	width: 260px;
-	background-color :#041c33;
+	background-color: #041c33;
 	outline: none;
 	border-left-style: hidden;
 	border-right-style: hidden;
@@ -409,42 +439,38 @@ height: 140px;
 
 /* ----------------------------------------------------------------*/
 
-
 /*======================= Wrapper 3 Vlog ============================ */
-
-#wrapper3{
+#wrapper3 {
 	position: relative;
 	top: 60px;
 }
 
-#vlog{
+#vlog {
 	color: red;
 	position: relative;
 	margin-left: 2px;
-	
 	left: 10px;
-	font-weight:bold; 
+	font-weight: bold;
 	display: inline-block;
 	font-family: "Times New Roman", Times, serif;
 }
 
-#vlogInputRadio{
+#vlogInputRadio {
 	position: relative;
 	left: 23px;
 	display: inline-block;
 	color: white;
 }
 
-#vlogInput{
+#vlogInput {
 	position: relative;
 	display: none;
-	left:57px;
+	left: 57px;
 }
 
-#vlogInput input[type = text]{
-
+#vlogInput input[type=text] {
 	width: 260px;
-	background-color :#041c33;
+	background-color: #041c33;
 	outline: none;
 	border-left-style: hidden;
 	border-right-style: hidden;
@@ -458,26 +484,23 @@ height: 140px;
 
 /* ----------------------------------------------------------------*/
 
-
 /*======================= Wrapper 4 Blood ============================ */
-
-#wrapper4{
+#wrapper4 {
 	position: relative;
 	top: 90px;
 }
 
-#blood{
+#blood {
 	color: red;
 	position: relative;
 	margin-left: 2px;
-	
 	left: 10px;
-	font-weight:bold; 
+	font-weight: bold;
 	display: inline-block;
 	font-family: "Times New Roman", Times, serif;
 }
 
-#bloodInputRadio{
+#bloodInputRadio {
 	position: relative;
 	left: 23px;
 	display: inline-block;
@@ -486,34 +509,26 @@ height: 140px;
 
 /* ----------------------------------------------------------------*/
 
-
 /*======================= Wrapper 4 Blood ============================ */
-
-
-#wrapper5{
+#wrapper5 {
 	position: relative;
 	top: 110px;
 }
 
-
-
-
 /* ----------------------------------------------------------------*/
 
-
 /*======================= Social ============================ */
-#social{
+#social {
 	color: red;
 	position: relative;
 	margin-left: 2px;
-	
 	left: 10px;
-	font-weight:bold; 
+	font-weight: bold;
 	display: inline-block;
 	font-family: "Times New Roman", Times, serif;
 }
 
-#socialinputText{
+#socialinputText {
 	position: absolute;
 	left: 10px;
 	top: 238px;
@@ -523,31 +538,27 @@ height: 140px;
 	height: 195px;
 	background-color: #15314b;
 }
-#coverDiv1{
+
+#coverDiv1 {
 	position: relative;
 	width: 300px;
 	height: 30px;
-
 }
 
 /* ----------------------------------------------------------------*/
 
-
 /*======================= Book ============================ */
-#book{
+#book {
 	color: red;
 	position: relative;
 	margin-left: 27px;
 	left: 10px;
-	font-weight:bold; 
+	font-weight: bold;
 	display: inline-block;
 	font-family: "Times New Roman", Times, serif;
 }
 
-
-
-
-#bookInputText{
+#bookInputText {
 	position: absolute;
 	left: 330px;
 	top: 238px;
@@ -558,81 +569,68 @@ height: 140px;
 	background-color: #15314b;
 }
 
-
-
-
-
 /* ----------------------------------------------------------------*/
 
-
 /*=======================  Social Icons============================ */
-
-
-.icons{
+.icons {
 	width: 30px;
 	height: 30px;
 	background: #b284be;
-	border-radius:4px;
+	border-radius: 4px;
 	text-align: center;
-	padding:px;
+	padding: px;
 	transition-duration: .3s;
-
-}
-.fa{
- margin-top: 5px;
- 
 }
 
+.fa {
+	margin-top: 5px;
+}
 
-.icons:hover{
+.icons:hover {
 	background: #15314b;
 	color: #FF00CC;
 }
 
-.iconInputField input[type= text]{
+.iconInputField input[type=text] {
 	width: 260px;
 	outline: none;
 	border-radius: 5px;
 	padding-left: 6px;
 	padding-bottom: 3px;
-	
 }
-
 
 /* ----------------------------------------------------------------*/
 
-
 /*=======================  Books Section ============================ */
-
-#paraForBook{
+#paraForBook {
 	color: white;
-	margin:0px;
+	margin: 0px;
 }
 
-#testAreaBook{
+#testAreaBook {
 	padding-left: 10px;
 	color: white;
-
 }
-#testAreaBook textarea{
+
+#testAreaBook textarea {
 	border-radius: 5px;
 	padding: 5px;
 	outline: none;
 	resize: none;
 	width: 450px;
-    height: 120px;
+	height: 120px;
 }
 
-#butt3{
+#butt3 {
 	position: relative;
 	top: 340px;
-	left: 353px;	
+	left: 353px;
 }
 
-#butt3 input[type = submit]{
+#butt3 input[type=submit] {
 	width: 150px;
 	height: 40px;
-	border-radius:5px;
+	border-radius: 5px;
 	font-weight: bold;
 	background-color: #9BC4E2;
 	color: #0D4F8B;
@@ -641,17 +639,9 @@ height: 140px;
 	transition: .3s;
 }
 
-#butt3 input[type = submit]:hover{
-	background-color:#0D4F8B;
-	color:  #9BC4E2;
+#butt3 input[type=submit]:hover {
+	background-color: #0D4F8B;
+	color: #9BC4E2;
 	border: none;
 	font-size: 16px;
 }
-
-
-
-
-
-
-
-

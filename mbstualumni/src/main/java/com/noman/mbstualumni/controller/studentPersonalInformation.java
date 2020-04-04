@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.noman.alumnibackend.dao.StudentJobInformationDao;
 import com.noman.alumnibackend.dao.StudentPersonalInformationDao;
+import com.noman.alumnibackend.dto.StudentImages;
 import com.noman.alumnibackend.dto.StudentJobInformation;
 import com.noman.alumnibackend.dto.StudentPersonalInformation;
 
@@ -29,6 +30,7 @@ public class studentPersonalInformation {
 
 		studentPersonalInformation.addObject("studentJobInformation", new StudentJobInformation());
 		studentPersonalInformation.addObject("studentPersonalInformation", new StudentPersonalInformation());
+		studentPersonalInformation.addObject("studentImages", new StudentImages());
 		
 		
 		return studentPersonalInformation;

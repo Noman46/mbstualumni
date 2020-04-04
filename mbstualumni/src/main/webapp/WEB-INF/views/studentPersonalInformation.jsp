@@ -17,37 +17,35 @@
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="${js}/submitStudentJobInFormationForm.js"></script>
 <script type="text/javascript">
-	
 	//This is for the Personal Information Section Section
 	// Clicking on Yes radio button a text filed appears.
 	// Clicking on No radio button the text field disappears.
-	function showInputFieldForHobby(x){
+	function showInputFieldForHobby(x) {
 
-		if(x==1){
+		if (x == 1) {
 			document.getElementById('hobbyInput').style.display = 'inline-block';
 		}
-		if(x==0){
+		if (x == 0) {
 			document.getElementById('hobbyInput').style.display = 'none';
 		}
 	}
 
-	function showInputFieldForBlog(x){
+	function showInputFieldForBlog(x) {
 
-		if(x==1){
+		if (x == 1) {
 			document.getElementById('blogInput').style.display = 'inline-block';
 		}
-		if(x==0){
+		if (x == 0) {
 			document.getElementById('blogInput').style.display = 'none';
 		}
 	}
 
+	function showInputFieldForVlog(x) {
 
-		function showInputFieldForVlog(x){
-
-		if(x==1){
+		if (x == 1) {
 			document.getElementById('vlogInput').style.display = 'inline-block';
 		}
-		if(x==0){
+		if (x == 0) {
 			document.getElementById('vlogInput').style.display = 'none';
 		}
 	}
@@ -56,11 +54,11 @@
 
 
 <script type="text/javascript">
-
 	// This is to count the inputed charecter inside the text area.
-	function countCharcter(maxCharecter,charectersEntered){
+	function countCharcter(maxCharecter, charectersEntered) {
 
-		var charecterThatInputedInTextArea = document.getElementById(maxCharecter).value.length;
+		var charecterThatInputedInTextArea = document
+				.getElementById(maxCharecter).value.length;
 		document.getElementById(charectersEntered).innerHTML = charecterThatInputedInTextArea;
 
 	}
@@ -70,13 +68,17 @@
 <body>
 
 	<div class="proSettings">
+		<form:form modelAttribute="studentImages" action="" method="post"
+			enctype="multipart/form-data">
+			<div id="uploadfile">
+						<div id = "fileLabel"><form:label path="file">Select a beautiful image of yours</form:label></div>
+						<div id = "fileInput"><input type="file" name="file" /></div>
+						<div id = "fileButt"><input type="submit" value="Submit" /></div>		
+			</div>
+		</form:form>
 		<form:form modelAttribute="studentJobInformation"
 			action="/mbstualumni/student/sendStudentJobInformation" method="post"
 			enctype="" id="jobForm">
-			<div id="uploadfile">
-				<p class="textcontrol"></p>
-			</div>
-
 			<div id="description">
 				<p class="textcontrol">Please add your Favorite Quote</p>
 				<form:input path="favouriteQoute" type="text" name=""
@@ -90,7 +92,8 @@
 					<div id="companyName">
 						<lebel>Company Name</lebel>
 						<div id="companyInput">
-							<form:input type="text" path="companyName1" autocomplete="off" id = "companyName1"/>
+							<form:input type="text" path="companyName1" autocomplete="off"
+								id="companyName1" />
 						</div>
 						<br> <br>
 						<lebel>Your Job Position</lebel>
@@ -176,18 +179,18 @@
 			<div id="description2">
 				<input type="submit" value="Submit" />
 			</div>
-			</form:form>
-			<div id="divider2"></div>
+		</form:form>
+		<div id="divider2"></div>
 
 
 
 
 
 
-			<div id="personalInfo">
-				<form:form modelAttribute="studentPersonalInformation"
-			action="/mbstualumni/student/sendStudentPersonalInformation" method="post"
-			enctype="">
+		<div id="personalInfo">
+			<form:form modelAttribute="studentPersonalInformation"
+				action="/mbstualumni/student/sendStudentPersonalInformation"
+				method="post" enctype="">
 				<div class="personalSection">Personal Information</div>
 				<div id="wrapper1">
 					<div id="hobby">
@@ -195,13 +198,13 @@
 					</div>
 					<div id="hobbyInputRadio">
 						<input type="radio" id="" onclick="showInputFieldForHobby(0)"
-							name="studentsHobby"  value="no">&nbspNo&nbsp&nbsp
-						<input type="radio" id="" onclick="showInputFieldForHobby(1)"
+							name="studentsHobby" value="no">&nbspNo&nbsp&nbsp <input
+							type="radio" id="" onclick="showInputFieldForHobby(1)"
 							name="studentsHobby" value="yes">&nbspYes
 					</div>
 					<div id="hobbyInput">
 						<form:input type="text" path="studentHobby" placeholder="Hobbies"
-							autocomplete="off"/>
+							autocomplete="off" />
 					</div>
 				</div>
 
@@ -214,12 +217,13 @@
 					</div>
 					<div id="blogInputRadio">
 						<input type="radio" id="" onclick="showInputFieldForBlog(0)"
-							name="studentsBlog"  value="no">&nbspNo&nbsp&nbsp
-						<input type="radio" id="" onclick="showInputFieldForBlog(1)"
-							name="studentsBlog"  value="yes">&nbspYes
+							name="studentsBlog" value="no">&nbspNo&nbsp&nbsp <input
+							type="radio" id="" onclick="showInputFieldForBlog(1)"
+							name="studentsBlog" value="yes">&nbspYes
 					</div>
 					<div id="blogInput">
-						<form:input type="text" path="studentBlog" placeholder="URL" autocomplete="off"/>
+						<form:input type="text" path="studentBlog" placeholder="URL"
+							autocomplete="off" />
 					</div>
 				</div>
 
@@ -230,12 +234,13 @@
 					</div>
 					<div id="vlogInputRadio">
 						<input type="radio" id="" onclick="showInputFieldForVlog(0)"
-							name="studentsVlog" value="no">&nbspNo&nbsp&nbsp
-						<input type="radio" id="" onclick="showInputFieldForVlog(1)"
+							name="studentsVlog" value="no">&nbspNo&nbsp&nbsp <input
+							type="radio" id="" onclick="showInputFieldForVlog(1)"
 							name="studentsVlog" value="yes">&nbspYes
 					</div>
 					<div id="vlogInput">
-						<input type="text" path="studentVlog" placeholder="URL" autocomplete="off">
+						<input type="text" path="studentVlog" placeholder="URL"
+							autocomplete="off">
 					</div>
 				</div>
 
@@ -247,14 +252,22 @@
 						<label>Blood Group</label>
 					</div>
 					<div id="bloodInputRadio">
-						<form:radiobutton path="studentBloodGroup" value="A+"/>A+
-						<form:radiobutton path="studentBloodGroup" value="A-"/>A-
-						<form:radiobutton path="studentBloodGroup" value="B+"/>B+
-						<form:radiobutton path="studentBloodGroup" value="B-"/>B+
-						<form:radiobutton path="studentBloodGroup" value="AB+"/>AB+
-						<form:radiobutton path="studentBloodGroup" value="AB-"/>AB-
-						<form:radiobutton path="studentBloodGroup" value="O+"/>O+
-						<form:radiobutton path="studentBloodGroup" value="O-"/>O-				
+						<form:radiobutton path="studentBloodGroup" value="A+" />
+						A+
+						<form:radiobutton path="studentBloodGroup" value="A-" />
+						A-
+						<form:radiobutton path="studentBloodGroup" value="B+" />
+						B+
+						<form:radiobutton path="studentBloodGroup" value="B-" />
+						B+
+						<form:radiobutton path="studentBloodGroup" value="AB+" />
+						AB+
+						<form:radiobutton path="studentBloodGroup" value="AB-" />
+						AB-
+						<form:radiobutton path="studentBloodGroup" value="O+" />
+						O+
+						<form:radiobutton path="studentBloodGroup" value="O-" />
+						O-
 					</div>
 
 				</div>
@@ -274,23 +287,28 @@
 
 						<tr>
 							<td><i class="fa fa-github icons"></i></td>
-							<td><form:input type="text" path = "studentGit" autocomplete="off"/></td>
+							<td><form:input type="text" path="studentGit"
+									autocomplete="off" /></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-facebook icons"></i></td>
-							<td><form:input type="text" path = "studentFb" autocomplete="off"/></td>
+							<td><form:input type="text" path="studentFb"
+									autocomplete="off" /></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-linkedin icons"></i></td>
-							<td><form:input type="text" path = "studentLinkedin" autocomplete="off"/></td>
+							<td><form:input type="text" path="studentLinkedin"
+									autocomplete="off" /></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-instagram icons"></i></td>
-							<td><form:input type="text" path = "studentIn" autocomplete="off"/></td>
+							<td><form:input type="text" path="studentIn"
+									autocomplete="off" /></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-twitter icons"></i></td>
-							<td><form:input type="text" path = "studentTwt" autocomplete="off"/></td>
+							<td><form:input type="text" path="studentTwt"
+									autocomplete="off" /></td>
 						</tr>
 					</table>
 
@@ -305,10 +323,10 @@
 						</tr>
 						<tr>
 							<td id="testAreaBook"><form:textarea maxlength="300"
-									id="maxCharecter" path = "studentBooks" 
+									id="maxCharecter" path="studentBooks"
 									onkeyup="countCharcter('maxCharecter','charectersEntered');"
 									onkeydown="countCharcter('maxCharecter','charectersEntered');"
-		    				        onmouseout="countCharcter('maxCharecter','charectersEntered');"/>
+									onmouseout="countCharcter('maxCharecter','charectersEntered');" />
 								<br> You have entered&nbsp<span style="color: red;"
 								id="charectersEntered">0</span>/300&nbspcharecters</td>
 						</tr>
@@ -318,12 +336,11 @@
 				<div id="butt3">
 					<input type="submit" value="Submit" />
 				</div>
-				</form:form>
-				
+			</form:form>
 
 
-			</div>
-		
+
+		</div>
 	</div>
 
 </body>

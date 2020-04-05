@@ -68,7 +68,7 @@
 <body>
 
 	<div class="proSettings">
-		<form:form modelAttribute="studentImages" action="" method="post"
+		<form:form modelAttribute="studentImages" action="/mbstualumni/student/sendStudentImage" method="post"
 			enctype="multipart/form-data">
 			<div id="uploadfile">
 						<div id = "fileLabel"><form:label path="file">Select a beautiful image of yours</form:label></div>

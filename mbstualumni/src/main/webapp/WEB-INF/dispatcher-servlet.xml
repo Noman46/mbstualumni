@@ -22,36 +22,37 @@
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 
+
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".jsp" />
-	
+
 	</bean>
-	
-	
-		
-		
-		
-		<!-- Spring Email Sender Bean Configuration -->
-		<bean id="mailSender"
-			class="org.springframework.mail.javamail.JavaMailSenderImpl">
-			<property name="host" value="smtp.gmail.com" />
-			<property name="port" value="587" />
-			<property name="username"
-				value="minsheminshe12030@gmail.com" />
-			<property name="password"
-				value="minsheminshe@12030noman" />
-			<property name="javaMailProperties">
-				<props>
-					<prop key="mail.smtp.auth">true</prop>
-					<prop key="mail.debug">true</prop>
-					<prop key="mail.transport.protocol">smtp</prop>
-					<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
-					<prop key="mail.smtp.socketFactory.port">465</prop>
-					<prop key="mail.smtp.starttls.enable">true</prop>
-				</props>
-			</property>
-		</bean>
-	
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
+
+
+ 
+
+
+	<!-- Spring Email Sender Bean Configuration -->
+	<bean id="mailSender"
+		class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="username" value="minsheminshe12030@gmail.com" />
+		<property name="password" value="minsheminshe@12030noman" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.debug">true</prop>
+				<prop key="mail.transport.protocol">smtp</prop>
+				<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+				<prop key="mail.smtp.socketFactory.port">465</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+			</props>
+		</property>
+	</bean>
+
 
 
 	<mvc:annotation-driven />

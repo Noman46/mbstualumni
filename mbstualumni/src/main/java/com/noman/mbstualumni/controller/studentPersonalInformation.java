@@ -1,5 +1,7 @@
 package com.noman.mbstualumni.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -13,6 +15,7 @@ import com.noman.alumnibackend.dao.StudentPersonalInformationDao;
 import com.noman.alumnibackend.dto.StudentImages;
 import com.noman.alumnibackend.dto.StudentJobInformation;
 import com.noman.alumnibackend.dto.StudentPersonalInformation;
+import com.noman.mbstualumni.util.FileUploadUtility;
 
 @Controller
 public class studentPersonalInformation {
@@ -51,6 +54,17 @@ public class studentPersonalInformation {
 	public String sendStudentPersonalInformation(@ModelAttribute("studentPersonalInformation") StudentPersonalInformation studentPersonalInformation, ModelMap model) {
 		
 		studentPersonalInformationDao.saveStudentPersonalInformation(studentPersonalInformation);
+		return "redirect:/student/personalInformation";
+	}
+	
+	@RequestMapping(value = {"student/sendStudentImage"}, method = RequestMethod.POST)
+	public String sendStudentImage(@ModelAttribute("studentImages") StudentImages studentImages, ModelMap model,HttpServletRequest request) {
+		
+		if(!studentImages.getFile().getOriginalFilename().equals("")) {
+			 if(!studentImages.getFile().getOriginalFilename().equals("") ){
+				 FileUploadUtility.uploadFile(request, studentImages.getFile()); 
+				 }
+		}
 		return "redirect:/student/personalInformation";
 	}
 	

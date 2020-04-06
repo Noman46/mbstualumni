@@ -2,6 +2,7 @@ package com.noman.mbstualumni.util;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -31,10 +32,11 @@ public class FileUploadUtility {
 		
 		try {
 			//Server Upload
-			file.transferTo(new File(REAL_PATH +".jpg"));
+			Random random = new Random();
+			file.transferTo(new File(REAL_PATH + random.nextInt(25) + ".jpg"));
 			System.out.println(REAL_PATH);
 			//Project Directory Upload
-			file.transferTo(new File(ABS_PATH +".jpg"));
+			file.transferTo(new File(ABS_PATH + random.nextInt(25) +".jpg"));
 			System.out.println(REAL_PATH);
 		}
 		catch(IOException ex) {

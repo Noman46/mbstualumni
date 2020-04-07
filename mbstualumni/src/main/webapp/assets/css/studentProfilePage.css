@@ -147,14 +147,15 @@ h1 span:nth-child(12)
 
 #searcharea{
 	position: absolute;
+	left: 250px;
 	top: 12px;
-	left: 252px;
 	height:40px;
+
 }
 
 #searchbox{
 	width: 500px;
-	height:20px;
+	height:40px;
 	background-color: white;
 	padding: 5px;
 	outline: none;

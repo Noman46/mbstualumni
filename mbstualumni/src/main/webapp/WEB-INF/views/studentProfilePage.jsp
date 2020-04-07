@@ -18,16 +18,8 @@
 <body>
 
 <%@include file="./shared/studentProfilePageHeader.jsp"%>
-	
-	<div class="leftbar">
-		<div id="left1"></div>
-		<div id="left2"></div>
-		<div id="left3"></div>
-		
-		<div id="left4"></div>
+<%@include file="./shared/studentProfilePageLeft.jsp" %>
 
-
-	</div>
 
 	<div class="messagediv">
 		<div class="innerMessage">
@@ -80,8 +72,8 @@
 	<div></div>
 
 
-
-	<div class="rightbar"></div>
+<%@include file="./shared/studentProfilePageRight.jsp" %>
+	
 
 </body>
 </html>

@@ -1,5 +1,7 @@
 package com.noman.mbstualumni.controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +10,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.noman.alumnibackend.dao.StudentJobInformationDao;
@@ -66,6 +69,25 @@ public class studentPersonalInformation {
 				 }
 		}
 		return "redirect:/student/personalInformation";
+	}
+	
+	
+	//REST API TEST
+	
+	@ResponseBody
+	@RequestMapping(value= {"/jobTestRes"}, method = RequestMethod.GET)
+	public ArrayList<StudentJobInformation> giveStudentJobREST(){
+		StudentJobInformation job = new StudentJobInformation();
+		job.setCompanyName1("Orbund");
+		StudentJobInformation job1 = new StudentJobInformation();
+		job1.setCompanyName2("Selise");
+		
+		ArrayList<StudentJobInformation> li = new ArrayList<StudentJobInformation>();
+		li.add(job);
+		li.add(job1);
+		return li;
+		
+		
 	}
 	
 

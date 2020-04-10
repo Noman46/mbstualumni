@@ -22,7 +22,7 @@
 			<input type="text" name="" placeholder="Search here" id="searchbox">
 		</div>
 		<div id="profileIcon">
-			<a href="settings.html"><i class="fa fa-user"
+			<a href="./personalInformation"><i class="fa fa-user"
 				style="font-size: 30px"></i></a>
 		</div>
 		<div id="gearicon">

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -86,9 +87,21 @@ public class studentPersonalInformation {
 		li.add(job);
 		li.add(job1);
 		return li;
+		}
+	
+	@ResponseBody
+	@RequestMapping(value = {"/jobTestRes/{company}"})
+	public StudentJobInformation getJobInfo(@PathVariable("company") String companyname) {
+		
+		StudentJobInformation st =  new StudentJobInformation();
+		st.setCompanyName1(companyname);
+		st.setJobDuration1("1.5");
 		
 		
+		return st;
 	}
+	
+	
 	
 
 

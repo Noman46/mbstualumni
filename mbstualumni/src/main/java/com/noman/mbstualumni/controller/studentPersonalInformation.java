@@ -111,15 +111,9 @@ public class studentPersonalInformation {
 	@RequestMapping(value = "/saveJob", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Boolean> saveJob(@RequestBody StudentJobInformation studentJobInformation){
 		System.out.println("companyName1" +"=" +studentJobInformation.getCompanyName1());
+		studentJobInformationDao.saveStudentJobInformation(studentJobInformation);
 		
 		return new ResponseEntity<Boolean>(true,HttpStatus.CREATED);
 	}
-	
-	
-	
-	
-
-	
-
 
 }

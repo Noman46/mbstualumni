@@ -47,7 +47,7 @@ public class studentPersonalInformation {
 		return studentPersonalInformation;
 	}
 
-	@RequestMapping(value = { "student/sendStudentJobInformation" }, method = RequestMethod.POST)
+	/*@RequestMapping(value = { "student/sendStudentJobInformation" }, method = RequestMethod.POST)
 	public String sendStudentJobInformation(
 			@ModelAttribute("studentJobInformation") StudentJobInformation studentJobInformation, ModelMap model) {
 
@@ -55,7 +55,7 @@ public class studentPersonalInformation {
 
 		return "redirect:/student/personalInformation";
 	}
-
+*/
 
 	
 	@RequestMapping(value = {"student/sendStudentPersonalInformation"}, method = RequestMethod.POST)
@@ -77,7 +77,30 @@ public class studentPersonalInformation {
 	}
 	
 	
-	//REST API TEST
+// REST API METODS, alternate methods are above this section
+	
+	
+	//To save the Job information of the student.
+	@RequestMapping(value = "/student/sendStudentJobInformation", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Boolean> saveStudentJobInformationREST(@RequestBody StudentJobInformation studentJobInformation){
+		
+		studentJobInformationDao.saveStudentJobInformation(studentJobInformation);
+		return new ResponseEntity<Boolean>(true,HttpStatus.CREATED);
+	}
+	
+	
+	//To save the Personal Information of the student.
+	
+	@RequestMapping(value= {"student/sendStudentPersonalInformation"}, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Boolean> saveStudentPersonalInformationREST(@RequestBody StudentPersonalInformation studentPersonalInformation){
+		
+		studentPersonalInformationDao.saveStudentPersonalInformation(studentPersonalInformation);
+		return new ResponseEntity<Boolean>(true,HttpStatus.CREATED);
+	}
+	
+	
+	
+/*	//REST API TEST
 	
 	@ResponseBody
 	@RequestMapping(value= {"/jobTestRes"}, method = RequestMethod.GET)
@@ -103,17 +126,7 @@ public class studentPersonalInformation {
 		
 		
 		return st;
-	}
+	}*/
 	
-	
-	//Post REST API
-	
-	@RequestMapping(value = "/saveJob", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Boolean> saveJob(@RequestBody StudentJobInformation studentJobInformation){
-		System.out.println("companyName1" +"=" +studentJobInformation.getCompanyName1());
-		studentJobInformationDao.saveStudentJobInformation(studentJobInformation);
-		
-		return new ResponseEntity<Boolean>(true,HttpStatus.CREATED);
-	}
 
 }

@@ -82,7 +82,7 @@
 			<div id="description">
 				<p class="textcontrol">Please add your Favorite Quote</p>
 				<form:input path="favouriteQoute" type="text" name=""
-					autocomplete="off" />
+					autocomplete="off" id="favouriteQoute"  />
 			</div>
 
 			<div id="job">
@@ -98,12 +98,14 @@
 						<br> <br>
 						<lebel>Your Job Position</lebel>
 						<div id="jobPosition">
-							<form:input type="text" path="jobPosition1" autocomplete="off" />
+							<form:input type="text" path="jobPosition1" autocomplete="off" 
+							id="jobPosition1" />
 						</div>
 						<br> <br>
 						<lebel>Job Duration</lebel>
 						<div id="jobDuration">
-							<form:input type="text" path="jobDuration1" autocomplete="off" />
+							<form:input type="text" path="jobDuration1" autocomplete="off" 
+							id="jobDuration1" />
 						</div>
 					</div>
 				</div>
@@ -113,17 +115,20 @@
 					<div id="companyName">
 						<lebel>Company Name</lebel>
 						<div id="companyInput">
-							<form:input type="text" path="companyName2" autocomplete="off" />
+							<form:input type="text" path="companyName2" autocomplete="off" 
+							id="companyName2" />
 						</div>
 						<br> <br>
 						<lebel>Your Job Position</lebel>
 						<div id="jobPosition">
-							<form:input type="text" path="jobPosition2" autocomplete="off" />
+							<form:input type="text" path="jobPosition2" autocomplete="off" 
+							id="jobPosition2" />
 						</div>
 						<br> <br>
 						<lebel>Job Duration</lebel>
 						<div id="jobDuration">
-							<form:input type="text" path="jobDuration2" autocomplete="off" />
+							<form:input type="text" path="jobDuration2" autocomplete="off" 
+							id="jobDuration2"/>
 						</div>
 					</div>
 				</div>
@@ -132,17 +137,20 @@
 					<div id="companyName">
 						<lebel>Company Name</lebel>
 						<div id="companyInput">
-							<form:input type="text" path="companyName3" autocomplete="off" />
+							<form:input type="text" path="companyName3" autocomplete="off" 
+							id="companyName3"/>
 						</div>
 						<br> <br>
 						<lebel>Your Job Position</lebel>
 						<div id="jobPosition">
-							<form:input type="text" path="jobPosition3" autocomplete="off" />
+							<form:input type="text" path="jobPosition3" autocomplete="off" 
+							id="jobPosition3"/>
 						</div>
 						<br> <br>
 						<lebel>Job Duration</lebel>
 						<div id="jobDuration">
-							<form:input type="text" path="jobDuration3" autocomplete="off" />
+							<form:input type="text" path="jobDuration3" autocomplete="off" 
+							id="jobDuration3"/>
 						</div>
 					</div>
 				</div>
@@ -152,17 +160,20 @@
 					<div id="companyName">
 						<lebel>Company Name</lebel>
 						<div id="companyInput">
-							<form:input type="text" path="companyName4" autocomplete="off" />
+							<form:input type="text" path="companyName4" autocomplete="off" 
+							id="companyName4"/>
 						</div>
 						<br> <br>
 						<lebel>Your Job Position</lebel>
 						<div id="jobPosition">
-							<form:input type="text" path="jobPosition4" autocomplete="off" />
+							<form:input type="text" path="jobPosition4" autocomplete="off" 
+							id="jobPosition4"/>
 						</div>
 						<br> <br>
 						<lebel>Job Duration</lebel>
 						<div id="jobDuration">
-							<form:input type="text" path="jobDuration4" autocomplete="off" />
+							<form:input type="text" path="jobDuration4" autocomplete="off" 
+							id="jobDuration4"/>
 						</div>
 
 

@@ -1,7 +1,7 @@
 
-// This AJAX is for saving the Job Information Of the student
+// This AJAX is for Saving the Personal Information Of the Student
 jQuery(document).ready(function($) {
-	$("#jobForm").submit(function(event) {
+	$("#personalInfoForm").submit(function(event) {
 		
         var thatForm = $(this)
 		// Prevent the form from submitting via the browser.
@@ -21,29 +21,24 @@ function saveJobAjax(thatForm) {
 	                              //console.log(url);
 	                              //console.log(type);
 	
-	data["companyName1"] = $("#companyName1").val();
-	data["jobPosition1"] = $("#jobPosition1").val();
-	data["jobDuration1"] = $("#jobDuration1").val();
+	data["studentHobby"] = $("#studentHobby").val();
+	data["studentBlog"] = $("#studentBlog").val();
+	data["studentVlog"] = $("#studentVlog").val();
+	data["studentBloodGroup"] = $("input[name='studentBloodGroup']:checked").val();
+	data["studentGit"] = $("#studentGit").val();
+	data["studentFb"] = $("#studentFb").val();
+	data["studentLinkedin"] = $("#studentLinkedin").val();
+	data["studentIn"] = $("#studentIn").val();
+	data["studentTwt"] = $("#studentTwt").val();
+	data["studentBooks"] = $("#maxCharecter").val();
 	
-	data["companyName2"] = $("#companyName2").val();
-	data["jobPosition2"] = $("#jobPosition2").val();
-	data["jobDuration2"] = $("#jobDuration2").val();
-	
-	data["companyName3"] = $("#companyName3").val();
-	data["jobPosition3"] = $("#jobPosition3").val();
-	data["jobDuration3"] = $("#jobDuration3").val();
 	
 	
-	data["companyName4"] = $("#companyName4").val();
-	data["jobPosition4"] = $("#jobPosition4").val();
-	data["jobDuration4"] = $("#jobDuration4").val();
-	
-	data["favouriteQoute"] = $("#favouriteQoute").val();
 	                            
-	                              //console.log(data);
+	//console.log(data);
 
 	
-	$.ajax({
+$.ajax({
 		type : type,
 		contentType : "application/json",
 		url : url,

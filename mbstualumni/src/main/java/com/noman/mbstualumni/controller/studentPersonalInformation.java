@@ -58,12 +58,12 @@ public class studentPersonalInformation {
 */
 
 	
-	@RequestMapping(value = {"student/sendStudentPersonalInformation"}, method = RequestMethod.POST)
+/*	@RequestMapping(value = {"student/sendStudentPersonalInformation"}, method = RequestMethod.POST)
 	public String sendStudentPersonalInformation(@ModelAttribute("studentPersonalInformation") StudentPersonalInformation studentPersonalInformation, ModelMap model) {
 		
 		studentPersonalInformationDao.saveStudentPersonalInformation(studentPersonalInformation);
 		return "redirect:/student/personalInformation";
-	}
+	}*/
 	
 	@RequestMapping(value = {"student/sendStudentImage"}, method = RequestMethod.POST)
 	public String sendStudentImage(@ModelAttribute("studentImages") StudentImages studentImages, ModelMap model,HttpServletRequest request) {

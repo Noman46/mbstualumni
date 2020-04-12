@@ -16,6 +16,7 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="${js}/submitStudentJobInFormationForm.js"></script>
+<script src="${js}/submitStudentPersonalInfo.js"></script>
 <script type="text/javascript">
 	//This is for the Personal Information Section Section
 	// Clicking on Yes radio button a text filed appears.
@@ -201,7 +202,7 @@
 		<div id="personalInfo">
 			<form:form modelAttribute="studentPersonalInformation"
 				action="/mbstualumni/student/sendStudentPersonalInformation"
-				method="post" enctype="">
+				method="post" enctype="" id = "personalInfoForm" >
 				<div class="personalSection">Personal Information</div>
 				<div id="wrapper1">
 					<div id="hobby">
@@ -209,13 +210,14 @@
 					</div>
 					<div id="hobbyInputRadio">
 						<input type="radio" id="" onclick="showInputFieldForHobby(0)"
-							name="studentsHobby" value="no">&nbspNo&nbsp&nbsp <input
+							name="studentsHobby" value="no">&nbspNo&nbsp&nbsp 
+						<input
 							type="radio" id="" onclick="showInputFieldForHobby(1)"
 							name="studentsHobby" value="yes">&nbspYes
 					</div>
 					<div id="hobbyInput">
 						<form:input type="text" path="studentHobby" placeholder="Hobbies"
-							autocomplete="off" />
+							autocomplete="off" id = "studentHobby"/>
 					</div>
 				</div>
 
@@ -234,7 +236,7 @@
 					</div>
 					<div id="blogInput">
 						<form:input type="text" path="studentBlog" placeholder="URL"
-							autocomplete="off" />
+							autocomplete="off"  id= "studentBlog" />
 					</div>
 				</div>
 
@@ -251,7 +253,7 @@
 					</div>
 					<div id="vlogInput">
 						<input type="text" path="studentVlog" placeholder="URL"
-							autocomplete="off">
+							autocomplete="off" id= "studentVlog">
 					</div>
 				</div>
 
@@ -299,27 +301,27 @@
 						<tr>
 							<td><i class="fa fa-github icons"></i></td>
 							<td><form:input type="text" path="studentGit"
-									autocomplete="off" /></td>
+									autocomplete="off"  id= "studentGit" /></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-facebook icons"></i></td>
 							<td><form:input type="text" path="studentFb"
-									autocomplete="off" /></td>
+									autocomplete="off" id= "studentFb" /></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-linkedin icons"></i></td>
 							<td><form:input type="text" path="studentLinkedin"
-									autocomplete="off" /></td>
+									autocomplete="off" id = "studentLinkedin" /></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-instagram icons"></i></td>
 							<td><form:input type="text" path="studentIn"
-									autocomplete="off" /></td>
+									autocomplete="off" id = "studentIn" /></td>
 						</tr>
 						<tr>
 							<td><i class="fa fa-twitter icons"></i></td>
 							<td><form:input type="text" path="studentTwt"
-									autocomplete="off" /></td>
+									autocomplete="off" id = "studentTwt" /></td>
 						</tr>
 					</table>
 
@@ -334,7 +336,7 @@
 						</tr>
 						<tr>
 							<td id="testAreaBook"><form:textarea maxlength="300"
-									id="maxCharecter" path="studentBooks"
+									id="maxCharecter" path="studentBooks" class = "studentBooks"
 									onkeyup="countCharcter('maxCharecter','charectersEntered');"
 									onkeydown="countCharcter('maxCharecter','charectersEntered');"
 									onmouseout="countCharcter('maxCharecter','charectersEntered');" />

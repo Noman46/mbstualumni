@@ -33,9 +33,7 @@ function saveJobAjax(thatForm) {
 	data["studentBooks"] = $("#maxCharecter").val();
 	
 	
-	
-	                            
-	//console.log(data);
+	                            //console.log(data);
 
 	
 $.ajax({

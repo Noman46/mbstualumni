@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.noman.alumnibackend.dao.ApplicationFormDao;
+import com.noman.alumnibackend.dao.VerifiedStudentDao;
 import com.noman.alumnibackend.dto.ApplicationForm;
 import com.noman.alumnibackend.utility.EmailSender;
 
@@ -21,6 +22,9 @@ public class AdminViewController {
 	public ApplicationFormDao applicationFormDao;
 	@Autowired
 	public EmailSender sendTheEmail;
+	@Autowired
+	public VerifiedStudentDao verifiedStudentDao;
+
 
 	@RequestMapping(value = { "/adminView" }, method = RequestMethod.GET)
 	public ModelAndView getAdminView() {
@@ -74,7 +78,10 @@ public class AdminViewController {
 
 		applicationFormDao.updateisActive(applicationId);
 		ApplicationForm form = applicationFormDao.giveApplicationFormById(applicationId);
-		sendTheEmail.doSendEmailToApplicant(form);
+		verifiedStudentDao.saveVerifiedStdent(form);
+		
+		//applicationId.sendTheEmail.doSendEmailToApplicant(form); 
+		// Email sending having a problem. have to look at it in future
 		return "The form is verified and an Email has been sent to"+" "+form.getStudentName();
 	}
 

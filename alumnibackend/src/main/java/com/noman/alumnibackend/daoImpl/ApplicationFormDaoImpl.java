@@ -50,7 +50,7 @@ public class ApplicationFormDaoImpl implements ApplicationFormDao {
 	public void updateisActive(Integer applicationId) {
 
 		ApplicationForm applicationForm = sessionFactory.getCurrentSession().load(ApplicationForm.class, applicationId);
-		applicationForm.setActive(false);
+		applicationForm.setActive(true);
 		sessionFactory.getCurrentSession().update(applicationForm);
 	}
 

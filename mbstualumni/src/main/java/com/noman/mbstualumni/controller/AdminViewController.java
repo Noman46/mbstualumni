@@ -22,8 +22,7 @@ public class AdminViewController {
 	public ApplicationFormDao applicationFormDao;
 	@Autowired
 	public EmailSender sendTheEmail;
-	@Autowired
-	public VerifiedStudentDao verifiedStudentDao;
+	
 
 
 	@RequestMapping(value = { "/adminView" }, method = RequestMethod.GET)
@@ -78,9 +77,9 @@ public class AdminViewController {
 
 		applicationFormDao.updateisActive(applicationId);
 		ApplicationForm form = applicationFormDao.giveApplicationFormById(applicationId);
-		verifiedStudentDao.saveVerifiedStdent(form);
 		
-		//applicationId.sendTheEmail.doSendEmailToApplicant(form); 
+		
+		sendTheEmail.doSendEmailToApplicant(form); 
 		// Email sending having a problem. have to look at it in future
 		return "The form is verified and an Email has been sent to"+" "+form.getStudentName();
 	}

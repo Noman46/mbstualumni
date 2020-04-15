@@ -24,19 +24,19 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form:form modelAttribute="applicationForm" action="./student/loginToProfile" method="post" class="login100-form validate-form">
+				<form:form modelAttribute="verifiedStudent" action="./student/loginToProfile" method="post" class="login100-form validate-form">
 					<span class="login100-form-title p-b-34"> Account Login </span>
 
 					<!-- ===================================================================================================================== -->
 					<div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20">
 						<form:input id="first-name" class="input100" type="text"
-							path ="studentemail" placeholder="Your Email" autocomplete="off"/>
+							path ="verifiedStudentEmail" placeholder="Your Email" autocomplete="off"/>
 						<span class="focus-input100"></span>
 					</div>
 
 					<!-- ===================================================================================================================== -->
 					<div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20">
-						<form:input class="input100" type="password" path="studentName"
+						<form:input class="input100" type="password" path="verifiedStudentPassword"
 							 placeholder="Password" autocomplete="off"/> <span
 							class="focus-input100"></span>
 					</div>

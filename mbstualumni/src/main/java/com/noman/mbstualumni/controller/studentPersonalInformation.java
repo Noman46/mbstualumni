@@ -30,7 +30,7 @@ public class studentPersonalInformation {
 
 	@Autowired
 	public StudentJobInformationDao studentJobInformationDao;
-	
+
 	@Autowired
 	public StudentPersonalInformationDao studentPersonalInformationDao;
 
@@ -42,91 +42,107 @@ public class studentPersonalInformation {
 		studentPersonalInformation.addObject("studentJobInformation", new StudentJobInformation());
 		studentPersonalInformation.addObject("studentPersonalInformation", new StudentPersonalInformation());
 		studentPersonalInformation.addObject("studentImages", new StudentImages());
-		
-		
+
 		return studentPersonalInformation;
 	}
 
-	/*@RequestMapping(value = { "student/sendStudentJobInformation" }, method = RequestMethod.POST)
-	public String sendStudentJobInformation(
-			@ModelAttribute("studentJobInformation") StudentJobInformation studentJobInformation, ModelMap model) {
+	/*
+	 * The following two methods are for submitting form through Spring I have
+	 * created two REST API where form submitting occurs through AJAX
+	 * saveStudentJobInformationREST() saveStudentPersonalInformationREST()
+	 * --------------------------------------------------------------------
+	 * 
+	 * 
+	 * 
+	 * 
+	 * @RequestMapping(value = { "student/sendStudentJobInformation" }, method =
+	 * RequestMethod.POST) public String sendStudentJobInformation(
+	 * 
+	 * @ModelAttribute("studentJobInformation") StudentJobInformation
+	 * studentJobInformation, ModelMap model) {
+	 * 
+	 * studentJobInformationDao.saveStudentJobInformation(studentJobInformation);
+	 * 
+	 * return "redirect:/student/personalInformation"; }
+	 * 
+	 * 
+	 * 
+	 * @RequestMapping(value = {"student/sendStudentPersonalInformation"}, method =
+	 * RequestMethod.POST) public String
+	 * sendStudentPersonalInformation(@ModelAttribute("studentPersonalInformation")
+	 * StudentPersonalInformation studentPersonalInformation, ModelMap model) {
+	 * 
+	 * studentPersonalInformationDao.saveStudentPersonalInformation(
+	 * studentPersonalInformation); return "redirect:/student/personalInformation";
+	 * }
+	 * 
+	 * 
+	 * ----------------------------------------------
+	 * The above two methods are for submitting form through Spring I have created
+	 * two REST API where form submitting occurs through AJAX
+	 * saveStudentJobInformationREST() saveStudentPersonalInformationREST()
+	 * ----------------------------------------------
+	 */
 
-		studentJobInformationDao.saveStudentJobInformation(studentJobInformation);
+	@RequestMapping(value = { "student/sendStudentImage" }, method = RequestMethod.POST)
+	public String sendStudentImage(@ModelAttribute("studentImages") StudentImages studentImages, ModelMap model,
+			HttpServletRequest request) {
 
-		return "redirect:/student/personalInformation";
-	}
-*/
-
-	
-/*	@RequestMapping(value = {"student/sendStudentPersonalInformation"}, method = RequestMethod.POST)
-	public String sendStudentPersonalInformation(@ModelAttribute("studentPersonalInformation") StudentPersonalInformation studentPersonalInformation, ModelMap model) {
-		
-		studentPersonalInformationDao.saveStudentPersonalInformation(studentPersonalInformation);
-		return "redirect:/student/personalInformation";
-	}*/
-	
-	@RequestMapping(value = {"student/sendStudentImage"}, method = RequestMethod.POST)
-	public String sendStudentImage(@ModelAttribute("studentImages") StudentImages studentImages, ModelMap model,HttpServletRequest request) {
-		
-		if(!studentImages.getFile().getOriginalFilename().equals("")) {
-			 if(!studentImages.getFile().getOriginalFilename().equals("") ){
-				 FileUploadUtility.uploadFile(request, studentImages.getFile()); 
-				 }
+		if (!studentImages.getFile().getOriginalFilename().equals("")) {
+			if (!studentImages.getFile().getOriginalFilename().equals("")) {
+				FileUploadUtility.uploadFile(request, studentImages.getFile());
+			}
 		}
 		return "redirect:/student/personalInformation";
 	}
-	
-	
-// REST API METODS, alternate methods are above this section
-	
-	
-	//To save the Job information of the student.
+
+	// REST API METODS, alternate methods are above this section
+
+	// To save the Job information of the student.
 	@RequestMapping(value = "/student/sendStudentJobInformation", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Boolean> saveStudentJobInformationREST(@RequestBody StudentJobInformation studentJobInformation){
-		
+	public ResponseEntity<Boolean> saveStudentJobInformationREST(
+			@RequestBody StudentJobInformation studentJobInformation) {
+
 		studentJobInformationDao.saveStudentJobInformation(studentJobInformation);
-		return new ResponseEntity<Boolean>(true,HttpStatus.CREATED);
+		return new ResponseEntity<Boolean>(true, HttpStatus.CREATED);
 	}
-	
-	
-	//To save the Personal Information of the student.
-	
-	@RequestMapping(value= {"student/sendStudentPersonalInformation"}, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Boolean> saveStudentPersonalInformationREST(@RequestBody StudentPersonalInformation studentPersonalInformation){
-		
+
+	// To save the Personal Information of the student.
+
+	@RequestMapping(value = {
+			"student/sendStudentPersonalInformation" }, method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Boolean> saveStudentPersonalInformationREST(
+			@RequestBody StudentPersonalInformation studentPersonalInformation) {
+
 		studentPersonalInformationDao.saveStudentPersonalInformation(studentPersonalInformation);
-		return new ResponseEntity<Boolean>(true,HttpStatus.CREATED);
+		return new ResponseEntity<Boolean>(true, HttpStatus.CREATED);
 	}
-	
-	
-	
-/*	//REST API TEST
-	
-	@ResponseBody
-	@RequestMapping(value= {"/jobTestRes"}, method = RequestMethod.GET)
-	public ArrayList<StudentJobInformation> giveStudentJobREST(){
-		StudentJobInformation job = new StudentJobInformation();
-		job.setCompanyName1("Orbund");
-		StudentJobInformation job1 = new StudentJobInformation();
-		job1.setCompanyName2("Selise");
-		
-		ArrayList<StudentJobInformation> li = new ArrayList<StudentJobInformation>();
-		li.add(job);
-		li.add(job1);
-		return li;
-		}
-	
-	@ResponseBody
-	@RequestMapping(value = {"/jobTestRes/{company}"})
-	public StudentJobInformation getJobInfo(@PathVariable("company") String companyname) {
-		
-		StudentJobInformation st =  new StudentJobInformation();
-		st.setCompanyName1(companyname);
-		st.setJobDuration1("1.5");
-		
-		
-		return st;
-	}*/
-	
+
+	/*
+	 * //REST API TEST
+	 * 
+	 * @ResponseBody
+	 * 
+	 * @RequestMapping(value= {"/jobTestRes"}, method = RequestMethod.GET) public
+	 * ArrayList<StudentJobInformation> giveStudentJobREST(){ StudentJobInformation
+	 * job = new StudentJobInformation(); job.setCompanyName1("Orbund");
+	 * StudentJobInformation job1 = new StudentJobInformation();
+	 * job1.setCompanyName2("Selise");
+	 * 
+	 * ArrayList<StudentJobInformation> li = new ArrayList<StudentJobInformation>();
+	 * li.add(job); li.add(job1); return li; }
+	 * 
+	 * @ResponseBody
+	 * 
+	 * @RequestMapping(value = {"/jobTestRes/{company}"}) public
+	 * StudentJobInformation getJobInfo(@PathVariable("company") String companyname)
+	 * {
+	 * 
+	 * StudentJobInformation st = new StudentJobInformation();
+	 * st.setCompanyName1(companyname); st.setJobDuration1("1.5");
+	 * 
+	 * 
+	 * return st; }
+	 */
 
 }

@@ -33,7 +33,7 @@ public class FileUploadUtility {
 		try {
 			//Server Upload
 			Random random = new Random();
-			file.transferTo(new File(REAL_PATH + random.nextInt(25) + ".jpg"));
+			file.transferTo(new File(REAL_PATH + random.nextInt(25)  + ".jpg"));
 			System.out.println(REAL_PATH);
 			//Project Directory Upload
 			file.transferTo(new File(ABS_PATH + random.nextInt(25) +".jpg"));

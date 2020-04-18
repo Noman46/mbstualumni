@@ -3,20 +3,21 @@
 jQuery(document).ready(function($) {
 	$("#personalInfoForm").submit(function(event) {
 		
-        var thatForm = $(this)
+        var thatForm = $(this);
 		// Prevent the form from submitting via the browser.
 		event.preventDefault();
-		saveJobAjax(thatForm);
+		savePersonalInfoAjax(thatForm);
 		//alert('hi');
 		this.reset();
 	});
 });
 
 
-function saveJobAjax(thatForm) {
+function savePersonalInfoAjax(thatForm) {
 	var url = thatForm.attr('action'),
 	    type = thatForm.attr('method'),
 	    data = {};
+	
 	
 	                              //console.log(url);
 	                              //console.log(type);

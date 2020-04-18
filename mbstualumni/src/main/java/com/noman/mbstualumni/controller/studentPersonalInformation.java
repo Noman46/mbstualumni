@@ -104,6 +104,7 @@ public class studentPersonalInformation {
 			@RequestBody StudentJobInformation studentJobInformation) {
 
 		studentJobInformationDao.saveStudentJobInformation(studentJobInformation);
+		System.out.println(studentJobInformation.toString());
 		return new ResponseEntity<Boolean>(true, HttpStatus.CREATED);
 	}
 

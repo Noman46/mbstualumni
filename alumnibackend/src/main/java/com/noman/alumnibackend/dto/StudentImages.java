@@ -1,6 +1,8 @@
 package com.noman.alumnibackend.dto;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,23 +15,35 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.web.multipart.MultipartFile;
 
 @Entity
-public class StudentImages {
-
+public class StudentImages implements Serializable {
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int studentImageId;
-	
+	private String code;
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+	public StudentImages() {
+		
+		this.code = "STU" + UUID.randomUUID().toString().substring(26).toUpperCase();
+		
+	}
+
 	@Transient
 	private MultipartFile File;
-	
+
 	@CreationTimestamp
 	private LocalDate created_at;
-	
+
 	@UpdateTimestamp
 	private LocalDate updated_at;
 
-	
-	
 	public int getStudentImageId() {
 		return studentImageId;
 	}
@@ -67,9 +81,5 @@ public class StudentImages {
 		return "StudentImages [studentImageId=" + studentImageId + ", File=" + File + ", created_at=" + created_at
 				+ ", updated_at=" + updated_at + "]";
 	}
-	
-	
-	
-	
-	
+
 }

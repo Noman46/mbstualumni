@@ -21,7 +21,7 @@ function saveJOBAJAX(thatForm) {
 	
 	                              //console.log(url);
 	                              //console.log(type);
-	
+	data["imageFile"] = $("#imageFile").val();
 	data["favouriteQoute"] = $("#favouriteQoute").val();
 	data["companyName1"] = $("#companyName1").val();
 	data["jobPosition1"] = $("#jobPosition1").val();

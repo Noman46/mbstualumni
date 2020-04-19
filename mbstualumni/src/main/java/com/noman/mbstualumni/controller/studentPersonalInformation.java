@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.noman.alumnibackend.dao.StudentImagesDao;
 import com.noman.alumnibackend.dao.StudentJobInformationDao;
 import com.noman.alumnibackend.dao.StudentPersonalInformationDao;
 import com.noman.alumnibackend.dto.StudentImages;
@@ -29,6 +30,9 @@ public class studentPersonalInformation {
 
 	@Autowired
 	public StudentPersonalInformationDao studentPersonalInformationDao;
+	
+	@Autowired
+	public StudentImagesDao studentImagesDao;
 
 	@RequestMapping(value = { "/student/personalInformation" })
 	public ModelAndView giveStudentPersonalInformationPage() {
@@ -89,6 +93,8 @@ public class studentPersonalInformation {
 				FileUploadUtility.uploadFile(request, studentImages.getFile(),studentImages.getCode());
 			
 		}
+		studentImagesDao.addStudentImage(2, "IT-12030", studentImages);
+		
 		return "redirect:/student/personalInformation";
 	}
 

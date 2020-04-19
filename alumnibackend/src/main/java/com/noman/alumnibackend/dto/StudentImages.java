@@ -28,6 +28,22 @@ public class StudentImages implements Serializable {
 		return code;
 	}
 
+	public int getApplicationId() {
+		return applicationId;
+	}
+
+	public void setApplicationId(int applicationId) {
+		this.applicationId = applicationId;
+	}
+
+	public String getVerifiedStudentVersityId() {
+		return verifiedStudentVersityId;
+	}
+
+	public void setVerifiedStudentVersityId(String verifiedStudentVersityId) {
+		this.verifiedStudentVersityId = verifiedStudentVersityId;
+	}
+
 	public void setCode(String code) {
 		this.code = code;
 	}

@@ -8,12 +8,13 @@
 </head>
 <body>
 
-	<div class="leftbar">
-		<div id="left1"></div>
-		<div id="left2"></div>
-		<div id="left3"></div>
-
+	<div class = "leftbar">
+		<div id = "image"></div>
+		<div id = "left1"></div>
+		<div id = "left2"></div>
+		<div id = "left3"></div>
 		<div id="left4"></div>
+		<div id="left5"></div>
 
 
 	</div>

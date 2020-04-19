@@ -20,6 +20,8 @@ public class StudentImages implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int studentImageId;
+	private int applicationId;
+	private String verifiedStudentVersityId;
 	private String code;
 
 	public String getCode() {

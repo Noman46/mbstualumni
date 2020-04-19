@@ -148,16 +148,15 @@ h1 span:nth-child(12)
 #searcharea{
 	position: absolute;
 	left: 250px;
-	top: 3px;
-	height:40px;
-
+	top: 9px;
+	height:30px;
 }
 
 #searchbox{
 	width: 500px;
-	height:40px;
+	height:30px;
 	background-color: white;
-	padding: 5px;
+	padding: 2px;
 	outline: none;
 	border-radius: 5px;
 
@@ -207,6 +206,14 @@ h1 span:nth-child(12)
 	height:403px;
 	box-shadow: 0 3px 12px #08131e;	
  }
+ #image{
+ position: relative;
+ width: 200px;
+ height:200px;
+ margin:12px;
+ background: red;
+ border-radius: 5px;
+ }
  
  .rightbar{
  	width: 220px;
@@ -230,7 +237,7 @@ h1 span:nth-child(12)
 	width: 200px;
 	height:25px;
 	position: relative;
-	top: 10px;
+	top:-8px;
 	left: 10px;
 	border: 1px solid #b59cbd;
 	border-radius: 5px;
@@ -270,6 +277,17 @@ h1 span:nth-child(12)
 	background-color: #efd4f7;
 }
 #left4:hover{background-color: #d3bdd9;}
+#left5{
+	width: 200px;
+	height:25px;
+	position: relative;
+	top: 35px;
+	left: 10px;
+	border: 1px solid #b59cbd;
+	border-radius: 5px;
+	background-color: #efd4f7;
+}
+#left5:hover{background-color: #d3bdd9;}
 /*============== Leftbar inside divs ===================*/
 
 /*-------------------------------------------------------------------------------------------*/

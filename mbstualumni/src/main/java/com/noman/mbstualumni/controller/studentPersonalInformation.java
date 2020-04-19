@@ -33,6 +33,8 @@ public class studentPersonalInformation {
 	
 	@Autowired
 	public StudentImagesDao studentImagesDao;
+	
+	
 
 	@RequestMapping(value = { "/student/personalInformation" })
 	public ModelAndView giveStudentPersonalInformationPage() {
@@ -46,6 +48,8 @@ public class studentPersonalInformation {
 		return studentPersonalInformation;
 	}
 
+	
+	
 	/*
 	 * The following two methods are for submitting form through Spring I have
 	 * created two REST API where form submitting occurs through AJAX
@@ -98,7 +102,7 @@ public class studentPersonalInformation {
 		return "redirect:/student/personalInformation";
 	}
 
-	// REST API METODS, alternate methods are above this section
+	// REST API METHODS, alternate methods are above this section
 
 	// To save the Job information of the student.
 	@RequestMapping(value = "/student/sendStudentJobInformation", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)

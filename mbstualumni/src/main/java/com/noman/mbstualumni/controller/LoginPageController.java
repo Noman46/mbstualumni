@@ -1,5 +1,7 @@
 package com.noman.mbstualumni.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -26,10 +28,11 @@ public class LoginPageController {
 	}
 	
 	@RequestMapping(value = {"/student/loginToProfile"})
-	public ModelAndView logintoTheSystem(@ModelAttribute("VerifiedStudent") VerifiedStudent verifiedStudent) {
+	public ModelAndView logintoTheSystem(@ModelAttribute("VerifiedStudent") VerifiedStudent verifiedStudent,HttpSession session) {
 		
 		VerifiedStudent getStudentFromDb = verifiedStudentDao.loginToSystemAsStudent(verifiedStudent);
 		if(getStudentFromDb != null) {
+			addVerifiedStudentWithSession(verifiedStudent, session);
 			ModelAndView studentProfilePage = new ModelAndView("studentProfilePage");
 			return studentProfilePage;
 			
@@ -37,9 +40,13 @@ public class LoginPageController {
 		else {
 			ModelAndView success = new ModelAndView("success");
 			return success;
-		}
+		}	
+	}
+	
+	private void addVerifiedStudentWithSession(VerifiedStudent verifiedStudent,HttpSession session){
+		
+		session.setAttribute("applicationId", verifiedStudent.getApplicationId());
+		session.setAttribute("verifiedStudentVersityId", verifiedStudent.getVerifiedStudentId());
 			
-		
-		
 	}
 }

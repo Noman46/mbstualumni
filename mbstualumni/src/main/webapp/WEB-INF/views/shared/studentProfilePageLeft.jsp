@@ -9,7 +9,8 @@
 <body>
 
 	<div class = "leftbar">
-		<div id = "image"></div>
+		<div id = "image">
+		<img src="${image}/${imageCode}.jpg" width="200" height="200"></div>
 		<div id = "left1"></div>
 		<div id = "left2"></div>
 		<div id = "left3"></div>

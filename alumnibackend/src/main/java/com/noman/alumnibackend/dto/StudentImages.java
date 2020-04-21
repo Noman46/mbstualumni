@@ -1,7 +1,8 @@
 package com.noman.alumnibackend.dto;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+//import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 import javax.persistence.Entity;
@@ -57,10 +58,10 @@ public class StudentImages implements Serializable {
 	private MultipartFile File;
 
 	@CreationTimestamp
-	private LocalDate created_at;
+	private LocalDateTime created_at;
 
 	@UpdateTimestamp
-	private LocalDate updated_at;
+	private LocalDateTime updated_at;
 
 	public int getStudentImageId() {
 		return studentImageId;
@@ -78,19 +79,19 @@ public class StudentImages implements Serializable {
 		File = file;
 	}
 
-	public LocalDate getCreated_at() {
+	public LocalDateTime getCreated_at() {
 		return created_at;
 	}
 
-	public void setCreated_at(LocalDate created_at) {
+	public void setCreated_at(LocalDateTime created_at) {
 		this.created_at = created_at;
 	}
 
-	public LocalDate getUpdated_at() {
+	public LocalDateTime getUpdated_at() {
 		return updated_at;
 	}
 
-	public void setUpdated_at(LocalDate updated_at) {
+	public void setUpdated_at(LocalDateTime updated_at) {
 		this.updated_at = updated_at;
 	}
 

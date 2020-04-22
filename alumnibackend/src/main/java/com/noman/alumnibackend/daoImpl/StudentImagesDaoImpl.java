@@ -29,14 +29,12 @@ public class StudentImagesDaoImpl implements StudentImagesDao{
 
 			return false;
 		}
-		
-		
-		
+				
 	}
 
 	@Override
 	public StudentImages getImageCode(int applicationId, String verifiedStudentVersityId) {
-		String queryForStudentImage = "FROM StudentImages WHERE applicationId= :applicationId AND verifiedStudentVersityId= :verifiedStudentVersityId";
+		String queryForStudentImage = "FROM StudentImages WHERE applicationId= :applicationId AND verifiedStudentVersityId= :verifiedStudentVersityId";	
 		Query<StudentImages> query = sessionFactory.getCurrentSession().createQuery(queryForStudentImage);
 		query.setParameter("applicationId", applicationId);
 		query.setParameter("verifiedStudentVersityId", verifiedStudentVersityId);

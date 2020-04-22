@@ -19,9 +19,9 @@ public class StudentProfilePageController {
 	public ModelAndView giveStudentProfilePage(@RequestParam("applicationId") Integer applicationId,
 			@RequestParam("verifiedStudentVersityId") String verifiedStudentVersityId) {
 
-		StudentImages ima = studentImagesDao.getImageCode(applicationId, verifiedStudentVersityId);
+		StudentImages image = studentImagesDao.getImageCode(applicationId, verifiedStudentVersityId);
 		ModelAndView studentProfilePage = new ModelAndView("studentProfilePage");
-		studentProfilePage.addObject("imageCode", ima.getCode());
+		studentProfilePage.addObject("imageCode", image.getCode());
 		
 		
 		return studentProfilePage;

@@ -1,5 +1,7 @@
 package com.noman.alumnibackend.daoImpl;
 
+
+
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,12 +35,15 @@ public class StudentImagesDaoImpl implements StudentImagesDao{
 	}
 
 	@Override
-	public StudentImages getImageCode(int applicationId, String verifiedStudentVersityId) {
-		String queryForStudentImage = "FROM StudentImages WHERE applicationId= :applicationId AND verifiedStudentVersityId= :verifiedStudentVersityId";	
+	public String getImageCode(int applicationId, String verifiedStudentVersityId) {
+		String queryForStudentImage = "FROM StudentImages WHERE applicationId= :applicationId AND verifiedStudentVersityId= :verifiedStudentVersityId ORDER BY created_at desc";	
 		Query<StudentImages> query = sessionFactory.getCurrentSession().createQuery(queryForStudentImage);
 		query.setParameter("applicationId", applicationId);
 		query.setParameter("verifiedStudentVersityId", verifiedStudentVersityId);
-		return query.getSingleResult();
+		query.setMaxResults(1);
+        StudentImages studentimage = query.getSingleResult();
+        System.out.println("The code is ----------++++ " +studentimage.getCode());
+		return studentimage.getCode();
 	}
 
 }

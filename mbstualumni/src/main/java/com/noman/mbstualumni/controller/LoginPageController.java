@@ -38,8 +38,7 @@ public class LoginPageController {
 			// ModelAndView studentProfilePage = new ModelAndView("studentProfilePage");
 			// return studentProfilePage;
 			return "redirect:/student/studentProfilePage?" + "applicationId=" + getStudentFromDb.getApplicationId()
-			+ "&verifiedStudentVersityId=" + getStudentFromDb.getVerifiedStudentVersityId()
-			+ "&imageCode=";
+			+ "&verifiedStudentVersityId=" + getStudentFromDb.getVerifiedStudentVersityId();
 
 		} else {
 

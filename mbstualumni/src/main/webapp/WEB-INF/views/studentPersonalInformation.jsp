@@ -62,6 +62,7 @@
 <body>
 
 	<div class="proSettings">
+	
 		<form:form modelAttribute="studentImages"
 			action="/mbstualumni/student/sendStudentImage" method="post"
 			enctype="multipart/form-data">
@@ -176,6 +177,7 @@
 							<form:input type="text" path="jobDuration4" autocomplete="off"
 								id="jobDuration4" />
 						</div>
+						
 
 
 					</div>

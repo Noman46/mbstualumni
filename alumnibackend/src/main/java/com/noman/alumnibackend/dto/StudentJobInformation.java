@@ -1,34 +1,25 @@
 package com.noman.alumnibackend.dto;
 
-import java.io.Serializable;
-import java.time.LocalDate;
-import java.util.UUID;
 
+import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Transient;
-
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.web.multipart.MultipartFile;
+
 
 @Entity
 public class StudentJobInformation{
 	
-	/**
-	 * 
-	 */
+	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int jobInfoId;
-	//private String versityId;
-   
-	
-	// default constructor
-
+	private int applicationId;
+	private String verifiedStudentVersityId;
 	private String companyName1;
 	private String jobPosition1;
 	private String jobDuration1;
@@ -144,6 +135,19 @@ public class StudentJobInformation{
 	}
 	public void setUpdated_at(LocalDate updated_at) {
 		this.updated_at = updated_at;
+	}
+	
+	public int getApplicationId() {
+		return applicationId;
+	}
+	public void setApplicationId(int applicationId) {
+		this.applicationId = applicationId;
+	}
+	public String getVerifiedStudentVersityId() {
+		return verifiedStudentVersityId;
+	}
+	public void setVerifiedStudentVersityId(String verifiedStudentVersityId) {
+		this.verifiedStudentVersityId = verifiedStudentVersityId;
 	}
 	@Override
 	public String toString() {

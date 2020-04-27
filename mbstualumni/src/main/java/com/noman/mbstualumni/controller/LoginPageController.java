@@ -1,19 +1,18 @@
 package com.noman.mbstualumni.controller;
 
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.context.annotation.SessionScope;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.noman.alumnibackend.dao.VerifiedStudentDao;
-import com.noman.alumnibackend.dto.ApplicationForm;
 import com.noman.alumnibackend.dto.VerifiedStudent;
 
 @Controller
+
 public class LoginPageController {
 
 	@Autowired
@@ -29,16 +28,16 @@ public class LoginPageController {
 	}
 
 	@RequestMapping(value = { "/student/loginToProfile" })
-	public String logintoTheSystem(@ModelAttribute("VerifiedStudent") VerifiedStudent verifiedStudent,
-			HttpSession session) {
+	public String logintoTheSystem(@ModelAttribute("VerifiedStudent") VerifiedStudent verifiedStudent,Model model) {
 
 		VerifiedStudent getStudentFromDb = verifiedStudentDao.loginToSystemAsStudent(verifiedStudent);
 		if (getStudentFromDb != null) {
 			// addVerifiedStudentWithSession(verifiedStudent, session);
 			// ModelAndView studentProfilePage = new ModelAndView("studentProfilePage");
 			// return studentProfilePage;
+			
 			return "redirect:/student/studentProfilePage?" + "applicationId=" + getStudentFromDb.getApplicationId()
-			+ "&verifiedStudentVersityId=" + getStudentFromDb.getVerifiedStudentVersityId();
+					+ "&verifiedStudentVersityId=" + getStudentFromDb.getVerifiedStudentVersityId();
 
 		} else {
 

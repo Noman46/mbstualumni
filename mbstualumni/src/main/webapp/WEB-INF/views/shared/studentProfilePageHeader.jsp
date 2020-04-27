@@ -22,7 +22,7 @@
 			<input type="text" name="" placeholder="Search here" id="searchbox">
 		</div>
 		<div id="profileIcon">
-			<a href="./personalInformation"><i class="fa fa-user"
+			<a href="./personalInformation?applicationId=<%=request.getParameter("applicationId")%>&verifiedStudentVersityId=<%=request.getParameter("verifiedStudentVersityId")%>"><i class="fa fa-user"
 				style="font-size: 30px"></i></a>
 		</div>
 		<div id="gearicon">

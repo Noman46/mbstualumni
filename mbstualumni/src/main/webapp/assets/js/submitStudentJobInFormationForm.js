@@ -3,17 +3,26 @@
 jQuery(document).ready(function($) {
 	$("#jobForm").submit(function(event) {
 		
-        var thatForm = $(this);
+        
 		// Prevent the form from submitting via the browser.
 		event.preventDefault();
-		saveJOBAJAX(thatForm);
+		var thatForm = $(this);
+		const queryString = window.location.search;
+		//alert(queryString);
+		const urlParams = new URLSearchParams(queryString);
+		const applicationId = urlParams.get('applicationId')
+		//alert(applicationId);
+		const verifiedStudentVersityId = urlParams.get('verifiedStudentVersityId')
+		//alert(verifiedStudentVersityId);
+		applicationId
+		saveJOBAJAX(thatForm,applicationId,verifiedStudentVersityId);
 		//alert('hi');
 		this.reset();
 	})
 });
 
 
-function saveJOBAJAX(thatForm) {
+function saveJOBAJAX(thatForm,applicationId,verifiedStudentVersityId) {
 	var url = thatForm.attr('action'),
 	    type = thatForm.attr('method'),
 	    data = {};
@@ -33,7 +42,8 @@ function saveJOBAJAX(thatForm) {
 	data["jobDuration3"] = $("#jobDuration3").val();
 	data["companyName4"] = $("#companyName4").val();
 	data["jobPosition4"] = $("#jobPosition4").val();
-	data["jobDuration4"] = $("#jobDuration4").val();
+	data["applicationId"] = applicationId;
+	data["verifiedStudentVersityId"] = verifiedStudentVersityId;
 	
 	
 	

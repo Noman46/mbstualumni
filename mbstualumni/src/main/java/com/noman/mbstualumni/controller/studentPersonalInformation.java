@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -39,13 +40,16 @@ public class studentPersonalInformation {
 	
 
 	@RequestMapping(value = { "/student/personalInformation" })
-	public ModelAndView giveStudentPersonalInformationPage() {
+	public ModelAndView giveStudentPersonalInformationPage(@RequestParam("applicationId") Integer applicationId,
+			@RequestParam("verifiedStudentVersityId") String verifiedStudentVersityId) {
 
 		ModelAndView studentPersonalInformation = new ModelAndView("studentPersonalInformation");
 
 		studentPersonalInformation.addObject("studentJobInformation", new StudentJobInformation());
 		studentPersonalInformation.addObject("studentPersonalInformation", new StudentPersonalInformation());
 		studentPersonalInformation.addObject("studentImages", new StudentImages());
+		studentPersonalInformation.addObject("applicationId", applicationId);
+		studentPersonalInformation.addObject("verifiedStudentVersityId", verifiedStudentVersityId);
 
 		return studentPersonalInformation;
 	}
@@ -110,7 +114,7 @@ public class studentPersonalInformation {
 	@RequestMapping(value = "/student/sendStudentJobInformation", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Boolean> saveStudentJobInformationREST(
 			@RequestBody StudentJobInformation studentJobInformation,HttpServletRequest request) {
-
+         
 		studentJobInformationDao.saveStudentJobInformation(studentJobInformation);
 		return new ResponseEntity<Boolean>(true, HttpStatus.CREATED);
 	}

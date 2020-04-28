@@ -3,17 +3,26 @@
 jQuery(document).ready(function($) {
 	$("#personalInfoForm").submit(function(event) {
 		
-        var thatForm = $(this);
+        
 		// Prevent the form from submitting via the browser.
 		event.preventDefault();
-		savePersonalInfoAjax(thatForm);
+		const queryString = window.location.search;
+		var thatForm = $(this);
+		//alert(queryString);
+		const urlParams = new URLSearchParams(queryString);
+		const applicationId = urlParams.get('applicationId')
+		//alert(applicationId);
+		const verifiedStudentVersityId = urlParams.get('verifiedStudentVersityId')
+		//alert(verifiedStudentVersityId);
+		applicationId
+		savePersonalInfoAjax(thatForm,applicationId,verifiedStudentVersityId);
 		//alert('hi');
 		this.reset();
 	});
 });
 
 
-function savePersonalInfoAjax(thatForm) {
+function savePersonalInfoAjax(thatForm,applicationId,verifiedStudentVersityId) {
 	var url = thatForm.attr('action'),
 	    type = thatForm.attr('method'),
 	    data = {};
@@ -32,6 +41,8 @@ function savePersonalInfoAjax(thatForm) {
 	data["studentIn"] = $("#studentIn").val();
 	data["studentTwt"] = $("#studentTwt").val();
 	data["studentBooks"] = $("#maxCharecter").val();
+	data["applicationId"] = applicationId;
+	data["verifiedStudentVersityId"] = verifiedStudentVersityId;
 	
 	
 	                            //console.log(data);

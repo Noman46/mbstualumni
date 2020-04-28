@@ -28,8 +28,7 @@ function saveJOBAJAX(thatForm,applicationId,verifiedStudentVersityId) {
 	    data = {};
 	
 	
-	                              //console.log(url);
-	                              //console.log(type);
+	                             
 	data["favouriteQoute"] = $("#favouriteQoute").val();
 	data["companyName1"] = $("#companyName1").val();
 	data["jobPosition1"] = $("#jobPosition1").val();

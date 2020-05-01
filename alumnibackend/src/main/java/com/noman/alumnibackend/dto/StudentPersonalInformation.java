@@ -17,6 +17,8 @@ public class StudentPersonalInformation {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int personalInfoId;
+	private int applicationId;
+	private String verifiedStudentVersityId;
 	private String studentHobby;
 	private String studentBlog;
 	private String studentVlog;
@@ -114,14 +116,29 @@ public class StudentPersonalInformation {
 	public void setUpdated_at(LocalDate updated_at) {
 		this.updated_at = updated_at;
 	}
+	public int getApplicationId() {
+		return applicationId;
+	}
+	public void setApplicationId(int applicationId) {
+		this.applicationId = applicationId;
+	}
+	public String getVerifiedStudentVersityId() {
+		return verifiedStudentVersityId;
+	}
+	public void setVerifiedStudentVersityId(String verifiedStudentVersityId) {
+		this.verifiedStudentVersityId = verifiedStudentVersityId;
+	}
 	@Override
 	public String toString() {
-		return "StudentPersonalInformation [personalInfoId=" + personalInfoId + ", studentHobby=" + studentHobby
+		return "StudentPersonalInformation [personalInfoId=" + personalInfoId + ", applicationId=" + applicationId
+				+ ", verifiedStudentVersityId=" + verifiedStudentVersityId + ", studentHobby=" + studentHobby
 				+ ", studentBlog=" + studentBlog + ", studentVlog=" + studentVlog + ", studentBloodGroup="
 				+ studentBloodGroup + ", studentGit=" + studentGit + ", studentFb=" + studentFb + ", studentLinkedin="
 				+ studentLinkedin + ", studentIn=" + studentIn + ", studentTwt=" + studentTwt + ", studentBooks="
 				+ studentBooks + ", created_at=" + created_at + ", updated_at=" + updated_at + "]";
 	}
+	
+	
 
 	
 	

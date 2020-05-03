@@ -392,4 +392,55 @@ h1 span:nth-child(12)
 
 
 /*-------------------------------------------------------------------*/
+.btn{
+  border: 1px solid #3498db;
+  background: none;
+  padding: 7px 15px;
+  font-size: 16px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin-bottom:5px;
+  transition: 0.8s;
+  position: relative;
+  top:60px;
+  left:240px;
+  overflow: hidden;
+  color: #3498db;
+}
+.btn:hover{
+  color: #fff;
+}
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background:#3498db;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+  z-index: -1;
+  transition: 0.8s; 
+}
+.btn:hover::before{
+  height: 180%;
+}
 
+#post{
+	width: 880px;
+	top: 65px;
+	left: 242px;
+	position: relative;
+	margin-bottom:5px;
+	display: none;
+}
+#postArea{
+	resize: none;
+	padding:5px;
+	font-family: "montserrat";
+	font-size: 15px;
+}
+#post textarea{
+  outline-color: #27ae60;
+  border:1px solid #27ae60;
+}

@@ -8,16 +8,24 @@
 </head>
 <body>
 
-	<div class = "leftbar">
-		<div id = "image">
-		<img src="${image}/${imageCode}.jpg" width="200" height="200"></div>
-		<div id = "left1"></div>
-		<div id = "left2"></div>
-		<div id = "left3"></div>
+	<div class="leftbar">
+		<div id="image">
+			<img src="${image}/${imageCode}.jpg" width="200" height="200">
+		</div>
+		<div id="left1"></div>
+		<div id="left2"></div>
+		<div id="left3"></div>
 		<div id="left4"></div>
 		<div id="left5"></div>
 
-
 	</div>
+	<div class="postButton">
+		<button class="btn" id="postClose">Share Your Thoughts</button>	
+		<button id="btnPost" class="btn" style="display: none;">Post</button> 
+	</div>
+	<div id="post">
+	<textarea id="postArea" rows="6" cols="106"></textarea>
+</div>
+	
 </body>
 </html>

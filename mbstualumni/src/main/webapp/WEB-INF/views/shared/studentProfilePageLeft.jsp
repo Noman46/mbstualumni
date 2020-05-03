@@ -20,12 +20,12 @@
 
 	</div>
 	<div class="postButton">
-		<button class="btn" id="postClose">Share Your Thoughts</button>	
-		<button id="btnPost" class="btn" style="display: none;">Post</button> 
+		<button class="btn" id="postClose">Share Your Thoughts</button>
+		<button id="btnPost" class="btn" style="display: none;">Post</button>
 	</div>
 	<div id="post">
-	<textarea id="postArea" rows="6" cols="106"></textarea>
-</div>
-	
+		<textarea id="postArea" rows="6" cols="106"></textarea>
+	</div>
+
 </body>
 </html>

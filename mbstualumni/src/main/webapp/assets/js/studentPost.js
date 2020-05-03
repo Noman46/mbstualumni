@@ -9,10 +9,16 @@ jQuery(document).ready(
 						const queryString = window.location.search;
 						const urlParams = new URLSearchParams(queryString);
 						const applicationId = urlParams.get('applicationId');
-						const verifiedStudentVersityId = urlParams
-								.get('verifiedStudentVersityId');
-						saveStudentPostAJAX(applicationId,
-								verifiedStudentVersityId);
+						const verifiedStudentVersityId = urlParams.get('verifiedStudentVersityId');
+						var postAreaValue = $('#postArea').val();
+						
+						if(postAreaValue != ''){
+							saveStudentPostAJAX(applicationId,verifiedStudentVersityId);
+						}
+						else if(postAreaValue == ''){
+							alert("Hei, Write Something inside the Post area !!! What I should save?");
+						}
+						
 						$('#postArea').val('');
 					})
 		});

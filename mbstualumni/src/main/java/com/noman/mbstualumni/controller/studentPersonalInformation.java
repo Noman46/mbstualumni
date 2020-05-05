@@ -103,7 +103,7 @@ public class studentPersonalInformation {
 				FileUploadUtility.uploadFile(request, studentImages.getFile(),studentImages.getCode());
 			
 		}
-		studentImagesDao.addStudentImage(42, "IT-12046", studentImages);
+		studentImagesDao.addStudentImage(43, "IT-13045", studentImages);
 		
 		return "redirect:/student/personalInformation";
 	}

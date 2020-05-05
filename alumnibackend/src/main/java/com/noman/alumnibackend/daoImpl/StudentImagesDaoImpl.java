@@ -2,6 +2,8 @@ package com.noman.alumnibackend.daoImpl;
 
 
 
+import javax.persistence.NoResultException;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,14 +38,25 @@ public class StudentImagesDaoImpl implements StudentImagesDao{
 
 	@Override
 	public String getImageCode(int applicationId, String verifiedStudentVersityId) {
-		String queryForStudentImage = "FROM StudentImages WHERE applicationId= :applicationId AND verifiedStudentVersityId= :verifiedStudentVersityId ORDER BY created_at desc";	
-		Query<StudentImages> query = sessionFactory.getCurrentSession().createQuery(queryForStudentImage);
-		query.setParameter("applicationId", applicationId);
-		query.setParameter("verifiedStudentVersityId", verifiedStudentVersityId);
-		query.setMaxResults(1);
-        StudentImages studentimage = query.getSingleResult();
-        System.out.println("The code is ----------++++ " +studentimage.getCode());
-		return studentimage.getCode();
+		try{
+			String queryForStudentImage = "FROM StudentImages WHERE applicationId= :applicationId AND verifiedStudentVersityId= :verifiedStudentVersityId ORDER BY created_at desc";	
+			
+			Query<StudentImages> query = sessionFactory.getCurrentSession().createQuery(queryForStudentImage);
+			query.setParameter("applicationId", applicationId);
+			query.setParameter("verifiedStudentVersityId", verifiedStudentVersityId);
+			query.setMaxResults(1);
+	        StudentImages studentimage = query.getSingleResult();
+	        System.out.println("The code is ----------++++ " +studentimage.getCode());
+	        return studentimage.getCode();
+	        }
+			catch (NoResultException nre){
+			
+				return "";
+			}
+
+	
+       
+		
 	}
 
 }

@@ -32,7 +32,13 @@ public class StudentProfilePageController {
 
 		String imageCode = studentImagesDao.getImageCode(applicationId, verifiedStudentVersityId);
 		ModelAndView studentProfilePage = new ModelAndView("studentProfilePage");
-		studentProfilePage.addObject("imageCode", imageCode);
+		if(imageCode != null) {
+			studentProfilePage.addObject("imageCode", imageCode);
+		}
+		else {
+			studentProfilePage.addObject("imageCode", "");
+		}
+		
 		
 		
 		return studentProfilePage;

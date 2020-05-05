@@ -10,7 +10,11 @@
 
 	<div class="leftbar">
 		<div id="image">
-			<img src="${image}/${imageCode}.jpg" width="200" height="200">
+
+			<c:if test="${(imageCode != '')}">
+				<img src="${image}/${imageCode}.jpg" width="200" height="200">
+			</c:if>
+			
 		</div>
 		<div id="left1"></div>
 		<div id="left2"></div>

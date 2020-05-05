@@ -31,17 +31,22 @@ public class LoginPageController {
 	public String logintoTheSystem(@ModelAttribute("VerifiedStudent") VerifiedStudent verifiedStudent,Model model) {
 
 		VerifiedStudent getStudentFromDb = verifiedStudentDao.loginToSystemAsStudent(verifiedStudent);
-		if (getStudentFromDb != null) {
-			// addVerifiedStudentWithSession(verifiedStudent, session);
-			// ModelAndView studentProfilePage = new ModelAndView("studentProfilePage");
-			// return studentProfilePage;
+/*		System.out.println(getStudentFromDb.getApplicationId());
+		System.out.println(getStudentFromDb.getVerifiedStudentEmail());
+		System.out.println(getStudentFromDb.getVerifiedStudentId());
+		System.out.println(getStudentFromDb.getVerifiedStudentPassword());
+		System.out.println(getStudentFromDb.getCreated_at());
+		System.out.println(getStudentFromDb.getUpdated_at());*/
+		
+		if (getStudentFromDb.getVerifiedStudentEmail() == verifiedStudent.getVerifiedStudentEmail() 
+				&& getStudentFromDb.getVerifiedStudentPassword() == verifiedStudent.getVerifiedStudentPassword()) {
 			
 			return "redirect:/student/studentProfilePage?" + "applicationId=" + getStudentFromDb.getApplicationId()
 					+ "&verifiedStudentVersityId=" + getStudentFromDb.getVerifiedStudentVersityId();
 
 		} else {
 
-			return "success";
+			return "loginfail";
 		}
 	}
 

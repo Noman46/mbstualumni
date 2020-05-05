@@ -1,6 +1,7 @@
 package com.noman.alumnibackend.daoImpl;
 
 
+import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,12 +27,18 @@ public class VerifiedStudentDaoImpl implements VerifiedStudentDao {
 
 	@Override
 	public VerifiedStudent loginToSystemAsStudent(VerifiedStudent verifiedStudent) {
-		String selectVerifiedStudent = "FROM VerifiedStudent WHERE verifiedStudentEmail = :verifiedStudentEmail AND verifiedStudentPassword = :verifiedStudentPassword";
-		
-		Query<VerifiedStudent> query = sessionFactory.getCurrentSession().createQuery(selectVerifiedStudent);
-		query.setParameter("verifiedStudentEmail", verifiedStudent.getVerifiedStudentEmail());
-		query.setParameter("verifiedStudentPassword", verifiedStudent.getVerifiedStudentPassword());
-		return query.getSingleResult();
+		try {
+			String selectVerifiedStudent = "FROM VerifiedStudent WHERE verifiedStudentEmail = :verifiedStudentEmail AND verifiedStudentPassword = :verifiedStudentPassword";
+			
+			Query<VerifiedStudent> query = sessionFactory.getCurrentSession().createQuery(selectVerifiedStudent);
+			query.setParameter("verifiedStudentEmail", verifiedStudent.getVerifiedStudentEmail());
+			query.setParameter("verifiedStudentPassword", verifiedStudent.getVerifiedStudentPassword());
+			return query.getSingleResult();
+		} catch (HibernateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 }

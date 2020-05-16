@@ -1,5 +1,7 @@
 package com.noman.mbstualumni.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +28,17 @@ public class StudentProfilePageController {
 	@Autowired
 	public StudentPostDao studentPostDao;
 	
+
+	
 	@RequestMapping(value = { "/student/studentProfilePage" })
 	public ModelAndView giveStudentProfilePage(@RequestParam("applicationId") Integer applicationId,
 			@RequestParam("verifiedStudentVersityId") String verifiedStudentVersityId) {
-
+        
+		List<Object[]>obj = studentPostDao.getPosts();
+		 for (Object[] num : obj)  
+	        { 
+	           System.out.println(num[0]);
+	        } 
 		String imageCode = studentImagesDao.getImageCode(applicationId, verifiedStudentVersityId);
 		ModelAndView studentProfilePage = new ModelAndView("studentProfilePage");
 		if(imageCode != null) {

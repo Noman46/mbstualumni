@@ -10,16 +10,18 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-
 import com.noman.alumnibackend.dao.ApplicationFormDao;
-
+import com.noman.alumnibackend.dao.StudentPostDao;
 import com.noman.alumnibackend.dto.ApplicationForm;
+import com.noman.alumnibackend.dto.StudentPost;
 
 public class ApplicationFormTest {
 
 	private static AnnotationConfigApplicationContext context;
 	private static ApplicationFormDao applicationFormDao;
+	//private static StudentPostDao studentpostDao;
 	private ApplicationForm form;
+	//private StudentPost sp;
 	
 	
 	
@@ -32,6 +34,7 @@ public class ApplicationFormTest {
 		
 		
 		applicationFormDao = (ApplicationFormDao)context.getBean("applicationFormDao");
+		//studentpostDao = (StudentPostDao)context.getBean("studentPostDaoImpl");
 		
 	}
 	
@@ -60,7 +63,7 @@ public class ApplicationFormTest {
 		//List<ApplicationForm> list = applicationFormDao.getApplicationForms();
 		/*assertEquals("Successfull", ,applicationFormDao.getApplicationForms().size());*/
 		//System.out.println(list.size());
-		form = applicationFormDao.giveApplicationFormById(36);
+		form = applicationFormDao.giveApplicationFormById(42);
 		System.out.println(form.getFatherName());
 	}
 	

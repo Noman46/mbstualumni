@@ -37,10 +37,14 @@ public class StudentProfilePageController {
 		List<Object[]>obj = studentPostDao.getPosts();
 		 for (Object[] num : obj)  
 	        { 
-	           System.out.println(num[0]);
+			 System.out.println("------");
+	           System.out.println(num[0]+"----"+num[3]);
+	           System.out.println("++++++");
 	        } 
 		String imageCode = studentImagesDao.getImageCode(applicationId, verifiedStudentVersityId);
 		ModelAndView studentProfilePage = new ModelAndView("studentProfilePage");
+		studentProfilePage.addObject("PostLists", obj);
+		
 		if(imageCode != null) {
 			studentProfilePage.addObject("imageCode", imageCode);
 		}

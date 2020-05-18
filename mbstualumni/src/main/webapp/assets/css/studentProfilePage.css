@@ -322,11 +322,16 @@ h1 span:nth-child(12)
 	box-shadow: 0 3px 8px #08131e;	
 }
 #profileMessage{
-	height:230px;
+	height:175px;
 	width: 840px;
+	padding: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:16px;
 	position: absolute;
 	top: 75px;
 	left:10px;
+	resize: none;
+	outline: none;
 	border-radius: 5px;
 	background-color: #e5e5e5;
 	box-shadow: 0 3px 8px #08131e;	
@@ -337,7 +342,7 @@ h1 span:nth-child(12)
 	width: 50px;
 	position: absolute;
 	left:10px;
-	top: 310px;
+	top: 270px;
     background-color: #e5e5e5;
 	box-shadow: 0 3px 8px #08131e;
 	border-radius: 5px;	
@@ -347,7 +352,7 @@ h1 span:nth-child(12)
 	width: 80px;
 	position: absolute;
 	left:75px;
-	top: 310px;
+	top: 270px;
     background-color: #e5e5e5;
 	box-shadow: 0 3px 8px #08131e;
 	border-radius: 5px;	

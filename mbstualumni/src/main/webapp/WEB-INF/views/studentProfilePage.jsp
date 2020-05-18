@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <spring:url var="css" value="/resources/css" />
 <spring:url var="image" value="/resources/images" />
@@ -45,52 +45,26 @@
 
 
 	<div class="messagediv">
-		<div class="innerMessage">
 
-			<div id="profileImage"></div>
-			<div id="profileName"></div>
-			<div id="profileMessage"></div>
-			<div id="likeButton">
-				<button class="buttonLike">Like</button>
+		<c:if test="${not empty PostLists}">
+			<c:forEach items="${PostLists}" var="lists">
+                 <div class="innerMessage">
+
+				<div id="profileImage">
+					<img src="" width="50" height="50" />
+				</div>
+				<div id="profileName">${lists[3]}</div>
+				<textarea id="profileMessage"  readonly>${lists[0]}</textarea>
+				<div id="likeButton">
+					<button class="buttonLike">Like</button>
+				</div>
+				<div id="commentButton">
+					<button class="buttonCmnt">Comment</button>
+				</div>
+
 			</div>
-			<div id="commentButton">
-				<button class="buttonCmnt">Comment</button>
-			</div>
-
-		</div>
-
-
-		<div class="innerMessage">
-
-			<div id="profileImage">
-				<img src="" width="50" height="50" />
-			</div>
-			<div id="profileName"></div>
-			<div id="profileMessage"></div>
-			<div id="likeButton">
-				<button class="buttonLike">Like</button>
-			</div>
-			<div id="commentButton">
-				<button class="buttonCmnt">Comment</button>
-			</div>
-
-		</div>
-
-		<div class="innerMessage">
-
-			<div id="profileImage"></div>
-			<div id="profileName"></div>
-			<div id="profileMessage"></div>
-			<div id="likeButton">
-				<button class="buttonLike">Like</button>
-			</div>
-			<div id="commentButton">
-				<button class="buttonCmnt">Comment</button>
-			</div>
-
-		</div>
-
-
+      </c:forEach>
+      </c:if>
 
 
 	</div>

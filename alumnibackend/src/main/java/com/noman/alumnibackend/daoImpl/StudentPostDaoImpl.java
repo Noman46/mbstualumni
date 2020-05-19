@@ -36,7 +36,7 @@ public class StudentPostDaoImpl implements StudentPostDao {
 	@Override
 	@SuppressWarnings("unchecked")
 	public List<Object[]> getPosts() {
-		String selectPost = "SELECT a.post,a.applicationId,b.applicationId,b.studentName FROM StudentPost a, ApplicationForm b WHERE a.applicationId = b.applicationId";
+		String selectPost = "SELECT a.post,a.postId,a.applicationId,b.applicationId,b.studentName FROM StudentPost a, ApplicationForm b WHERE a.applicationId = b.applicationId";
 		
 		Query<Object[]> query = sessionFactory.getCurrentSession().createQuery(selectPost);
 		return query.getResultList();

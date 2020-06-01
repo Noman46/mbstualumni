@@ -23,7 +23,7 @@
 		</div>
 			<div class = "icons">
 			<ul>
-				<li><a href="#" title="MBSTU Life"><i class="fas fa-university"></i></a></li>
+				<li><a href="./mbstulife" title="MBSTU Life" target="_blank"><i class="fas fa-university"></i></a></li>
 				<li><a href="./personalInformation?applicationId=<%=request.getParameter("applicationId")%>&verifiedStudentVersityId=<%=request.getParameter("verifiedStudentVersityId")%>" title="Settings"><i class="fas fa-users-cog"></i></a></li>
 				<li><a href="#" title="Logout"><i class="fas fa-sign-out-alt"></i></a></li>
 				<li><a href="#" title="Poem & Poetry"><i class="fas fa-theater-masks"></i></a></li>

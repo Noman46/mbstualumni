@@ -4,6 +4,7 @@
 body{
 	min-height: 100%
     width: 100%
+
     
 }
 
@@ -162,25 +163,54 @@ h1 span:nth-child(12)
 
 }
 
-#profileIcon{
-	position: absolute;
-	top: 13px;
-	left: 1000px;
-	}
+/* ----------- ICONS ANIMATION ---------------------- */
 
-.fa:hover{
-	color: #728393;	
-}
-#gearicon{
+
+.icons{
 	position: absolute;
-	top: 13px;
-	left: 1050px;
+	top: 0px;
+	padding: 0px;
+	margin-top: 0px;
+	top: 0px;
+	left: 730px;
+	display:  flex;
+	
+	
+	
 }
-#logouticon{
+.icons ul{
 	position: absolute;
-	top: 13px;
-	left: 1250px;
+	display: flex;
 }
+.icons ul li{
+	position: relative;
+	list-style: none;
+}
+.icons ul li a{
+	display: block;
+	width: 50px;
+	height: 40px;
+	background: #15314b;
+	text-align: center;
+	margin: 0 10px;
+	border-radius: 10px;
+	box-shadow: -2px -2px 3px rgba(255,255,255,0.05),
+	             3px 3px 3px rgba(0,0,0,0.2);
+   
+}
+
+.icons ul li a .fas{
+	font-size:30px;
+	color: #9E9E9E;
+	transition: 0.4s;
+}
+.icons ul li a:hover .fas{
+	color: #66FF66;
+	text-shadow: 0 0 45px #66FF66;
+	
+}
+
+
 
 /*-------------------------------------------------------------------*/
 .messagediv{

@@ -21,18 +21,21 @@
 		<div id="searcharea">
 			<input type="text" name="" placeholder="Search here" id="searchbox">
 		</div>
-		<div id="profileIcon">
-			<a href="./personalInformation?applicationId=<%=request.getParameter("applicationId")%>&verifiedStudentVersityId=<%=request.getParameter("verifiedStudentVersityId")%>"><i class="fa fa-user"
-				style="font-size: 30px"></i></a>
-		</div>
-		<div id="gearicon">
-			<i class="fa fa-gear" style="font-size: 30px"></i>
-		</div>
-		<div id="logouticon">
-			<i class="fa fa-power-off" style="font-size: 30px;"></i>
-		</div>
-
+			<div class = "icons">
+			<ul>
+				<li><a href="#" title="MBSTU Life"><i class="fas fa-university"></i></a></li>
+				<li><a href="./personalInformation?applicationId=<%=request.getParameter("applicationId")%>&verifiedStudentVersityId=<%=request.getParameter("verifiedStudentVersityId")%>" title="Settings"><i class="fas fa-users-cog"></i></a></li>
+				<li><a href="#" title="Logout"><i class="fas fa-sign-out-alt"></i></a></li>
+				<li><a href="#" title="Poem & Poetry"><i class="fas fa-theater-masks"></i></a></li>
+				<li><a href="#" title="Blog"><i class="fas fa-pen-nib"></i></a></li>
+				<li><a href="#" title="Donate Blood"><i class="fas fa-hand-holding-water"></i></a></li>
+				<li><a href="#" title="Job Circular"><i class="fas fa-briefcase"></i></a></li>
+				<li><a href="#" title="Academic Notes"><i class="fas fa-book-reader"></i></a></li>
+			</ul>	
 	</div>
+		
+	</div>
+
 
 </body>
 </html>

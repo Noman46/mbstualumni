@@ -47,6 +47,7 @@ public class StudentProfilePageController {
 	           System.out.println("++++++");
 	        } 
 		String imageCode = studentImagesDao.getImageCode(applicationId, verifiedStudentVersityId);
+		
 		ModelAndView studentProfilePage = new ModelAndView("studentProfilePage");
 		studentProfilePage.addObject("PostLists", obj);
 		studentProfilePage.addObject("likes", new Likes());

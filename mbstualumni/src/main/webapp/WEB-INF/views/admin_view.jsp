@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 
 <spring:url var="css" value="/resources/css" />
@@ -20,6 +21,7 @@
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="${css}/adminpage.css">
 <link rel="stylesheet" type="text/css" href="${css}/notification.css">
+
 
 <script src="${js}/adminpage.js"></script>
 

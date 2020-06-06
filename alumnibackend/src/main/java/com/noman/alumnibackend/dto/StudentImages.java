@@ -18,6 +18,9 @@ import org.springframework.web.multipart.MultipartFile;
 @Entity
 public class StudentImages implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int studentImageId;
@@ -25,6 +28,14 @@ public class StudentImages implements Serializable {
 	private String verifiedStudentVersityId;
 	private String code;
 
+	
+	public StudentImages() {
+		
+		this.code = "STU" + UUID.randomUUID().toString().substring(26).toUpperCase();
+		
+	}
+	
+	
 	public String getCode() {
 		return code;
 	}
@@ -48,11 +59,7 @@ public class StudentImages implements Serializable {
 	public void setCode(String code) {
 		this.code = code;
 	}
-	public StudentImages() {
-		
-		this.code = "STU" + UUID.randomUUID().toString().substring(26).toUpperCase();
-		
-	}
+
 
 	@Transient
 	private MultipartFile File;

@@ -1,192 +1,281 @@
 @charset "ISO-8859-1";
 
-
-body{
-	min-height: 100%
-    width: 100%
-
-    
+body {
+	min-height: 100% width: 100%
 }
 
-.header1{
-  position:fixed;
-  width:100%;
-  height: 60px;
-  background: #15314b;
-  top: 0;
-  left: 0;
-  color: white;
-  box-shadow: 0 3px 8px #08131e;
-  z-index: 7;
+.header1 {
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	background: #15314b;
+	top: 0;
+	left: 0;
+	color: white;
+	box-shadow: 0 3px 8px #08131e;
+	z-index: 7;
+}
+/*========================= BLOOD MODAL ===========================*/
+.modal {
+	display: block; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 72%;
+	top: 1;
+	width: 25%; /* Full width */
+	height: 23%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+	width: 315px;
+	height: 140px;
+	background-color: #fefefe;
+	margin: auto;
+	border: 1px solid #888;
+}
+
+/* The Close Button */
+.close {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 27px;
+	height: 27px;
+	color: #aaaaaa;
+	float: right;
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-right: 3px;
+	align: center;
+	border: 1px solid #15314b;
+	transition:.5s;
+}
+
+.close:hover, .close:focus {
+	color: red;
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 31px;
+	border: 1px solid red;
+	border-radius:2px;
+}
+#bloodselect {
+	position: relative;
+	width: 230px;
+	height: 30px;
+	margin-left: 10px;
+	margin-top: 10px;
 }
 /* ======================== LOGO MBSTU ALUMN =====================I*/
-.shadow{
+.shadow {
 	position: relative;
 	top: 12px;
 	left: 12px;
 	width: 210px;
 	height: 35px;
-	background: linear-gradient(0deg,#000,#262626);
+	background: linear-gradient(0deg, #000, #262626);
 	border-radius: 5px;
 }
 
-.shadow:before,
-.shadow:after
-{
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
+.shadow:before, .shadow:after {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000,
+		#fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	border-radius: 5px;
+	animation: animate1 20s linear infinite;
+}
 
-    background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
-    background-size: 400%;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    z-index: -1;
-    border-radius: 5px;
-    animation: animate1 20s linear infinite;
-} 
-.shadow:after
-{
+.shadow:after {
 	filter: blur(10px);
 }
-@keyframes animate1 
-{
-	0%{
-		background-position: 0 0;
-	}
-	50%{
-		background-position: 300% 0;
-	}
-	100%{
-		background-position: 0 0;
-	}
+
+@
+keyframes animate1 { 0%{
+	background-position: 0 0;
 }
 
-#logo{
+50%{
+background-position
+
+
+:
+
+ 
+
+300%
+0;
+}
+100%{
+background-position
+
+
+:
+
+ 
+
+0
+0;
+}
+}
+#logo {
 	position: absolute;
 	left: 17px;
 }
 
-h1{
+h1 {
 	font-size: 1em;
 }
 
-h1 span
-{
+h1 span {
 	display: inline-block;
 	animation: animate 1s linear forwards;
 }
-@keyframes animate
-{
 
-  0%{
-         opacity: 0;
-         transform: rotateY(90deg);
-         filter: blur(10px);
-       }
-
-       100%{
-       	opacity:1;
-       	transform: rotateY(0deg);
-       	filter: blur(0);
-       }
+@
+keyframes animate { 0%{
+	opacity: 0;
+	transform: rotateY(90deg);
+	filter: blur(10px);
 }
-h1 span:nth-child(1)
-{
+
+100%{
+opacity
+
+
+:
+
+
+1;
+transform
+
+
+:
+
+ 
+
+rotateY
+
+
+(0
+deg
+);
+
+
+       	
+
+filter
+
+
+:
+
+ 
+
+blur
+
+
+(0);
+}
+}
+h1 span:nth-child(1) {
 	animation-delay: 0.5s;
 }
-h1 span:nth-child(2)
-{
+
+h1 span:nth-child(2) {
 	animation-delay: .75s;
 }
-h1 span:nth-child(3)
-{
+
+h1 span:nth-child(3) {
 	animation-delay: 1s;
 }
-h1 span:nth-child(4)
-{
+
+h1 span:nth-child(4) {
 	animation-delay: 1.25s;
 }
-h1 span:nth-child(5)
-{
+
+h1 span:nth-child(5) {
 	animation-delay: 1.5s;
 }
-h1 span:nth-child(6)
-{
+
+h1 span:nth-child(6) {
 	animation-delay: 6s;
 }
-h1 span:nth-child(7)
-{
+
+h1 span:nth-child(7) {
 	animation-delay: 2.5s;
 }
-h1 span:nth-child(8)
-{
+
+h1 span:nth-child(8) {
 	animation-delay: 2.75s;
 }
-h1 span:nth-child(9)
-{
+
+h1 span:nth-child(9) {
 	animation-delay: 3s;
 }
-h1 span:nth-child(10)
-{
+
+h1 span:nth-child(10) {
 	animation-delay: 3.75s;
 }
-h1 span:nth-child(11)
-{
+
+h1 span:nth-child(11) {
 	animation-delay: 4s;
 }
-h1 span:nth-child(12)
-{
+
+h1 span:nth-child(12) {
 	animation-delay: 4.5s;
 }
 
 /*---------------------------------------------------------------- */
 
-
 /* ========================== Search Box ========================== */
-
-#searcharea{
+#searcharea {
 	position: absolute;
 	left: 250px;
 	top: 9px;
-	height:30px;
+	height: 30px;
 }
 
-#searchbox{
+#searchbox {
 	width: 500px;
-	height:30px;
+	height: 30px;
 	background-color: white;
 	padding: 2px;
 	outline: none;
 	border-radius: 5px;
-
 }
 
 /* ----------- ICONS ANIMATION ---------------------- */
-
-
-.icons{
+.icons {
 	position: absolute;
 	top: 0px;
 	padding: 0px;
 	margin-top: 0px;
 	top: 0px;
 	left: 730px;
-	display:  flex;
-	
-	
-	
+	display: flex;
 }
-.icons ul{
+
+.icons ul {
 	position: absolute;
 	display: flex;
 }
-.icons ul li{
+
+.icons ul li {
 	position: relative;
 	list-style: none;
 }
-.icons ul li a{
+
+.icons ul li a {
 	display: block;
 	width: 50px;
 	height: 40px;
@@ -194,89 +283,91 @@ h1 span:nth-child(12)
 	text-align: center;
 	margin: 0 10px;
 	border-radius: 10px;
-	box-shadow: -2px -2px 3px rgba(255,255,255,0.05),
-	             3px 3px 3px rgba(0,0,0,0.2);
-   
+	box-shadow: -2px -2px 3px rgba(255, 255, 255, 0.05), 3px 3px 3px
+		rgba(0, 0, 0, 0.2);
 }
 
-.icons ul li a .fas{
-	font-size:30px;
+.icons ul li a .fas {
+	font-size: 30px;
 	color: #9E9E9E;
 	transition: 0.4s;
 }
-.icons ul li a:hover .fas{
+
+.icons ul li a:hover .fas {
 	color: #66FF66;
 	text-shadow: 0 0 45px #66FF66;
-	
 }
 
-
-
 /*-------------------------------------------------------------------*/
-.messagediv{
+.messagediv {
 	width: 880px;
 	top: 65px;
 	left: 242px;
 	position: relative;
-	background:#15314b;
-	box-shadow: 0 3px 8px #08131e;	
+	background: #15314b;
+	box-shadow: 0 3px 8px #08131e;
 }
 
-.leftbar{
+.leftbar {
 	width: 225px;
-	height:400px;
+	height: 400px;
 	position: fixed;
 	top: 65px;
-	left:10px;
-	background:#15314b;
-	box-shadow: 0 3px 8px #08131e;	
- }
- .leftbar:hover{
- 	width: 228px;
-	height:403px;
-	box-shadow: 0 3px 12px #08131e;	
- }
- #image{
- position: relative;
- width: 200px;
- height:200px;
- margin:12px;
- background: red;
- border-radius: 5px;
- }
- 
- .rightbar{
- 	width: 220px;
-	height:400px;
-	position: fixed;
-	top: 65px;
-	left:1145px;
+	left: 10px;
 	background: #15314b;
-	box-shadow: 0 3px 8px #08131e;	
- }
+	box-shadow: 0 3px 8px #08131e;
+}
 
-  .rightbar:hover{
- 	width: 222px;
-	height:403px;
-	box-shadow: 0 3px 12px #08131e;	
- }
+.leftbar:hover {
+	width: 228px;
+	height: 403px;
+	box-shadow: 0 3px 12px #08131e;
+}
 
- /*============== Leftbar inside divs ===================*/
-
-#left1{
-	width: 200px;
-	height:25px;
+#image {
 	position: relative;
-	top:-8px;
+	width: 200px;
+	height: 200px;
+	margin: 12px;
+	background: red;
+	border-radius: 5px;
+}
+
+.rightbar {
+	width: 220px;
+	height: 400px;
+	position: fixed;
+	top: 65px;
+	left: 1145px;
+	background: #15314b;
+	box-shadow: 0 3px 8px #08131e;
+}
+
+.rightbar:hover {
+	width: 222px;
+	height: 403px;
+	box-shadow: 0 3px 12px #08131e;
+}
+
+/*============== Leftbar inside divs ===================*/
+#left1 {
+	width: 200px;
+	height: 25px;
+	position: relative;
+	top: -8px;
 	left: 10px;
 	border: 1px solid #b59cbd;
 	border-radius: 5px;
 	background-color: #efd4f7;
 }
-#left1:hover{background-color: #d3bdd9;}
-#left2{
+
+#left1:hover {
+	background-color: #d3bdd9;
+}
+
+#left2 {
 	width: 200px;
-	height:25px;
+	height: 25px;
 	position: relative;
 	top: 18px;
 	left: 10px;
@@ -284,10 +375,14 @@ h1 span:nth-child(12)
 	border-radius: 5px;
 	background-color: #efd4f7;
 }
-#left2:hover{background-color: #d3bdd9;}
-#left3{
+
+#left2:hover {
+	background-color: #d3bdd9;
+}
+
+#left3 {
 	width: 200px;
-	height:25px;
+	height: 25px;
 	position: relative;
 	top: 25px;
 	left: 10px;
@@ -295,10 +390,14 @@ h1 span:nth-child(12)
 	border-radius: 5px;
 	background-color: #efd4f7;
 }
-#left3:hover{background-color: #d3bdd9;}
-#left4{
+
+#left3:hover {
+	background-color: #d3bdd9;
+}
+
+#left4 {
 	width: 200px;
-	height:25px;
+	height: 25px;
 	position: relative;
 	top: 30px;
 	left: 10px;
@@ -306,10 +405,14 @@ h1 span:nth-child(12)
 	border-radius: 5px;
 	background-color: #efd4f7;
 }
-#left4:hover{background-color: #d3bdd9;}
-#left5{
+
+#left4:hover {
+	background-color: #d3bdd9;
+}
+
+#left5 {
 	width: 200px;
-	height:25px;
+	height: 25px;
 	position: relative;
 	top: 35px;
 	left: 10px;
@@ -317,106 +420,109 @@ h1 span:nth-child(12)
 	border-radius: 5px;
 	background-color: #efd4f7;
 }
-#left5:hover{background-color: #d3bdd9;}
+
+#left5:hover {
+	background-color: #d3bdd9;
+}
 /*============== Leftbar inside divs ===================*/
 
 /*-------------------------------------------------------------------------------------------*/
 
 /*============== profile image inner message div ===================*/
-
-.innerMessage{
-	height:350px;
+.innerMessage {
+	height: 350px;
 	width: 870px;
 	position: relative;
-	margin-bottom: 20px;	
+	margin-bottom: 20px;
 }
 
-#profileImage{
-	height:50px;
-	width:50px;
+#profileImage {
+	height: 50px;
+	width: 50px;
 	position: absolute;
 	top: 10px;
 	left: 10px;
 	background-color: #e5e5e5;
-	box-shadow: 0 3px 8px #08131e;	
+	box-shadow: 0 3px 8px #08131e;
 	border-radius: 5px;
 }
-#profileName{
+
+#profileName {
 	height: 25px;
-	width:300px;
+	width: 300px;
 	background-color: #e5e5e5;
 	border-radius: 10px;
 	position: absolute;
 	text-align: center;
 	top: 18px;
-	left:70px;
-	box-shadow: 0 3px 8px #08131e;	
+	left: 70px;
+	box-shadow: 0 3px 8px #08131e;
 }
-#profileMessage{
-	height:175px;
+
+#profileMessage {
+	height: 175px;
 	width: 840px;
 	padding: 5px;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size:16px;
+	font-size: 16px;
 	position: absolute;
 	top: 75px;
-	left:10px;
+	left: 10px;
 	resize: none;
 	outline: none;
 	border-radius: 5px;
 	background-color: #e5e5e5;
-	box-shadow: 0 3px 8px #08131e;	
+	box-shadow: 0 3px 8px #08131e;
 }
 
-#likeButton{
-	height:30px;
+#likeButton {
+	height: 30px;
 	width: 50px;
 	position: absolute;
-	left:10px;
+	left: 10px;
 	top: 270px;
-    background-color: #e5e5e5;
+	background-color: #e5e5e5;
 	box-shadow: 0 3px 8px #08131e;
-	border-radius: 5px;	
+	border-radius: 5px;
 }
-#commentButton{
-	height:30px;
+
+#commentButton {
+	height: 30px;
 	width: 80px;
 	position: absolute;
-	left:75px;
+	left: 75px;
 	top: 270px;
-    background-color: #e5e5e5;
+	background-color: #e5e5e5;
 	box-shadow: 0 3px 8px #08131e;
-	border-radius: 5px;	
+	border-radius: 5px;
 }
 
-
 /*============================ BUTTONS ====================*/
-
-.buttonLike{
-	height:30px;
+.buttonLike {
+	height: 30px;
 	width: 50px;
 	background-color: #e5e5e5;
 	border: none;
-	border-radius: 5px;	
+	border-radius: 5px;
 	font-size: 14px;
 }
 
-.buttonLike:hover{
+.buttonLike:hover {
 	background-color: #cccccc;
 	font-weight: bold;
 	font-size: 15px;
 }
 
-.buttonCmnt{
-	height:30px;
+.buttonCmnt {
+	height: 30px;
 	width: 80px;
 	background-color: #e5e5e5;
 	border: none;
-	border-radius: 5px;	
+	border-radius: 5px;
 	font-size: 14px;
 }
 
-.buttonCmnt:hover{
+.buttonCmnt:hover {
 	background-color: #cccccc;
 	font-weight: bold;
 	font-size: 15px;
@@ -426,57 +532,61 @@ h1 span:nth-child(12)
 
 /*================================ SHADOW ON LOGO ======================*/
 
-
 /*-------------------------------------------------------------------*/
-.btn{
-  border: 1px solid #3498db;
-  background: none;
-  padding: 7px 15px;
-  font-size: 16px;
-  font-family: "montserrat";
-  cursor: pointer;
-  margin-bottom:5px;
-  transition: 0.8s;
-  position: relative;
-  top:60px;
-  left:240px;
-  overflow: hidden;
-  color: #3498db;
-}
-.btn:hover{
-  color: #fff;
-}
-.btn::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  background:#3498db;
-  top: 0;
-  border-radius: 0 0 50% 50%;
-  z-index: -1;
-  transition: 0.8s; 
-}
-.btn:hover::before{
-  height: 180%;
+.btn {
+	border: 1px solid #3498db;
+	background: none;
+	padding: 7px 15px;
+	font-size: 16px;
+	font-family: "montserrat";
+	cursor: pointer;
+	margin-bottom: 5px;
+	transition: 0.8s;
+	position: relative;
+	top: 60px;
+	left: 240px;
+	overflow: hidden;
+	color: #3498db;
 }
 
-#post{
+.btn:hover {
+	color: #fff;
+}
+
+.btn::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	background: #3498db;
+	top: 0;
+	border-radius: 0 0 50% 50%;
+	z-index: -1;
+	transition: 0.8s;
+}
+
+.btn:hover::before {
+	height: 180%;
+}
+
+#post {
 	width: 880px;
 	top: 65px;
 	left: 242px;
 	position: relative;
-	margin-bottom:5px;
+	margin-bottom: 5px;
 	display: none;
 }
-#postArea{
+
+#postArea {
 	resize: none;
-	padding:5px;
+	padding: 5px;
 	font-family: "montserrat";
 	font-size: 15px;
 }
-#post textarea{
-  outline-color: #27ae60;
-  border:1px solid #27ae60;
+
+#post textarea {
+	outline-color: #27ae60;
+	border: 1px solid #27ae60;
 }

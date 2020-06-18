@@ -19,7 +19,8 @@
 <script src="${js}/like.js"></script>
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://kit.fontawesome.com/42066bab5c.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/42066bab5c.js"
+	crossorigin="anonymous"></script>
 <script type="text/javascript">
 
 	$(document).ready(function() {
@@ -50,6 +51,25 @@
 
 
 	<div class="messagediv">
+		<div id="bloodmodal" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="close"><span>&times;</span></div> 
+				<select id="bloodselect">
+					<option value="">--- Select ---</option>
+					<option value="O+">O+</option>
+					<option value="O-">O-</option>
+					<option value="A+">A+</option>
+					<option value="A-">A-</option>
+					<option value="B+">B+</option>
+					<option value="B-">B-</option>
+					<option value="AB+">AB+</option>
+					<option value="AB-">AB-</option>
+				</select>
+			</div>
+
+		</div>
 
 		<c:if test="${not empty PostLists}">
 			<c:forEach items="${PostLists}" var="lists">
@@ -61,19 +81,20 @@
 					<div id="profileName">${lists[4]}</div>
 					<textarea id="profileMessage" readonly>${lists[0]}</textarea>
 
-					
 
-						
+
+
 					<div id="likeButton">
-						<button class="buttonLike" onclick="saveLike(${lists[1]},${profileOwnerId})">Like</button>
+						<button class="buttonLike"
+							onclick="saveLike(${lists[1]},${profileOwnerId})">Like</button>
 					</div>
-						
 
-					
+
+
 
 					<div id="commentButton">
-							<button class="buttonCmnt">Comment</button>
-						</div>
+						<button class="buttonCmnt">Comment</button>
+					</div>
 
 
 				</div>

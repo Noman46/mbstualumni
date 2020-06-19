@@ -85,4 +85,13 @@ public class StudentProfilePageController {
 		likeDao.saveLike(like);
 		return new ResponseEntity<Boolean>(true, HttpStatus.CREATED);
 	}
+	
+	@RequestMapping(value = {"/student/bloodGroup"})
+	public ModelAndView giveBloodGroup(@RequestParam("group") String group) {
+		ModelAndView mv = new ModelAndView("bloodGroup");
+		mv.addObject("bloodgroup", group);
+		return mv;
+		
+		
+	}
 }

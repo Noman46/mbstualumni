@@ -47,6 +47,19 @@
 		$('[title="Donate Blood"]').click(function(){
 			$('.modal').css("display","block");
 		})
+		
+		
+		$('#bloodbutton').click(function(){
+			
+			 //alert($('#bloodselect').val());
+			link = $('#bloogSearchLink').attr('href');
+			bloodGroup =$('#bloodselect').val();
+			newLink = link +"?group=" +bloodGroup;
+			 //link + "?Group=" + $('#bloodselect').val();
+			 $('#bloogSearchLink').attr('href',newLink);
+			 //alert(newLink);
+			 
+		})
 	});
 </script>
 </head>
@@ -76,7 +89,7 @@
 					<option value="AB-">AB-</option>
 				</select>
 				<div id="bloodbutton">
-					<button>Search</button>
+					<a href="./bloodGroup" target="_blank" id = "bloogSearchLink">Search</a>
 				</div>
 
 

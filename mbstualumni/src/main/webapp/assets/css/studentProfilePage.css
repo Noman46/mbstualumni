@@ -17,7 +17,7 @@ body {
 }
 /*========================= BLOOD MODAL ===========================*/
 .modal {
-	display: block; /* Hidden by default */
+	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	z-index: 1; /* Sit on top */
 	left: 72%;
@@ -69,6 +69,10 @@ body {
 	height: 30px;
 	margin-left: 10px;
 	margin-top: 10px;
+}
+#bloodbutton{
+    margin-left: 255px;
+    margin-top: 60px;
 }
 /* ======================== LOGO MBSTU ALUMN =====================I*/
 .shadow {

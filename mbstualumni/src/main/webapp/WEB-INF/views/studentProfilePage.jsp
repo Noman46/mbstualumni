@@ -40,7 +40,13 @@
 
 		})
 		
-		
+		$('.close').click(function(){
+			$('.modal').css("display","none");
+		})
+
+		$('[title="Donate Blood"]').click(function(){
+			$('.modal').css("display","block");
+		})
 	});
 </script>
 </head>
@@ -55,7 +61,9 @@
 
 			<!-- Modal content -->
 			<div class="modal-content">
-				<div class="close"><span>&times;</span></div> 
+				<div class="close" >
+					<span>&times;</span>
+				</div>
 				<select id="bloodselect">
 					<option value="">--- Select ---</option>
 					<option value="O+">O+</option>
@@ -67,6 +75,12 @@
 					<option value="AB+">AB+</option>
 					<option value="AB-">AB-</option>
 				</select>
+				<div id="bloodbutton">
+					<button>Search</button>
+				</div>
+
+
+
 			</div>
 
 		</div>

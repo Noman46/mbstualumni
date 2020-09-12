@@ -1,6 +1,9 @@
 package com.noman.alumnibackend.daoImpl;
 
+import java.util.List;
+
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,6 +31,18 @@ public class StudentPersonalInformationDaoImpl implements StudentPersonalInforma
 
 			return false;
 		}
+	}
+
+	@Override
+	public List<Object[]> getStudentByBloodGroup(String bloodGroup) {
+		
+		
+		
+			String studentByBloodGroup = "FROM StudentPersonalInformation WHERE studentBloodGroup = :studentBloodGroup";
+			Query<Object[]> query = sessionFactory.getCurrentSession().createQuery(studentByBloodGroup);
+			query.setParameter("studentBloodGroup", bloodGroup);
+			return query.getResultList();
+		
 	}
 	
 

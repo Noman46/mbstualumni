@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.noman.alumnibackend.dao.LikesDao;
 import com.noman.alumnibackend.dao.StudentImagesDao;
+import com.noman.alumnibackend.dao.StudentPersonalInformationDao;
 import com.noman.alumnibackend.dao.StudentPostDao;
 import com.noman.alumnibackend.dto.Likes;
 import com.noman.alumnibackend.dto.StudentPost;
@@ -33,6 +34,8 @@ public class StudentProfilePageController {
 	@Autowired
 	public LikesDao likeDao;
 	
+	@Autowired
+	public StudentPersonalInformationDao studentPersonalInformationDao;
 
 	
 	@RequestMapping(value = { "/student/studentProfilePage" })
@@ -88,9 +91,12 @@ public class StudentProfilePageController {
 	
 	@RequestMapping(value = {"/student/bloodGroup"})
 	public ModelAndView giveBloodGroup(@RequestParam("group") String group) {
-		ModelAndView mv = new ModelAndView("bloodGroup");
-		mv.addObject("bloodgroup", group);
-		return mv;
+		
+		List<Object[]> obj = studentPersonalInformationDao.getStudentByBloodGroup(group);
+		ModelAndView bloodGroup = new ModelAndView("bloodGroup");
+		bloodGroup.addObject("studentList", obj);
+		
+		return bloodGroup;
 		
 		
 	}

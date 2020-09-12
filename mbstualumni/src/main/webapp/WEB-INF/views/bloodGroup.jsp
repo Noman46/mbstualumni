@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-this is blood group page is ${bloodgroup}
+this is blood group page is ${studentList}
 </body>
 </html>

@@ -107,6 +107,7 @@
 					</div>
 					<div id="profileName">${lists[4]}</div>
 					<textarea id="profileMessage" readonly>${lists[0]}</textarea>
+					
 
 
 
